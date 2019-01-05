@@ -59,6 +59,8 @@ namespace taxii
 
         private void control_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'select_ride.car' table. You can move, or remove it, as needed.
+            this.carTableAdapter1.Fill(this.select_ride.car);
             // TODO: This line of code loads data into the 'rideselect_control.ride' table. You can move, or remove it, as needed.
             this.rideTableAdapter.Fill(this.rideselect_control.ride);
             // TODO: This line of code loads data into the 'carselect_dataset.car' table. You can move, or remove it, as needed.
@@ -70,6 +72,7 @@ namespace taxii
 
         private void bunifuCustomLabel8_Click(object sender, EventArgs e)
         {
+            
             rideselect.Text = "1";
             this.Close();
         }
@@ -93,7 +96,7 @@ namespace taxii
              r[i] = new Ride(ID, odo, driversel.Text, datee);
 
             idlabel.Text = "THE TRIP ID IS "+ID;
-            i = i + 1; ;
+            i = i + 1;
         }
 
         private void updaterideb_Click(object sender, EventArgs e)
@@ -166,9 +169,12 @@ namespace taxii
 
         private void clear_Click(object sender, EventArgs e)
         {
+            cname.TextName = "";
+            caddress.TextName = "";
+            cpno.TextName = "";
+            drivernamelabel.Text = "";
             cnamelabel.Text = "";
-            caddress.ResetText();
-            cpno.ResetText();
+            cpnumlabel.Text = "";
         }
     }
     class Ride

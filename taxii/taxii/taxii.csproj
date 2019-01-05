@@ -124,6 +124,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>rideselect_control.xsd</DependentUpon>
     </Compile>
+    <Compile Include="select_ride.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>select_ride.xsd</DependentUpon>
+    </Compile>
     <Compile Include="tempform.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +208,17 @@
     </None>
     <None Include="rideselect_control.xss">
       <DependentUpon>rideselect_control.xsd</DependentUpon>
+    </None>
+    <None Include="select_ride.xsc">
+      <DependentUpon>select_ride.xsd</DependentUpon>
+    </None>
+    <None Include="select_ride.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>select_ride.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="select_ride.xss">
+      <DependentUpon>select_ride.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

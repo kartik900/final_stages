@@ -58,6 +58,7 @@
             this.newrideb = new Bunifu.Framework.UI.BunifuFlatButton();
             this.homeb = new Bunifu.Framework.UI.BunifuFlatButton();
             this.newridepanel = new System.Windows.Forms.Panel();
+            this.clear = new Bunifu.Framework.UI.BunifuFlatButton();
             this.idlabel = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.okay = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -88,7 +89,9 @@
             this.driverTableAdapter = new taxii.drivername_datasetTableAdapters.driverTableAdapter();
             this.carTableAdapter = new taxii.carselect_datasetTableAdapters.carTableAdapter();
             this.rideTableAdapter = new taxii.rideselect_controlTableAdapters.rideTableAdapter();
-            this.clear = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.select_ride = new taxii.select_ride();
+            this.carBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.carTableAdapter1 = new taxii.select_rideTableAdapters.carTableAdapter();
             this.header.SuspendLayout();
             this.leftpanel.SuspendLayout();
             this.updateridepanel.SuspendLayout();
@@ -101,6 +104,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.carselect_dataset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.driverBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.drivername_dataset)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.select_ride)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // header
@@ -111,7 +116,7 @@
             this.header.Dock = System.Windows.Forms.DockStyle.Top;
             this.header.Location = new System.Drawing.Point(0, 0);
             this.header.Name = "header";
-            this.header.Size = new System.Drawing.Size(1130, 31);
+            this.header.Size = new System.Drawing.Size(1782, 31);
             this.header.TabIndex = 0;
             this.header.Paint += new System.Windows.Forms.PaintEventHandler(this.header_Paint);
             this.header.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelHeader_MouseDown);
@@ -143,7 +148,6 @@
             // 
             // leftpanel
             // 
-            this.leftpanel.Controls.Add(this.updateridepanel);
             this.leftpanel.Controls.Add(this.infob);
             this.leftpanel.Controls.Add(this.driversb);
             this.leftpanel.Controls.Add(this.updaterideb);
@@ -173,7 +177,7 @@
             this.updateridepanel.Controls.Add(this.bunifuCustomLabel21);
             this.updateridepanel.Controls.Add(this.bunifuCustomLabel22);
             this.updateridepanel.Controls.Add(this.cname_on_update);
-            this.updateridepanel.Location = new System.Drawing.Point(42, 52);
+            this.updateridepanel.Location = new System.Drawing.Point(326, 37);
             this.updateridepanel.Name = "updateridepanel";
             this.updateridepanel.Size = new System.Drawing.Size(803, 705);
             this.updateridepanel.TabIndex = 3;
@@ -245,7 +249,7 @@
             // 
             // rideselect
             // 
-            this.rideselect.DataSource = this.rideBindingSource;
+            this.rideselect.DataSource = this.carBindingSource1;
             this.rideselect.DisplayMember = "Id";
             this.rideselect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rideselect.FormattingEnabled = true;
@@ -253,6 +257,7 @@
             this.rideselect.Name = "rideselect";
             this.rideselect.Size = new System.Drawing.Size(281, 33);
             this.rideselect.TabIndex = 9;
+            this.rideselect.ValueMember = "Id";
             this.rideselect.SelectedIndexChanged += new System.EventHandler(this.rideselect_SelectedIndexChanged);
             // 
             // rideBindingSource
@@ -578,10 +583,46 @@
             this.newridepanel.Controls.Add(this.caddress);
             this.newridepanel.Controls.Add(this.cpno);
             this.newridepanel.Controls.Add(this.cname);
-            this.newridepanel.Location = new System.Drawing.Point(326, 37);
+            this.newridepanel.Location = new System.Drawing.Point(967, 45);
             this.newridepanel.Name = "newridepanel";
             this.newridepanel.Size = new System.Drawing.Size(803, 705);
             this.newridepanel.TabIndex = 1;
+            // 
+            // clear
+            // 
+            this.clear.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.clear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.clear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.clear.BorderRadius = 0;
+            this.clear.ButtonText = "CLEAR";
+            this.clear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.clear.DisabledColor = System.Drawing.Color.Gray;
+            this.clear.Iconcolor = System.Drawing.Color.Transparent;
+            this.clear.Iconimage = null;
+            this.clear.Iconimage_right = null;
+            this.clear.Iconimage_right_Selected = null;
+            this.clear.Iconimage_Selected = null;
+            this.clear.IconMarginLeft = 0;
+            this.clear.IconMarginRight = 0;
+            this.clear.IconRightVisible = true;
+            this.clear.IconRightZoom = 0D;
+            this.clear.IconVisible = true;
+            this.clear.IconZoom = 90D;
+            this.clear.IsTab = false;
+            this.clear.Location = new System.Drawing.Point(213, 635);
+            this.clear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.clear.Name = "clear";
+            this.clear.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.clear.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.clear.OnHoverTextColor = System.Drawing.Color.White;
+            this.clear.selected = false;
+            this.clear.Size = new System.Drawing.Size(81, 44);
+            this.clear.TabIndex = 12;
+            this.clear.Text = "CLEAR";
+            this.clear.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.clear.Textcolor = System.Drawing.Color.White;
+            this.clear.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clear.Click += new System.EventHandler(this.clear_Click);
             // 
             // idlabel
             // 
@@ -926,48 +967,27 @@
             // 
             this.rideTableAdapter.ClearBeforeFill = true;
             // 
-            // clear
+            // select_ride
             // 
-            this.clear.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.clear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.clear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.clear.BorderRadius = 0;
-            this.clear.ButtonText = "CLEAR";
-            this.clear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.clear.DisabledColor = System.Drawing.Color.Gray;
-            this.clear.Iconcolor = System.Drawing.Color.Transparent;
-            this.clear.Iconimage = null;
-            this.clear.Iconimage_right = null;
-            this.clear.Iconimage_right_Selected = null;
-            this.clear.Iconimage_Selected = null;
-            this.clear.IconMarginLeft = 0;
-            this.clear.IconMarginRight = 0;
-            this.clear.IconRightVisible = true;
-            this.clear.IconRightZoom = 0D;
-            this.clear.IconVisible = true;
-            this.clear.IconZoom = 90D;
-            this.clear.IsTab = false;
-            this.clear.Location = new System.Drawing.Point(213, 635);
-            this.clear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.clear.Name = "clear";
-            this.clear.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.clear.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.clear.OnHoverTextColor = System.Drawing.Color.White;
-            this.clear.selected = false;
-            this.clear.Size = new System.Drawing.Size(81, 44);
-            this.clear.TabIndex = 12;
-            this.clear.Text = "CLEAR";
-            this.clear.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.clear.Textcolor = System.Drawing.Color.White;
-            this.clear.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clear.Click += new System.EventHandler(this.clear_Click);
+            this.select_ride.DataSetName = "select_ride";
+            this.select_ride.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // carBindingSource1
+            // 
+            this.carBindingSource1.DataMember = "car";
+            this.carBindingSource1.DataSource = this.select_ride;
+            // 
+            // carTableAdapter1
+            // 
+            this.carTableAdapter1.ClearBeforeFill = true;
             // 
             // control
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.ClientSize = new System.Drawing.Size(1130, 748);
+            this.ClientSize = new System.Drawing.Size(1782, 748);
+            this.Controls.Add(this.updateridepanel);
             this.Controls.Add(this.newridepanel);
             this.Controls.Add(this.leftpanel);
             this.Controls.Add(this.header);
@@ -990,6 +1010,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.carselect_dataset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.driverBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.drivername_dataset)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.select_ride)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1055,5 +1077,8 @@
         private System.Windows.Forms.BindingSource rideBindingSource;
         private rideselect_controlTableAdapters.rideTableAdapter rideTableAdapter;
         private Bunifu.Framework.UI.BunifuFlatButton clear;
+        private select_ride select_ride;
+        private System.Windows.Forms.BindingSource carBindingSource1;
+        private select_rideTableAdapters.carTableAdapter carTableAdapter1;
     }
 }
