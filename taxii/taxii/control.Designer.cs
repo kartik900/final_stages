@@ -68,6 +68,7 @@
             this.cname = new JTextBox2.JTextBox();
             this.driverTableAdapter = new taxii.drivername_datasetTableAdapters.driverTableAdapter();
             this.carTableAdapter = new taxii.carselect_datasetTableAdapters.carTableAdapter();
+            this.idlabel = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.header.SuspendLayout();
             this.leftpanel.SuspendLayout();
             this.newridepanel.SuspendLayout();
@@ -306,6 +307,7 @@
             // 
             // newridepanel
             // 
+            this.newridepanel.Controls.Add(this.idlabel);
             this.newridepanel.Controls.Add(this.pictureBox1);
             this.newridepanel.Controls.Add(this.okay);
             this.newridepanel.Controls.Add(this.carsel);
@@ -654,6 +656,18 @@
             // 
             this.carTableAdapter.ClearBeforeFill = true;
             // 
+            // idlabel
+            // 
+            this.idlabel.AutoSize = true;
+            this.idlabel.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idlabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.idlabel.Location = new System.Drawing.Point(305, 635);
+            this.idlabel.Name = "idlabel";
+            this.idlabel.Size = new System.Drawing.Size(35, 32);
+            this.idlabel.TabIndex = 7;
+            this.idlabel.Text = "--";
+            this.idlabel.Click += new System.EventHandler(this.bunifuCustomLabel8_Click);
+            // 
             // control
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -721,5 +735,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel13;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel11;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel9;
+        private Bunifu.Framework.UI.BunifuCustomLabel idlabel;
     }
 }

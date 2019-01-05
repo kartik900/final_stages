@@ -16,6 +16,7 @@ namespace taxii
 {
     public partial class control : Form
     {
+        int odo = 0;
         string constr;
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=K:\finalll\final_stages\taxii\taxii\rental.mdf;Integrated Security=True");
         
@@ -72,7 +73,8 @@ namespace taxii
 
         private void okay_Click(object sender, EventArgs e)
         {
-            
+            #region data entry
+            int ID = i + 1;
             drivernamelabel.Text = driversel.Text;
             cnamelabel.Text = cname.TextName;
             cpnumlabel.Text = cpno.TextName;
@@ -83,27 +85,38 @@ namespace taxii
             SqlCommand c1 = new SqlCommand(cmd, con);
             c1.ExecuteNonQuery();
             con.Close();
+            #endregion
 
+             r[i] = new Ride(ID, odo, driversel.Text, datee);
 
-
-
-          
-
+            idlabel.Text = "THE TRIP ID IS "+ID;
+            i++;
         }
 
     }
     class Ride
     {
-        int carnum, hours, driverid, drivers_cut, owner_cut, count_before, count_after;
-        public Ride(int a, int count_b,)
+        int rno, km_b;
+        string dname, date;
+        public Ride(int a, int km_bef,string drname,string datee)
         {
-            carnum = a;
-            count_before = count_b;
+            rno = a;
+            km_b = km_bef;
+            dname = drname;
+            date = datee;
         }
-        public int Farecal(int a)
+        public float Farecal(int a)
         {
-            int f = count_after - count_before;
+            int f = a - km_b;
             return f * 50;
+        }
+        public string ownfare(float a)
+        {
+            return (a - (a * 80 / 100)).ToString();
+        }
+        public string driverfare(float a)
+        {
+            return (a - (a * 20 / 100)).ToString();
         }
 
     }
