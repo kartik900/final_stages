@@ -59,5 +59,12 @@ namespace taxii
         {
             this.Close();
         }
+
+        private void okay_Click(object sender, EventArgs e)
+        {
+            drivernamelabel.Text = driversel.Text;
+            cnamelabel.Text = cname.TextName;
+            cpnumlabel.Text = cpno.TextName;
+        }
     }
 }

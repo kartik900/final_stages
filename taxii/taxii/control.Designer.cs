@@ -58,6 +58,16 @@
             this.carTableAdapter = new taxii.carselect_datasetTableAdapters.carTableAdapter();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel9 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.cnamelabel = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel11 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.cpnumlabel = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel13 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel14 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.drivernamelabel = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.driverpnolabel = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.okay = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.header.SuspendLayout();
             this.leftpanel.SuspendLayout();
             this.newridepanel.SuspendLayout();
@@ -65,6 +75,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.driverBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.carselect_dataset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.carBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // header
@@ -75,7 +86,7 @@
             this.header.Dock = System.Windows.Forms.DockStyle.Top;
             this.header.Location = new System.Drawing.Point(0, 0);
             this.header.Name = "header";
-            this.header.Size = new System.Drawing.Size(1331, 31);
+            this.header.Size = new System.Drawing.Size(1129, 31);
             this.header.TabIndex = 0;
             this.header.Paint += new System.Windows.Forms.PaintEventHandler(this.header_Paint);
             this.header.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelHeader_MouseDown);
@@ -272,6 +283,8 @@
             // 
             // newridepanel
             // 
+            this.newridepanel.Controls.Add(this.pictureBox1);
+            this.newridepanel.Controls.Add(this.okay);
             this.newridepanel.Controls.Add(this.carsel);
             this.newridepanel.Controls.Add(this.driversel);
             this.newridepanel.Controls.Add(this.bunifuDatepicker1);
@@ -280,13 +293,21 @@
             this.newridepanel.Controls.Add(this.bunifuCustomLabel2);
             this.newridepanel.Controls.Add(this.bunifuCustomLabel3);
             this.newridepanel.Controls.Add(this.bunifuCustomLabel5);
+            this.newridepanel.Controls.Add(this.driverpnolabel);
+            this.newridepanel.Controls.Add(this.cpnumlabel);
+            this.newridepanel.Controls.Add(this.drivernamelabel);
+            this.newridepanel.Controls.Add(this.cnamelabel);
+            this.newridepanel.Controls.Add(this.bunifuCustomLabel14);
+            this.newridepanel.Controls.Add(this.bunifuCustomLabel13);
+            this.newridepanel.Controls.Add(this.bunifuCustomLabel11);
+            this.newridepanel.Controls.Add(this.bunifuCustomLabel9);
             this.newridepanel.Controls.Add(this.bunifuCustomLabel1);
             this.newridepanel.Controls.Add(this.caddress);
             this.newridepanel.Controls.Add(this.cpno);
             this.newridepanel.Controls.Add(this.cname);
             this.newridepanel.Location = new System.Drawing.Point(326, 37);
             this.newridepanel.Name = "newridepanel";
-            this.newridepanel.Size = new System.Drawing.Size(1005, 705);
+            this.newridepanel.Size = new System.Drawing.Size(803, 705);
             this.newridepanel.TabIndex = 1;
             // 
             // cname
@@ -295,7 +316,7 @@
             this.cname.Font_Size = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.cname.HintText = null;
             this.cname.IsPassword = false;
-            this.cname.Location = new System.Drawing.Point(55, 79);
+            this.cname.Location = new System.Drawing.Point(92, 79);
             this.cname.Margin = new System.Windows.Forms.Padding(4);
             this.cname.MaxLength = 32767;
             this.cname.Name = "cname";
@@ -313,7 +334,7 @@
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(49, 31);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(86, 31);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(189, 32);
             this.bunifuCustomLabel1.TabIndex = 6;
@@ -325,7 +346,7 @@
             this.cpno.Font_Size = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.cpno.HintText = null;
             this.cpno.IsPassword = false;
-            this.cpno.Location = new System.Drawing.Point(393, 79);
+            this.cpno.Location = new System.Drawing.Point(430, 79);
             this.cpno.Margin = new System.Windows.Forms.Padding(4);
             this.cpno.MaxLength = 32767;
             this.cpno.Name = "cpno";
@@ -343,7 +364,7 @@
             this.bunifuCustomLabel2.AutoSize = true;
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel2.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(387, 31);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(424, 31);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(194, 32);
             this.bunifuCustomLabel2.TabIndex = 6;
@@ -355,7 +376,7 @@
             this.caddress.Font_Size = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.caddress.HintText = null;
             this.caddress.IsPassword = false;
-            this.caddress.Location = new System.Drawing.Point(55, 188);
+            this.caddress.Location = new System.Drawing.Point(92, 188);
             this.caddress.Margin = new System.Windows.Forms.Padding(4);
             this.caddress.MaxLength = 32767;
             this.caddress.Name = "caddress";
@@ -373,7 +394,7 @@
             this.bunifuCustomLabel3.AutoSize = true;
             this.bunifuCustomLabel3.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel3.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(49, 140);
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(86, 140);
             this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
             this.bunifuCustomLabel3.Size = new System.Drawing.Size(209, 32);
             this.bunifuCustomLabel3.TabIndex = 6;
@@ -384,7 +405,7 @@
             this.bunifuCustomLabel4.AutoSize = true;
             this.bunifuCustomLabel4.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel4.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(387, 140);
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(424, 140);
             this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
             this.bunifuCustomLabel4.Size = new System.Drawing.Size(107, 32);
             this.bunifuCustomLabel4.TabIndex = 6;
@@ -397,7 +418,7 @@
             this.bunifuDatepicker1.ForeColor = System.Drawing.Color.White;
             this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.bunifuDatepicker1.FormatCustom = null;
-            this.bunifuDatepicker1.Location = new System.Drawing.Point(393, 188);
+            this.bunifuDatepicker1.Location = new System.Drawing.Point(430, 188);
             this.bunifuDatepicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuDatepicker1.Name = "bunifuDatepicker1";
             this.bunifuDatepicker1.Size = new System.Drawing.Size(283, 38);
@@ -409,7 +430,7 @@
             this.bunifuCustomLabel5.AutoSize = true;
             this.bunifuCustomLabel5.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel5.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(49, 285);
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(86, 285);
             this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
             this.bunifuCustomLabel5.Size = new System.Drawing.Size(150, 32);
             this.bunifuCustomLabel5.TabIndex = 6;
@@ -420,7 +441,7 @@
             this.bunifuCustomLabel6.AutoSize = true;
             this.bunifuCustomLabel6.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel6.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bunifuCustomLabel6.Location = new System.Drawing.Point(387, 285);
+            this.bunifuCustomLabel6.Location = new System.Drawing.Point(424, 285);
             this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
             this.bunifuCustomLabel6.Size = new System.Drawing.Size(121, 32);
             this.bunifuCustomLabel6.TabIndex = 6;
@@ -432,7 +453,7 @@
             this.driversel.DisplayMember = "d_name";
             this.driversel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.driversel.FormattingEnabled = true;
-            this.driversel.Location = new System.Drawing.Point(55, 334);
+            this.driversel.Location = new System.Drawing.Point(92, 334);
             this.driversel.Name = "driversel";
             this.driversel.Size = new System.Drawing.Size(281, 33);
             this.driversel.TabIndex = 9;
@@ -444,7 +465,7 @@
             this.carsel.DisplayMember = "c_name";
             this.carsel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.carsel.FormattingEnabled = true;
-            this.carsel.Location = new System.Drawing.Point(395, 334);
+            this.carsel.Location = new System.Drawing.Point(432, 334);
             this.carsel.Name = "carsel";
             this.carsel.Size = new System.Drawing.Size(281, 33);
             this.carsel.TabIndex = 9;
@@ -494,19 +515,151 @@
             this.bunifuCustomLabel8.AutoSize = true;
             this.bunifuCustomLabel8.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel8.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bunifuCustomLabel8.Location = new System.Drawing.Point(1300, -1);
+            this.bunifuCustomLabel8.Location = new System.Drawing.Point(1099, 0);
             this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
             this.bunifuCustomLabel8.Size = new System.Drawing.Size(29, 32);
             this.bunifuCustomLabel8.TabIndex = 7;
             this.bunifuCustomLabel8.Text = "X";
             this.bunifuCustomLabel8.Click += new System.EventHandler(this.bunifuCustomLabel8_Click);
             // 
+            // bunifuCustomLabel9
+            // 
+            this.bunifuCustomLabel9.AutoSize = true;
+            this.bunifuCustomLabel9.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel9.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.bunifuCustomLabel9.Location = new System.Drawing.Point(49, 425);
+            this.bunifuCustomLabel9.Name = "bunifuCustomLabel9";
+            this.bunifuCustomLabel9.Size = new System.Drawing.Size(189, 32);
+            this.bunifuCustomLabel9.TabIndex = 6;
+            this.bunifuCustomLabel9.Text = "Customer Name";
+            // 
+            // cnamelabel
+            // 
+            this.cnamelabel.AutoSize = true;
+            this.cnamelabel.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cnamelabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.cnamelabel.Location = new System.Drawing.Point(305, 425);
+            this.cnamelabel.Name = "cnamelabel";
+            this.cnamelabel.Size = new System.Drawing.Size(35, 32);
+            this.cnamelabel.TabIndex = 6;
+            this.cnamelabel.Text = "--";
+            // 
+            // bunifuCustomLabel11
+            // 
+            this.bunifuCustomLabel11.AutoSize = true;
+            this.bunifuCustomLabel11.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel11.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.bunifuCustomLabel11.Location = new System.Drawing.Point(49, 473);
+            this.bunifuCustomLabel11.Name = "bunifuCustomLabel11";
+            this.bunifuCustomLabel11.Size = new System.Drawing.Size(223, 32);
+            this.bunifuCustomLabel11.TabIndex = 6;
+            this.bunifuCustomLabel11.Text = "Customer pho num";
+            // 
+            // cpnumlabel
+            // 
+            this.cpnumlabel.AutoSize = true;
+            this.cpnumlabel.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpnumlabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.cpnumlabel.Location = new System.Drawing.Point(305, 473);
+            this.cpnumlabel.Name = "cpnumlabel";
+            this.cpnumlabel.Size = new System.Drawing.Size(35, 32);
+            this.cpnumlabel.TabIndex = 6;
+            this.cpnumlabel.Text = "--";
+            // 
+            // bunifuCustomLabel13
+            // 
+            this.bunifuCustomLabel13.AutoSize = true;
+            this.bunifuCustomLabel13.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel13.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.bunifuCustomLabel13.Location = new System.Drawing.Point(49, 519);
+            this.bunifuCustomLabel13.Name = "bunifuCustomLabel13";
+            this.bunifuCustomLabel13.Size = new System.Drawing.Size(150, 32);
+            this.bunifuCustomLabel13.TabIndex = 6;
+            this.bunifuCustomLabel13.Text = "Driver Name";
+            // 
+            // bunifuCustomLabel14
+            // 
+            this.bunifuCustomLabel14.AutoSize = true;
+            this.bunifuCustomLabel14.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel14.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.bunifuCustomLabel14.Location = new System.Drawing.Point(49, 567);
+            this.bunifuCustomLabel14.Name = "bunifuCustomLabel14";
+            this.bunifuCustomLabel14.Size = new System.Drawing.Size(211, 32);
+            this.bunifuCustomLabel14.TabIndex = 6;
+            this.bunifuCustomLabel14.Text = "Driver phone num";
+            // 
+            // drivernamelabel
+            // 
+            this.drivernamelabel.AutoSize = true;
+            this.drivernamelabel.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drivernamelabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.drivernamelabel.Location = new System.Drawing.Point(305, 519);
+            this.drivernamelabel.Name = "drivernamelabel";
+            this.drivernamelabel.Size = new System.Drawing.Size(35, 32);
+            this.drivernamelabel.TabIndex = 6;
+            this.drivernamelabel.Text = "--";
+            // 
+            // driverpnolabel
+            // 
+            this.driverpnolabel.AutoSize = true;
+            this.driverpnolabel.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.driverpnolabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.driverpnolabel.Location = new System.Drawing.Point(305, 567);
+            this.driverpnolabel.Name = "driverpnolabel";
+            this.driverpnolabel.Size = new System.Drawing.Size(35, 32);
+            this.driverpnolabel.TabIndex = 6;
+            this.driverpnolabel.Text = "--";
+            // 
+            // okay
+            // 
+            this.okay.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.okay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.okay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.okay.BorderRadius = 0;
+            this.okay.ButtonText = "CREATE TRIP";
+            this.okay.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.okay.DisabledColor = System.Drawing.Color.Gray;
+            this.okay.Iconcolor = System.Drawing.Color.Transparent;
+            this.okay.Iconimage = null;
+            this.okay.Iconimage_right = null;
+            this.okay.Iconimage_right_Selected = null;
+            this.okay.Iconimage_Selected = null;
+            this.okay.IconMarginLeft = 0;
+            this.okay.IconMarginRight = 0;
+            this.okay.IconRightVisible = true;
+            this.okay.IconRightZoom = 0D;
+            this.okay.IconVisible = true;
+            this.okay.IconZoom = 90D;
+            this.okay.IsTab = false;
+            this.okay.Location = new System.Drawing.Point(55, 635);
+            this.okay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.okay.Name = "okay";
+            this.okay.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.okay.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.okay.OnHoverTextColor = System.Drawing.Color.White;
+            this.okay.selected = false;
+            this.okay.Size = new System.Drawing.Size(217, 44);
+            this.okay.TabIndex = 10;
+            this.okay.Text = "CREATE TRIP";
+            this.okay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.okay.Textcolor = System.Drawing.Color.White;
+            this.okay.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.okay.Click += new System.EventHandler(this.okay_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(531, 425);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(228, 233);
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
             // control
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.ClientSize = new System.Drawing.Size(1331, 744);
+            this.ClientSize = new System.Drawing.Size(1129, 744);
             this.Controls.Add(this.newridepanel);
             this.Controls.Add(this.leftpanel);
             this.Controls.Add(this.header);
@@ -523,6 +676,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.driverBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.carselect_dataset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.carBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -557,5 +711,15 @@
         private carselect_datasetTableAdapters.carTableAdapter carTableAdapter;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel8;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private Bunifu.Framework.UI.BunifuFlatButton okay;
+        private Bunifu.Framework.UI.BunifuCustomLabel driverpnolabel;
+        private Bunifu.Framework.UI.BunifuCustomLabel cpnumlabel;
+        private Bunifu.Framework.UI.BunifuCustomLabel drivernamelabel;
+        private Bunifu.Framework.UI.BunifuCustomLabel cnamelabel;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel14;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel13;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel11;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel9;
     }
 }
