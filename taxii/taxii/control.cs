@@ -7,14 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.IO;
+using Bunifu.Framework.UI;
+using System.Configuration;
 
 namespace taxii
 {
     public partial class control : Form
     {
+        string constr;
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=K:\finalll\final_stages\taxii\taxii\rental.mdf;Integrated Security=True");
+        
+        Ride[] r = new Ride[90];
+        int i = 0;
         public control()
         {
             InitializeComponent();
+          
         }
         #region header drag
         private bool mouseDown;
@@ -62,9 +72,39 @@ namespace taxii
 
         private void okay_Click(object sender, EventArgs e)
         {
+            
             drivernamelabel.Text = driversel.Text;
             cnamelabel.Text = cname.TextName;
             cpnumlabel.Text = cpno.TextName;
+            string datee = datepick.Value.ToString();
+
+            con.Open();
+            string cmd = "insert into ride(c_name,d_name,car,date)values('"+cname.TextName+"','"+driversel.Text+"','"+carsel.Text+"','"+datee+"')";
+            SqlCommand c1 = new SqlCommand(cmd, con);
+            c1.ExecuteNonQuery();
+            con.Close();
+
+
+
+
+          
+
         }
+
+    }
+    class Ride
+    {
+        int carnum, hours, driverid, drivers_cut, owner_cut, count_before, count_after;
+        public Ride(int a, int count_b,)
+        {
+            carnum = a;
+            count_before = count_b;
+        }
+        public int Farecal(int a)
+        {
+            int f = count_after - count_before;
+            return f * 50;
+        }
+
     }
 }
