@@ -50,8 +50,8 @@ namespace taxii
                  usernamebox.HintText = "only 4 attempls left ";
                  MessageBox.Show("incorrect username or password");
              }/*/
-            loadimg i = new loadimg();
-            i.Show();
+            control c = new control();
+            c.Show();
             this.Hide();
             
         }
