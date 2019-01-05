@@ -114,6 +114,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rideselect.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rideselect.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="rideselect_control.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rideselect_control.xsd</DependentUpon>
+    </Compile>
     <Compile Include="tempform.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +182,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="rideselect.xsc">
+      <DependentUpon>rideselect.xsd</DependentUpon>
+    </None>
+    <None Include="rideselect.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>rideselect.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="rideselect.xss">
+      <DependentUpon>rideselect.xsd</DependentUpon>
+    </None>
+    <None Include="rideselect_control.xsc">
+      <DependentUpon>rideselect_control.xsd</DependentUpon>
+    </None>
+    <None Include="rideselect_control.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>rideselect_control.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="rideselect_control.xss">
+      <DependentUpon>rideselect_control.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

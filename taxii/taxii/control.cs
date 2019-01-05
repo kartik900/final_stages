@@ -59,6 +59,8 @@ namespace taxii
 
         private void control_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'rideselect_control.ride' table. You can move, or remove it, as needed.
+            this.rideTableAdapter.Fill(this.rideselect_control.ride);
             // TODO: This line of code loads data into the 'carselect_dataset.car' table. You can move, or remove it, as needed.
             this.carTableAdapter.Fill(this.carselect_dataset.car);
             // TODO: This line of code loads data into the 'drivername_dataset.driver' table. You can move, or remove it, as needed.
@@ -68,6 +70,7 @@ namespace taxii
 
         private void bunifuCustomLabel8_Click(object sender, EventArgs e)
         {
+            rideselect.Text = "1";
             this.Close();
         }
 
@@ -81,7 +84,7 @@ namespace taxii
             string datee = datepick.Value.ToString();
 
             con.Open();
-            string cmd = "insert into ride(c_name,d_name,car,date)values('"+cname.TextName+"','"+driversel.Text+"','"+carsel.Text+"','"+datee+"')";
+            string cmd = "insert into ride(id,c_name,d_name,car,date)values('"+ID+"','"+cname.TextName+"','"+driversel.Text+"','"+carsel.Text+"','"+datee+"')";
             SqlCommand c1 = new SqlCommand(cmd, con);
             c1.ExecuteNonQuery();
             con.Close();
@@ -90,9 +93,83 @@ namespace taxii
              r[i] = new Ride(ID, odo, driversel.Text, datee);
 
             idlabel.Text = "THE TRIP ID IS "+ID;
-            i++;
+            i = i + 1; ;
         }
 
+        private void updaterideb_Click(object sender, EventArgs e)
+        {
+            newridepanel.Hide();
+            updateridepanel.Show();
+        }
+
+        private void rideselect_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int y = Convert.ToInt32(rideselect.Text);
+            con.Open();
+
+
+            string cmd = "select c_name from ride where id='" + y + "'";
+            SqlCommand c = new SqlCommand(cmd, con);
+            string h = Convert.ToString(c.ExecuteScalar());
+            cname_on_update.Text = h;
+            con.Close();
+        }
+        #region UPDATE LABELS IN NEW RIDE PANEL
+        private void newrideb_Click(object sender, EventArgs e)
+        {
+            updateridepanel.Hide();
+            newridepanel.Show();
+        }
+
+        private void cname_Load(object sender, EventArgs e)
+        {
+            drivernamelabel.Text = driversel.Text;
+            cnamelabel.Text = cname.TextName;
+            cpnumlabel.Text = cpno.TextName;
+        }
+
+        private void cpno_Load(object sender, EventArgs e)
+        {
+            drivernamelabel.Text = driversel.Text;
+            cnamelabel.Text = cname.TextName;
+            cpnumlabel.Text = cpno.TextName;
+        }
+
+        private void caddress_Load(object sender, EventArgs e)
+        {
+            drivernamelabel.Text = driversel.Text;
+            cnamelabel.Text = cname.TextName;
+            cpnumlabel.Text = cpno.TextName;
+        }
+
+        private void datepick_onValueChanged(object sender, EventArgs e)
+        {
+            drivernamelabel.Text = driversel.Text;
+            cnamelabel.Text = cname.TextName;
+            cpnumlabel.Text = cpno.TextName;
+        }
+
+        private void driversel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            drivernamelabel.Text = driversel.Text;
+            cnamelabel.Text = cname.TextName;
+            cpnumlabel.Text = cpno.TextName;
+        }
+
+        private void carsel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            drivernamelabel.Text = driversel.Text;
+            cnamelabel.Text = cname.TextName;
+            cpnumlabel.Text = cpno.TextName;
+        }
+        #endregion
+
+        private void clear_Click(object sender, EventArgs e)
+        {
+            cnamelabel.Text = "";
+            caddress.ResetText();
+            cpno.ResetText();
+        }
     }
     class Ride
     {
