@@ -89,6 +89,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>carselect_dataset.xsd</DependentUpon>
     </Compile>
+    <Compile Include="car_name.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>car_name.xsd</DependentUpon>
+    </Compile>
     <Compile Include="control.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +109,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>drivername_dataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="driver_name.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>driver_name.xsd</DependentUpon>
     </Compile>
     <Compile Include="holdform.cs">
       <SubType>Form</SubType>
@@ -139,6 +149,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rideselect_control.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ride_ID.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ride_ID.xsd</DependentUpon>
     </Compile>
     <Compile Include="select_ride.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -186,6 +201,17 @@
     <None Include="carselect_dataset.xss">
       <DependentUpon>carselect_dataset.xsd</DependentUpon>
     </None>
+    <None Include="car_name.xsc">
+      <DependentUpon>car_name.xsd</DependentUpon>
+    </None>
+    <None Include="car_name.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>car_name.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="car_name.xss">
+      <DependentUpon>car_name.xsd</DependentUpon>
+    </None>
     <None Include="drivername.xsc">
       <DependentUpon>drivername.xsd</DependentUpon>
     </None>
@@ -207,6 +233,17 @@
     </None>
     <None Include="drivername_dataset.xss">
       <DependentUpon>drivername_dataset.xsd</DependentUpon>
+    </None>
+    <None Include="driver_name.xsc">
+      <DependentUpon>driver_name.xsd</DependentUpon>
+    </None>
+    <None Include="driver_name.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>driver_name.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="driver_name.xss">
+      <DependentUpon>driver_name.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -249,6 +286,17 @@
     </None>
     <None Include="rideselect_control.xss">
       <DependentUpon>rideselect_control.xsd</DependentUpon>
+    </None>
+    <None Include="ride_ID.xsc">
+      <DependentUpon>ride_ID.xsd</DependentUpon>
+    </None>
+    <None Include="ride_ID.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ride_ID.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ride_ID.xss">
+      <DependentUpon>ride_ID.xsd</DependentUpon>
     </None>
     <None Include="select_ride.xsc">
       <DependentUpon>select_ride.xsd</DependentUpon>

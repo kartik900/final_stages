@@ -33,33 +33,23 @@
             this.header = new System.Windows.Forms.Panel();
             this.exit = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.carBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.select_ride = new taxii.select_ride();
             this.leftpanel = new System.Windows.Forms.Panel();
             this.infob = new Bunifu.Framework.UI.BunifuFlatButton();
             this.driversb = new Bunifu.Framework.UI.BunifuFlatButton();
             this.updaterideb = new Bunifu.Framework.UI.BunifuFlatButton();
             this.homeb = new Bunifu.Framework.UI.BunifuFlatButton();
             this.newrideb = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.rideBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.rideselect_control = new taxii.rideselect_control();
-            this.carBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.carselect_dataset = new taxii.carselect_dataset();
-            this.driverBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.drivername_dataset = new taxii.drivername_dataset();
-            this.driverTableAdapter = new taxii.drivername_datasetTableAdapters.driverTableAdapter();
-            this.carTableAdapter = new taxii.carselect_datasetTableAdapters.carTableAdapter();
-            this.rideTableAdapter = new taxii.rideselect_controlTableAdapters.rideTableAdapter();
-            this.carTableAdapter1 = new taxii.select_rideTableAdapters.carTableAdapter();
             this.newridepanel = new System.Windows.Forms.Panel();
             this.clear = new Bunifu.Framework.UI.BunifuFlatButton();
             this.idlabel = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.okay = new Bunifu.Framework.UI.BunifuFlatButton();
             this.carsel = new System.Windows.Forms.ComboBox();
+            this.carBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.car_name = new taxii.car_name();
             this.driversel = new System.Windows.Forms.ComboBox();
-            this.driverBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.drivername = new taxii.drivername();
+            this.driverBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.driver_name = new taxii.driver_name();
             this.datepick = new Bunifu.Framework.UI.BunifuDatepicker();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -78,44 +68,39 @@
             this.caddress = new JTextBox2.JTextBox();
             this.cpno = new JTextBox2.JTextBox();
             this.cname = new JTextBox2.JTextBox();
-            this.rideBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.rideid = new taxii.rideid();
-            this.rideTableAdapter1 = new taxii.rideidTableAdapters.rideTableAdapter();
             this.updateridepanel = new System.Windows.Forms.Panel();
             this.km_after = new JTextBox2.JTextBox();
             this.updateb = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.rideselect = new System.Windows.Forms.ComboBox();
+            this.rideBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ride_ID = new taxii.ride_ID();
             this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel15 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.dateshow = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.cpnoshow = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.dnameshow = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.carnameshow = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.c_nameshow = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel20 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel21 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel22 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.cname_on_update = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.driverTableAdapter1 = new taxii.drivernameTableAdapters.driverTableAdapter();
+            this.driverTableAdapter = new taxii.driver_nameTableAdapters.driverTableAdapter();
+            this.carTableAdapter = new taxii.car_nameTableAdapters.carTableAdapter();
+            this.rideTableAdapter = new taxii.ride_IDTableAdapters.rideTableAdapter();
             this.header.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.carBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.select_ride)).BeginInit();
             this.leftpanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rideBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rideselect_control)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.carBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.carselect_dataset)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.driverBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.drivername_dataset)).BeginInit();
             this.newridepanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.driverBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.drivername)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rideBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rideid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.car_name)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.driverBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.driver_name)).BeginInit();
             this.updateridepanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rideBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ride_ID)).BeginInit();
             this.SuspendLayout();
             // 
             // header
@@ -156,16 +141,6 @@
             this.bunifuCustomLabel7.TabIndex = 6;
             this.bunifuCustomLabel7.Text = "- CAR RENTALS -";
             // 
-            // carBindingSource1
-            // 
-            this.carBindingSource1.DataMember = "car";
-            this.carBindingSource1.DataSource = this.select_ride;
-            // 
-            // select_ride
-            // 
-            this.select_ride.DataSetName = "select_ride";
-            this.select_ride.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // leftpanel
             // 
             this.leftpanel.Controls.Add(this.infob);
@@ -200,7 +175,7 @@
             this.infob.IconVisible = true;
             this.infob.IconZoom = 90D;
             this.infob.IsTab = false;
-            this.infob.Location = new System.Drawing.Point(0, 573);
+            this.infob.Location = new System.Drawing.Point(0, 570);
             this.infob.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.infob.Name = "infob";
             this.infob.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
@@ -236,7 +211,7 @@
             this.driversb.IconVisible = true;
             this.driversb.IconZoom = 90D;
             this.driversb.IsTab = false;
-            this.driversb.Location = new System.Drawing.Point(0, 431);
+            this.driversb.Location = new System.Drawing.Point(0, 429);
             this.driversb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.driversb.Name = "driversb";
             this.driversb.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
@@ -272,7 +247,7 @@
             this.updaterideb.IconVisible = true;
             this.updaterideb.IconZoom = 90D;
             this.updaterideb.IsTab = false;
-            this.updaterideb.Location = new System.Drawing.Point(-1, 289);
+            this.updaterideb.Location = new System.Drawing.Point(-1, 288);
             this.updaterideb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.updaterideb.Name = "updaterideb";
             this.updaterideb.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
@@ -358,52 +333,6 @@
             this.newrideb.Textcolor = System.Drawing.Color.White;
             this.newrideb.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newrideb.Click += new System.EventHandler(this.newrideb_Click);
-            // 
-            // rideBindingSource
-            // 
-            this.rideBindingSource.DataMember = "ride";
-            this.rideBindingSource.DataSource = this.rideselect_control;
-            // 
-            // rideselect_control
-            // 
-            this.rideselect_control.DataSetName = "rideselect_control";
-            this.rideselect_control.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // carBindingSource
-            // 
-            this.carBindingSource.DataMember = "car";
-            this.carBindingSource.DataSource = this.carselect_dataset;
-            // 
-            // carselect_dataset
-            // 
-            this.carselect_dataset.DataSetName = "carselect_dataset";
-            this.carselect_dataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // driverBindingSource
-            // 
-            this.driverBindingSource.DataMember = "driver";
-            this.driverBindingSource.DataSource = this.drivername_dataset;
-            // 
-            // drivername_dataset
-            // 
-            this.drivername_dataset.DataSetName = "drivername_dataset";
-            this.drivername_dataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // driverTableAdapter
-            // 
-            this.driverTableAdapter.ClearBeforeFill = true;
-            // 
-            // carTableAdapter
-            // 
-            this.carTableAdapter.ClearBeforeFill = true;
-            // 
-            // rideTableAdapter
-            // 
-            this.rideTableAdapter.ClearBeforeFill = true;
-            // 
-            // carTableAdapter1
-            // 
-            this.carTableAdapter1.ClearBeforeFill = true;
             // 
             // newridepanel
             // 
@@ -540,9 +469,19 @@
             this.carsel.TabIndex = 9;
             this.carsel.Click += new System.EventHandler(this.Refresh);
             // 
+            // carBindingSource
+            // 
+            this.carBindingSource.DataMember = "car";
+            this.carBindingSource.DataSource = this.car_name;
+            // 
+            // car_name
+            // 
+            this.car_name.DataSetName = "car_name";
+            this.car_name.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // driversel
             // 
-            this.driversel.DataSource = this.driverBindingSource1;
+            this.driversel.DataSource = this.driverBindingSource;
             this.driversel.DisplayMember = "d_name";
             this.driversel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.driversel.FormattingEnabled = true;
@@ -553,15 +492,15 @@
             this.driversel.SelectedIndexChanged += new System.EventHandler(this.driversel_SelectedIndexChanged_1);
             this.driversel.Click += new System.EventHandler(this.Refresh);
             // 
-            // driverBindingSource1
+            // driverBindingSource
             // 
-            this.driverBindingSource1.DataMember = "driver";
-            this.driverBindingSource1.DataSource = this.drivername;
+            this.driverBindingSource.DataMember = "driver";
+            this.driverBindingSource.DataSource = this.driver_name;
             // 
-            // drivername
+            // driver_name
             // 
-            this.drivername.DataSetName = "drivername";
-            this.drivername.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.driver_name.DataSetName = "driver_name";
+            this.driver_name.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // datepick
             // 
@@ -792,20 +731,6 @@
             this.cname.TextName = "";
             this.cname.Click += new System.EventHandler(this.Refresh);
             // 
-            // rideBindingSource1
-            // 
-            this.rideBindingSource1.DataMember = "ride";
-            this.rideBindingSource1.DataSource = this.rideid;
-            // 
-            // rideid
-            // 
-            this.rideid.DataSetName = "rideid";
-            this.rideid.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // rideTableAdapter1
-            // 
-            this.rideTableAdapter1.ClearBeforeFill = true;
-            // 
             // updateridepanel
             // 
             this.updateridepanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
@@ -817,7 +742,7 @@
             this.updateridepanel.Controls.Add(this.bunifuCustomLabel8);
             this.updateridepanel.Controls.Add(this.bunifuCustomLabel15);
             this.updateridepanel.Controls.Add(this.dateshow);
-            this.updateridepanel.Controls.Add(this.cpnoshow);
+            this.updateridepanel.Controls.Add(this.dnameshow);
             this.updateridepanel.Controls.Add(this.carnameshow);
             this.updateridepanel.Controls.Add(this.c_nameshow);
             this.updateridepanel.Controls.Add(this.bunifuCustomLabel20);
@@ -882,6 +807,7 @@
             this.updateb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.updateb.Textcolor = System.Drawing.Color.White;
             this.updateb.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateb.Click += new System.EventHandler(this.updateb_Click_1);
             // 
             // bunifuCustomLabel10
             // 
@@ -904,7 +830,7 @@
             // 
             // rideselect
             // 
-            this.rideselect.DataSource = this.rideBindingSource1;
+            this.rideselect.DataSource = this.rideBindingSource;
             this.rideselect.DisplayMember = "Id";
             this.rideselect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rideselect.FormattingEnabled = true;
@@ -912,6 +838,17 @@
             this.rideselect.Name = "rideselect";
             this.rideselect.Size = new System.Drawing.Size(281, 33);
             this.rideselect.TabIndex = 9;
+            this.rideselect.SelectedIndexChanged += new System.EventHandler(this.rideselect_SelectedIndexChanged);
+            // 
+            // rideBindingSource
+            // 
+            this.rideBindingSource.DataMember = "ride";
+            this.rideBindingSource.DataSource = this.ride_ID;
+            // 
+            // ride_ID
+            // 
+            this.ride_ID.DataSetName = "ride_ID";
+            this.ride_ID.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bunifuCustomLabel8
             // 
@@ -946,16 +883,16 @@
             this.dateshow.TabIndex = 6;
             this.dateshow.Text = "--";
             // 
-            // cpnoshow
+            // dnameshow
             // 
-            this.cpnoshow.AutoSize = true;
-            this.cpnoshow.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpnoshow.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.cpnoshow.Location = new System.Drawing.Point(362, 217);
-            this.cpnoshow.Name = "cpnoshow";
-            this.cpnoshow.Size = new System.Drawing.Size(35, 32);
-            this.cpnoshow.TabIndex = 6;
-            this.cpnoshow.Text = "--";
+            this.dnameshow.AutoSize = true;
+            this.dnameshow.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dnameshow.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dnameshow.Location = new System.Drawing.Point(362, 217);
+            this.dnameshow.Name = "dnameshow";
+            this.dnameshow.Size = new System.Drawing.Size(35, 32);
+            this.dnameshow.TabIndex = 6;
+            this.dnameshow.Text = "--";
             // 
             // carnameshow
             // 
@@ -1008,9 +945,9 @@
             this.bunifuCustomLabel22.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.bunifuCustomLabel22.Location = new System.Drawing.Point(106, 217);
             this.bunifuCustomLabel22.Name = "bunifuCustomLabel22";
-            this.bunifuCustomLabel22.Size = new System.Drawing.Size(223, 32);
+            this.bunifuCustomLabel22.Size = new System.Drawing.Size(150, 32);
             this.bunifuCustomLabel22.TabIndex = 6;
-            this.bunifuCustomLabel22.Text = "Customer pho num";
+            this.bunifuCustomLabel22.Text = "Driver Name";
             // 
             // cname_on_update
             // 
@@ -1023,9 +960,17 @@
             this.cname_on_update.TabIndex = 6;
             this.cname_on_update.Text = "Customer Name";
             // 
-            // driverTableAdapter1
+            // driverTableAdapter
             // 
-            this.driverTableAdapter1.ClearBeforeFill = true;
+            this.driverTableAdapter.ClearBeforeFill = true;
+            // 
+            // carTableAdapter
+            // 
+            this.carTableAdapter.ClearBeforeFill = true;
+            // 
+            // rideTableAdapter
+            // 
+            this.rideTableAdapter.ClearBeforeFill = true;
             // 
             // control
             // 
@@ -1035,33 +980,27 @@
             this.ClientSize = new System.Drawing.Size(1132, 746);
             this.Controls.Add(this.leftpanel);
             this.Controls.Add(this.header);
-            this.Controls.Add(this.newridepanel);
             this.Controls.Add(this.updateridepanel);
+            this.Controls.Add(this.newridepanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "control";
             this.Text = "control";
             this.Load += new System.EventHandler(this.control_Load);
             this.header.ResumeLayout(false);
             this.header.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.carBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.select_ride)).EndInit();
             this.leftpanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.rideBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rideselect_control)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.carBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.carselect_dataset)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.driverBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.drivername_dataset)).EndInit();
             this.newridepanel.ResumeLayout(false);
             this.newridepanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.driverBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.drivername)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rideBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rideid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.car_name)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.driverBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.driver_name)).EndInit();
             this.updateridepanel.ResumeLayout(false);
             this.updateridepanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rideBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ride_ID)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1074,20 +1013,8 @@
         private Bunifu.Framework.UI.BunifuFlatButton newrideb;
         private Bunifu.Framework.UI.BunifuFlatButton infob;
         private Bunifu.Framework.UI.BunifuFlatButton driversb;
-        private drivername_dataset drivername_dataset;
-        private System.Windows.Forms.BindingSource driverBindingSource;
-        private drivername_datasetTableAdapters.driverTableAdapter driverTableAdapter;
-        private carselect_dataset carselect_dataset;
-        private System.Windows.Forms.BindingSource carBindingSource;
-        private carselect_datasetTableAdapters.carTableAdapter carTableAdapter;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
         private Bunifu.Framework.UI.BunifuCustomLabel exit;
-        private rideselect_control rideselect_control;
-        private System.Windows.Forms.BindingSource rideBindingSource;
-        private rideselect_controlTableAdapters.rideTableAdapter rideTableAdapter;
-        private select_ride select_ride;
-        private System.Windows.Forms.BindingSource carBindingSource1;
-        private select_rideTableAdapters.carTableAdapter carTableAdapter1;
         private Bunifu.Framework.UI.BunifuFlatButton homeb;
         private System.Windows.Forms.Panel newridepanel;
         private Bunifu.Framework.UI.BunifuFlatButton clear;
@@ -1114,9 +1041,6 @@
         private JTextBox2.JTextBox caddress;
         private JTextBox2.JTextBox cpno;
         private JTextBox2.JTextBox cname;
-        private rideid rideid;
-        private System.Windows.Forms.BindingSource rideBindingSource1;
-        private rideidTableAdapters.rideTableAdapter rideTableAdapter1;
         private System.Windows.Forms.Panel updateridepanel;
         private JTextBox2.JTextBox km_after;
         private Bunifu.Framework.UI.BunifuFlatButton updateb;
@@ -1126,15 +1050,21 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel8;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel15;
         private Bunifu.Framework.UI.BunifuCustomLabel dateshow;
-        private Bunifu.Framework.UI.BunifuCustomLabel cpnoshow;
+        private Bunifu.Framework.UI.BunifuCustomLabel dnameshow;
         private Bunifu.Framework.UI.BunifuCustomLabel carnameshow;
         private Bunifu.Framework.UI.BunifuCustomLabel c_nameshow;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel20;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel21;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel22;
         private Bunifu.Framework.UI.BunifuCustomLabel cname_on_update;
-        private drivername drivername;
-        private System.Windows.Forms.BindingSource driverBindingSource1;
-        private drivernameTableAdapters.driverTableAdapter driverTableAdapter1;
+        private driver_name driver_name;
+        private System.Windows.Forms.BindingSource driverBindingSource;
+        private driver_nameTableAdapters.driverTableAdapter driverTableAdapter;
+        private car_name car_name;
+        private System.Windows.Forms.BindingSource carBindingSource;
+        private car_nameTableAdapters.carTableAdapter carTableAdapter;
+        private ride_ID ride_ID;
+        private System.Windows.Forms.BindingSource rideBindingSource;
+        private ride_IDTableAdapters.rideTableAdapter rideTableAdapter;
     }
 }

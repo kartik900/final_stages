@@ -65,26 +65,27 @@ namespace taxii
         //data stufff
         private void control_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'drivername.driver' table. You can move, or remove it, as needed.
-            this.driverTableAdapter1.Fill(this.drivername.driver);
-            // TODO: This line of code loads data into the 'rideid.ride' table. You can move, or remove it, as needed.
-            this.rideTableAdapter1.Fill(this.rideid.ride);
-            // TODO: This line of code loads data into the 'select_ride.car' table. You can move, or remove it, as needed.
-            this.carTableAdapter1.Fill(this.select_ride.car);
-            // TODO: This line of code loads data into the 'rideselect_control.ride' table. You can move, or remove it, as needed.
-            this.rideTableAdapter.Fill(this.rideselect_control.ride);
-            // TODO: This line of code loads data into the 'carselect_dataset.car' table. You can move, or remove it, as needed.
-            this.carTableAdapter.Fill(this.carselect_dataset.car);
-            // TODO: This line of code loads data into the 'drivername_dataset.driver' table. You can move, or remove it, as needed.
-            this.driverTableAdapter.Fill(this.drivername_dataset.driver);
+            // TODO: This line of code loads data into the 'ride_ID.ride' table. You can move, or remove it, as needed.
+            this.rideTableAdapter.Fill(this.ride_ID.ride);
+            // TODO: This line of code loads data into the 'car_name.car' table. You can move, or remove it, as needed.
+            this.carTableAdapter.Fill(this.car_name.car);
+            // TODO: This line of code loads data into the 'driver_name.driver' table. You can move, or remove it, as needed.
+            this.driverTableAdapter.Fill(this.driver_name.driver);
+
 
         }
 
         private void bunifuCustomLabel8_Click(object sender, EventArgs e)
         {
+
+            try
+            {
+                this.Close();
+
+            }
+            catch (IndexOutOfRangeException) { }
+            catch (FormatException) { }
             
-            rideselect.Text = "123";
-            this.Close();
         }
 
         #region LEFT PANEL BUTTON CLICKSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
@@ -122,10 +123,25 @@ namespace taxii
 
         #region updateride
 
-        
 
-        private void rideselect_SelectedIndexChanged_1(object sender, EventArgs e)
+        private void updateb_Click_1(object sender, EventArgs e)
         {
+            try
+            {
+                int y = Convert.ToInt32(rideselect.Text);
+                int km = Convert.ToInt32(km_after.TextName);
+                totals[y] = Convert.ToDouble(r[i].Farecal(km));
+                owners[y] = r[i].ownfare(totals[y]);
+                drivers[y] = r[i].driverfare(totals[y]);
+            }
+            catch (Exception) { }
+
+        }
+
+        private void rideselect_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+
             if (rideselect.Text != null)
             {
                 int y = Convert.ToInt32(rideselect.Text);
@@ -139,35 +155,24 @@ namespace taxii
 
                 string cmd2 = "select d_name from ride where id='" + y + "'";
                 SqlCommand c2 = new SqlCommand(cmd2, con);
-                string h2 = Convert.ToString(c2.ExecuteNonQuery());
-                carnameshow.Text = h2;
+                string h2 = Convert.ToString(c2.ExecuteScalar());
+                dnameshow.Text = h2;
 
                 string cmd3 = "select car from ride where id='" + y + "'";
                 SqlCommand c3 = new SqlCommand(cmd3, con);
-                string h3 = Convert.ToString(c3.ExecuteNonQuery());
+                string h3 = Convert.ToString(c3.ExecuteScalar());
                 carnameshow.Text = h3;
 
                 string cmd4 = "select date from ride where id='" + y + "'";
                 SqlCommand c4 = new SqlCommand(cmd4, con);
-                string h4 = Convert.ToString(c4.ExecuteNonQuery());
+                string h4 = Convert.ToString(c4.ExecuteScalar());
                 dateshow.Text = h4;
 
                 con.Close();
             }
-
-           
-
-
         }
+       
 
-        private void updateb_Click(object sender, EventArgs e)
-        {
-            int y = Convert.ToInt32(rideselect.Text);
-            int km = Convert.ToInt32(km_after.TextName);
-            totals[y] = Convert.ToDouble(r[i].Farecal(km));
-            owners[y] = r[i].ownfare(totals[y]);
-            drivers[y] = r[i].driverfare(totals[y]);
-        }
 
 
         #endregion
@@ -211,6 +216,7 @@ namespace taxii
         {
             if (driversel.Text != null)
             {
+
                 SqlDataReader r;
                 string n = driversel.Text;
                 string cmd2 = "select image from driver where d_name ='" + n + "'";
@@ -223,24 +229,27 @@ namespace taxii
                 MemoryStream ms = new MemoryStream(ap);
                 pictureBox1.Image = Image.FromStream(ms);
                 pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                
             }
         }
         private void Refresh(object sender, EventArgs e)
         {
-            string cmd4 = "select d_pno from driver where d_name='" +driversel.Text+ "'";
+            string cmd41 = "select d_pno from driver where d_name='" +driversel.Text+ "'";
             drivernamelabel.Text = driversel.Text;
             cnamelabel.Text = cname.TextName;
             cpnumlabel.Text = cpno.TextName;
             con.Open();
-            SqlCommand c4 = new SqlCommand(cmd4, con);
-            driverpnolabel.Text = Convert.ToString(c4.ExecuteNonQuery());
+            SqlCommand c41 = new SqlCommand(cmd41, con);
+            driverpnolabel.Text = Convert.ToString(c41.ExecuteScalar());
             con.Close();
         }
 
 
+
+
         #endregion
 
-        
+       
     }
     #region CLASS RIDE
     class Ride

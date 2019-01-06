@@ -52,7 +52,7 @@ namespace taxii
              }/*/
             control c = new control();
             c.Show();
-           // loadimg l = new loadimg();
+          // loadimg l = new loadimg();
            // l.Show();
             
         }
