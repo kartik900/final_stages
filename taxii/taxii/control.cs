@@ -16,19 +16,20 @@ namespace taxii
 {
     public partial class control : Form
     {
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=K:\finalll\final_stages\taxii\taxii\rental.mdf;Integrated Security=True");
+        int i;
         int odo = 0;
         string constr;
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=K:\finalll\final_stages\taxii\taxii\rental.mdf;Integrated Security=True");
 
         double[] totals = new double[90];
         string[] owners = new string[90];
         string[] drivers = new string[90];
-
+        
         Ride[] r = new Ride[90];
-        int i = 1;
         public control()
         {
             InitializeComponent();
+            
           
         }
         #region header drag
@@ -65,13 +66,21 @@ namespace taxii
         //data stufff
         private void control_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'ride_ID.ride' table. You can move, or remove it, as needed.
-            this.rideTableAdapter.Fill(this.ride_ID.ride);
+            // TODO: This line of code loads data into the 'ride_id.ride' table. You can move, or remove it, as needed.
+            this.rideTableAdapter.Fill(this.ride_id.ride);
+            
             // TODO: This line of code loads data into the 'car_name.car' table. You can move, or remove it, as needed.
             this.carTableAdapter.Fill(this.car_name.car);
             // TODO: This line of code loads data into the 'driver_name.driver' table. You can move, or remove it, as needed.
             this.driverTableAdapter.Fill(this.driver_name.driver);
-
+            
+            con.Open();
+            string maincmd = "select max(Id) from ride";
+            SqlCommand maincmd1 = new SqlCommand(maincmd, con);
+            i = Convert.ToInt32(maincmd1.ExecuteScalar());
+            i++;
+            con.Close();
+            
 
         }
 
@@ -123,7 +132,7 @@ namespace taxii
 
         #region updateride
 
-
+        
         private void updateb_Click_1(object sender, EventArgs e)
         {
             try

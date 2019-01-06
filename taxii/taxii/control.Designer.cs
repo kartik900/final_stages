@@ -75,7 +75,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.rideselect = new System.Windows.Forms.ComboBox();
             this.rideBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ride_ID = new taxii.ride_ID();
+            this.ride_id = new taxii.ride_id();
             this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel15 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.dateshow = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -88,7 +88,7 @@
             this.cname_on_update = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.driverTableAdapter = new taxii.driver_nameTableAdapters.driverTableAdapter();
             this.carTableAdapter = new taxii.car_nameTableAdapters.carTableAdapter();
-            this.rideTableAdapter = new taxii.ride_IDTableAdapters.rideTableAdapter();
+            this.rideTableAdapter = new taxii.ride_idTableAdapters.rideTableAdapter();
             this.header.SuspendLayout();
             this.leftpanel.SuspendLayout();
             this.newridepanel.SuspendLayout();
@@ -100,7 +100,7 @@
             this.updateridepanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rideBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ride_ID)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ride_id)).BeginInit();
             this.SuspendLayout();
             // 
             // header
@@ -123,11 +123,11 @@
             this.exit.AutoSize = true;
             this.exit.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exit.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.exit.Location = new System.Drawing.Point(1099, -2);
+            this.exit.Location = new System.Drawing.Point(1029, -2);
             this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(29, 32);
+            this.exit.Size = new System.Drawing.Size(90, 32);
             this.exit.TabIndex = 7;
-            this.exit.Text = "X";
+            this.exit.Text = "Logout";
             this.exit.Click += new System.EventHandler(this.bunifuCustomLabel8_Click);
             // 
             // bunifuCustomLabel7
@@ -843,12 +843,12 @@
             // rideBindingSource
             // 
             this.rideBindingSource.DataMember = "ride";
-            this.rideBindingSource.DataSource = this.ride_ID;
+            this.rideBindingSource.DataSource = this.ride_id;
             // 
-            // ride_ID
+            // ride_id
             // 
-            this.ride_ID.DataSetName = "ride_ID";
-            this.ride_ID.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.ride_id.DataSetName = "ride_id";
+            this.ride_id.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bunifuCustomLabel8
             // 
@@ -1000,7 +1000,7 @@
             this.updateridepanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rideBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ride_ID)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ride_id)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1063,8 +1063,8 @@
         private car_name car_name;
         private System.Windows.Forms.BindingSource carBindingSource;
         private car_nameTableAdapters.carTableAdapter carTableAdapter;
-        private ride_ID ride_ID;
+        private ride_id ride_id;
         private System.Windows.Forms.BindingSource rideBindingSource;
-        private ride_IDTableAdapters.rideTableAdapter rideTableAdapter;
+        private ride_idTableAdapters.rideTableAdapter rideTableAdapter;
     }
 }
