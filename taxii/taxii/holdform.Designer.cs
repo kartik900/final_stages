@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(holdform));
             this.newridepanel = new System.Windows.Forms.Panel();
             this.clear = new Bunifu.Framework.UI.BunifuFlatButton();
             this.idlabel = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -54,25 +56,41 @@
             this.cpno = new JTextBox2.JTextBox();
             this.cname = new JTextBox2.JTextBox();
             this.updateridepanel = new System.Windows.Forms.Panel();
-            this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.rideselect = new System.Windows.Forms.ComboBox();
-            this.bunifuCustomLabel12 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel15 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel16 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel17 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel18 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel19 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel20 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel21 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel22 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.cname_on_update = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.rideselect = new taxii.rideselect();
+            this.rideBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rideTableAdapter = new taxii.rideselectTableAdapters.rideTableAdapter();
+            this.tableAdapterManager = new taxii.rideselectTableAdapters.TableAdapterManager();
+            this.rideBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.rideBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.car_name = new taxii.car_name();
+            this.carBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.carTableAdapter = new taxii.car_nameTableAdapters.carTableAdapter();
+            this.tableAdapterManager1 = new taxii.car_nameTableAdapters.TableAdapterManager();
+            this.fullcar = new taxii.fullcar();
+            this.carBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.carTableAdapter1 = new taxii.fullcarTableAdapters.carTableAdapter();
+            this.tableAdapterManager2 = new taxii.fullcarTableAdapters.TableAdapterManager();
             this.newridepanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.updateridepanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rideselect)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rideBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rideBindingNavigator)).BeginInit();
+            this.rideBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.car_name)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fullcar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // newridepanel
@@ -446,211 +464,195 @@
             // updateridepanel
             // 
             this.updateridepanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.updateridepanel.Controls.Add(this.bunifuCustomLabel10);
-            this.updateridepanel.Controls.Add(this.pictureBox2);
-            this.updateridepanel.Controls.Add(this.bunifuFlatButton1);
-            this.updateridepanel.Controls.Add(this.comboBox1);
-            this.updateridepanel.Controls.Add(this.rideselect);
-            this.updateridepanel.Controls.Add(this.bunifuCustomLabel12);
-            this.updateridepanel.Controls.Add(this.bunifuCustomLabel15);
-            this.updateridepanel.Controls.Add(this.bunifuCustomLabel16);
-            this.updateridepanel.Controls.Add(this.bunifuCustomLabel17);
-            this.updateridepanel.Controls.Add(this.bunifuCustomLabel18);
-            this.updateridepanel.Controls.Add(this.bunifuCustomLabel19);
-            this.updateridepanel.Controls.Add(this.bunifuCustomLabel20);
-            this.updateridepanel.Controls.Add(this.bunifuCustomLabel21);
-            this.updateridepanel.Controls.Add(this.bunifuCustomLabel22);
-            this.updateridepanel.Controls.Add(this.cname_on_update);
-            this.updateridepanel.Location = new System.Drawing.Point(24, 37);
+            this.updateridepanel.Location = new System.Drawing.Point(48, 49);
             this.updateridepanel.Name = "updateridepanel";
             this.updateridepanel.Size = new System.Drawing.Size(803, 705);
             this.updateridepanel.TabIndex = 7;
             // 
-            // bunifuCustomLabel10
-            // 
-            this.bunifuCustomLabel10.AutoSize = true;
-            this.bunifuCustomLabel10.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel10.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bunifuCustomLabel10.Location = new System.Drawing.Point(305, 635);
-            this.bunifuCustomLabel10.Name = "bunifuCustomLabel10";
-            this.bunifuCustomLabel10.Size = new System.Drawing.Size(35, 32);
-            this.bunifuCustomLabel10.TabIndex = 7;
-            this.bunifuCustomLabel10.Text = "--";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(531, 425);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(228, 233);
-            this.pictureBox2.TabIndex = 11;
-            this.pictureBox2.TabStop = false;
-            // 
-            // bunifuFlatButton1
-            // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "CREATE TRIP";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = null;
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 90D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(55, 635);
-            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(217, 44);
-            this.bunifuFlatButton1.TabIndex = 10;
-            this.bunifuFlatButton1.Text = "CREATE TRIP";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DisplayMember = "c_name";
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(452, 97);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(281, 33);
-            this.comboBox1.TabIndex = 9;
-            this.comboBox1.ValueMember = "Id";
-            // 
             // rideselect
             // 
-            this.rideselect.DisplayMember = "Id";
-            this.rideselect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rideselect.FormattingEnabled = true;
-            this.rideselect.Location = new System.Drawing.Point(112, 97);
-            this.rideselect.Name = "rideselect";
-            this.rideselect.Size = new System.Drawing.Size(281, 33);
-            this.rideselect.TabIndex = 9;
-            this.rideselect.ValueMember = "Id";
+            this.rideselect.DataSetName = "rideselect";
+            this.rideselect.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // bunifuCustomLabel12
+            // rideBindingSource
             // 
-            this.bunifuCustomLabel12.AutoSize = true;
-            this.bunifuCustomLabel12.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel12.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bunifuCustomLabel12.Location = new System.Drawing.Point(444, 48);
-            this.bunifuCustomLabel12.Name = "bunifuCustomLabel12";
-            this.bunifuCustomLabel12.Size = new System.Drawing.Size(121, 32);
-            this.bunifuCustomLabel12.TabIndex = 6;
-            this.bunifuCustomLabel12.Text = "Select Car";
+            this.rideBindingSource.DataMember = "ride";
+            this.rideBindingSource.DataSource = this.rideselect;
             // 
-            // bunifuCustomLabel15
+            // rideTableAdapter
             // 
-            this.bunifuCustomLabel15.AutoSize = true;
-            this.bunifuCustomLabel15.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel15.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bunifuCustomLabel15.Location = new System.Drawing.Point(106, 48);
-            this.bunifuCustomLabel15.Name = "bunifuCustomLabel15";
-            this.bunifuCustomLabel15.Size = new System.Drawing.Size(127, 32);
-            this.bunifuCustomLabel15.TabIndex = 6;
-            this.bunifuCustomLabel15.Text = "Select ride";
+            this.rideTableAdapter.ClearBeforeFill = true;
             // 
-            // bunifuCustomLabel16
+            // tableAdapterManager
             // 
-            this.bunifuCustomLabel16.AutoSize = true;
-            this.bunifuCustomLabel16.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel16.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bunifuCustomLabel16.Location = new System.Drawing.Point(362, 311);
-            this.bunifuCustomLabel16.Name = "bunifuCustomLabel16";
-            this.bunifuCustomLabel16.Size = new System.Drawing.Size(35, 32);
-            this.bunifuCustomLabel16.TabIndex = 6;
-            this.bunifuCustomLabel16.Text = "--";
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.rideTableAdapter = this.rideTableAdapter;
+            this.tableAdapterManager.UpdateOrder = taxii.rideselectTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // bunifuCustomLabel17
+            // rideBindingNavigator
             // 
-            this.bunifuCustomLabel17.AutoSize = true;
-            this.bunifuCustomLabel17.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel17.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bunifuCustomLabel17.Location = new System.Drawing.Point(362, 217);
-            this.bunifuCustomLabel17.Name = "bunifuCustomLabel17";
-            this.bunifuCustomLabel17.Size = new System.Drawing.Size(35, 32);
-            this.bunifuCustomLabel17.TabIndex = 6;
-            this.bunifuCustomLabel17.Text = "--";
+            this.rideBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.rideBindingNavigator.BindingSource = this.rideBindingSource;
+            this.rideBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.rideBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.rideBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.rideBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.bindingNavigatorSeparator2,
+            this.bindingNavigatorAddNewItem,
+            this.bindingNavigatorDeleteItem,
+            this.rideBindingNavigatorSaveItem});
+            this.rideBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.rideBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.rideBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.rideBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.rideBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.rideBindingNavigator.Name = "rideBindingNavigator";
+            this.rideBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.rideBindingNavigator.Size = new System.Drawing.Size(1837, 27);
+            this.rideBindingNavigator.TabIndex = 8;
+            this.rideBindingNavigator.Text = "bindingNavigator1";
             // 
-            // bunifuCustomLabel18
+            // bindingNavigatorMoveFirstItem
             // 
-            this.bunifuCustomLabel18.AutoSize = true;
-            this.bunifuCustomLabel18.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel18.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bunifuCustomLabel18.Location = new System.Drawing.Point(362, 263);
-            this.bunifuCustomLabel18.Name = "bunifuCustomLabel18";
-            this.bunifuCustomLabel18.Size = new System.Drawing.Size(35, 32);
-            this.bunifuCustomLabel18.TabIndex = 6;
-            this.bunifuCustomLabel18.Text = "--";
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(24, 22);
+            this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
-            // bunifuCustomLabel19
+            // bindingNavigatorMovePreviousItem
             // 
-            this.bunifuCustomLabel19.AutoSize = true;
-            this.bunifuCustomLabel19.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel19.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bunifuCustomLabel19.Location = new System.Drawing.Point(362, 169);
-            this.bunifuCustomLabel19.Name = "bunifuCustomLabel19";
-            this.bunifuCustomLabel19.Size = new System.Drawing.Size(35, 32);
-            this.bunifuCustomLabel19.TabIndex = 6;
-            this.bunifuCustomLabel19.Text = "--";
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(24, 22);
+            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
-            // bunifuCustomLabel20
+            // bindingNavigatorSeparator
             // 
-            this.bunifuCustomLabel20.AutoSize = true;
-            this.bunifuCustomLabel20.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel20.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bunifuCustomLabel20.Location = new System.Drawing.Point(106, 311);
-            this.bunifuCustomLabel20.Name = "bunifuCustomLabel20";
-            this.bunifuCustomLabel20.Size = new System.Drawing.Size(211, 32);
-            this.bunifuCustomLabel20.TabIndex = 6;
-            this.bunifuCustomLabel20.Text = "Driver phone num";
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
             // 
-            // bunifuCustomLabel21
+            // bindingNavigatorPositionItem
             // 
-            this.bunifuCustomLabel21.AutoSize = true;
-            this.bunifuCustomLabel21.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel21.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bunifuCustomLabel21.Location = new System.Drawing.Point(106, 263);
-            this.bunifuCustomLabel21.Name = "bunifuCustomLabel21";
-            this.bunifuCustomLabel21.Size = new System.Drawing.Size(150, 32);
-            this.bunifuCustomLabel21.TabIndex = 6;
-            this.bunifuCustomLabel21.Text = "Driver Name";
+            this.bindingNavigatorPositionItem.AccessibleName = "Position";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bunifuCustomLabel22
+            // bindingNavigatorCountItem
             // 
-            this.bunifuCustomLabel22.AutoSize = true;
-            this.bunifuCustomLabel22.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel22.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bunifuCustomLabel22.Location = new System.Drawing.Point(106, 217);
-            this.bunifuCustomLabel22.Name = "bunifuCustomLabel22";
-            this.bunifuCustomLabel22.Size = new System.Drawing.Size(223, 32);
-            this.bunifuCustomLabel22.TabIndex = 6;
-            this.bunifuCustomLabel22.Text = "Customer pho num";
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 20);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
-            // cname_on_update
+            // bindingNavigatorSeparator1
             // 
-            this.cname_on_update.AutoSize = true;
-            this.cname_on_update.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cname_on_update.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.cname_on_update.Location = new System.Drawing.Point(106, 169);
-            this.cname_on_update.Name = "cname_on_update";
-            this.cname_on_update.Size = new System.Drawing.Size(189, 32);
-            this.cname_on_update.TabIndex = 6;
-            this.cname_on_update.Text = "Customer Name";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorMoveNextItem.Text = "Move next";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorMoveLastItem.Text = "Move last";
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
+            // 
+            // rideBindingNavigatorSaveItem
+            // 
+            this.rideBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.rideBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("rideBindingNavigatorSaveItem.Image")));
+            this.rideBindingNavigatorSaveItem.Name = "rideBindingNavigatorSaveItem";
+            this.rideBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.rideBindingNavigatorSaveItem.Text = "Save Data";
+            this.rideBindingNavigatorSaveItem.Click += new System.EventHandler(this.rideBindingNavigatorSaveItem_Click);
+            // 
+            // car_name
+            // 
+            this.car_name.DataSetName = "car_name";
+            this.car_name.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // carBindingSource
+            // 
+            this.carBindingSource.DataMember = "car";
+            this.carBindingSource.DataSource = this.car_name;
+            // 
+            // carTableAdapter
+            // 
+            this.carTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager1
+            // 
+            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.Connection = null;
+            this.tableAdapterManager1.UpdateOrder = taxii.car_nameTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // fullcar
+            // 
+            this.fullcar.DataSetName = "fullcar";
+            this.fullcar.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // carBindingSource1
+            // 
+            this.carBindingSource1.DataMember = "car";
+            this.carBindingSource1.DataSource = this.fullcar;
+            // 
+            // carTableAdapter1
+            // 
+            this.carTableAdapter1.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager2
+            // 
+            this.tableAdapterManager2.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager2.carTableAdapter = this.carTableAdapter1;
+            this.tableAdapterManager2.UpdateOrder = taxii.fullcarTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // holdform
             // 
@@ -658,17 +660,26 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.ClientSize = new System.Drawing.Size(1837, 1055);
+            this.Controls.Add(this.rideBindingNavigator);
             this.Controls.Add(this.updateridepanel);
             this.Controls.Add(this.newridepanel);
             this.Name = "holdform";
             this.Text = "holdform";
+            this.Load += new System.EventHandler(this.holdform_Load);
             this.newridepanel.ResumeLayout(false);
             this.newridepanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.updateridepanel.ResumeLayout(false);
-            this.updateridepanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rideselect)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rideBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rideBindingNavigator)).EndInit();
+            this.rideBindingNavigator.ResumeLayout(false);
+            this.rideBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.car_name)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fullcar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carBindingSource1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -699,20 +710,30 @@
         private JTextBox2.JTextBox cpno;
         private JTextBox2.JTextBox cname;
         private System.Windows.Forms.Panel updateridepanel;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel10;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox rideselect;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel12;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel15;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel16;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel17;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel18;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel19;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel20;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel21;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel22;
-        private Bunifu.Framework.UI.BunifuCustomLabel cname_on_update;
+        private rideselect rideselect;
+        private System.Windows.Forms.BindingSource rideBindingSource;
+        private rideselectTableAdapters.rideTableAdapter rideTableAdapter;
+        private rideselectTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.BindingNavigator rideBindingNavigator;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
+        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
+        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        private System.Windows.Forms.ToolStripButton rideBindingNavigatorSaveItem;
+        private car_name car_name;
+        private System.Windows.Forms.BindingSource carBindingSource;
+        private car_nameTableAdapters.carTableAdapter carTableAdapter;
+        private car_nameTableAdapters.TableAdapterManager tableAdapterManager1;
+        private fullcar fullcar;
+        private System.Windows.Forms.BindingSource carBindingSource1;
+        private fullcarTableAdapters.carTableAdapter carTableAdapter1;
+        private fullcarTableAdapters.TableAdapterManager tableAdapterManager2;
     }
 }

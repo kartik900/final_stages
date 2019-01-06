@@ -66,6 +66,12 @@ namespace taxii
         //data stufff
         private void control_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'rentalDataSet.ride' table. You can move, or remove it, as needed.
+            this.rideTableAdapter1.Fill(this.rentalDataSet.ride);
+            // TODO: This line of code loads data into the 'fulldriver.driver' table. You can move, or remove it, as needed.
+            this.driverTableAdapter1.Fill(this.fulldriver.driver);
+            // TODO: This line of code loads data into the 'fullcar.car' table. You can move, or remove it, as needed.
+            this.carTableAdapter1.Fill(this.fullcar.car);
             // TODO: This line of code loads data into the 'ride_id.ride' table. You can move, or remove it, as needed.
             this.rideTableAdapter.Fill(this.ride_id.ride);
             
@@ -101,6 +107,7 @@ namespace taxii
         private void updaterideb_Click(object sender, EventArgs e)
         {
             driverpanel.Hide();
+            infopanel.Hide();
 
             newridepanel.Hide();
             updateridepanel.Show();
@@ -110,7 +117,7 @@ namespace taxii
         private void newrideb_Click(object sender, EventArgs e)
         {
             driverpanel.Hide();
-            //infopanel.Hide();
+            infopanel.Hide();
 
             updateridepanel.Hide();
             newridepanel.Show();
@@ -120,7 +127,8 @@ namespace taxii
         }
         private void driversb_Click(object sender, EventArgs e)
         {
-            //infopanel.Hide();
+            
+            infopanel.Hide();
 
             updateridepanel.Hide();
             newridepanel.Hide();
@@ -134,7 +142,7 @@ namespace taxii
             updateridepanel.Hide();
             newridepanel.Hide();
             driverpanel.Hide();
-            //infopanel.Hide();
+            infopanel.Hide();
 
         }
 
@@ -143,7 +151,7 @@ namespace taxii
             updateridepanel.Hide();
             newridepanel.Hide();
             driverpanel.Hide();
-            //infopanel.Show();
+            infopanel.Show();
 
         }
         #endregion
@@ -170,7 +178,7 @@ namespace taxii
         {
             
 
-            if (rideselect.Text != null)
+            try
             {
                 int y = Convert.ToInt32(rideselect.Text);
                 con.Open();
@@ -198,6 +206,7 @@ namespace taxii
 
                 con.Close();
             }
+            catch (FormatException) { }
         }
        
 

@@ -107,6 +107,41 @@
             this.bunifuCustomLabel19 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel23 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel24 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.infopanel = new System.Windows.Forms.Panel();
+            this.fullcar = new taxii.fullcar();
+            this.carBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.carTableAdapter1 = new taxii.fullcarTableAdapters.carTableAdapter();
+            this.tableAdapterManager = new taxii.fullcarTableAdapters.TableAdapterManager();
+            this.carDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fulldriver = new taxii.fulldriver();
+            this.driverBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.driverTableAdapter1 = new taxii.fulldriverTableAdapters.driverTableAdapter();
+            this.tableAdapterManager1 = new taxii.fulldriverTableAdapters.TableAdapterManager();
+            this.driverDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.rentalDataSet = new taxii.rentalDataSet();
+            this.rideBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.rideTableAdapter1 = new taxii.rentalDataSetTableAdapters.rideTableAdapter();
+            this.tableAdapterManager2 = new taxii.rentalDataSetTableAdapters.TableAdapterManager();
+            this.rideDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bunifuCustomLabel25 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel26 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel27 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.header.SuspendLayout();
             this.leftpanel.SuspendLayout();
             this.newridepanel.SuspendLayout();
@@ -120,6 +155,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.ride_id)).BeginInit();
             this.driverpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.infopanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fullcar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fulldriver)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.driverBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.driverDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rentalDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rideBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rideDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // header
@@ -170,7 +215,7 @@
             this.leftpanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.leftpanel.Location = new System.Drawing.Point(0, 28);
             this.leftpanel.Name = "leftpanel";
-            this.leftpanel.Size = new System.Drawing.Size(320, 718);
+            this.leftpanel.Size = new System.Drawing.Size(320, 787);
             this.leftpanel.TabIndex = 0;
             // 
             // infob
@@ -985,6 +1030,7 @@
             // driverpanel
             // 
             this.driverpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.driverpanel.Controls.Add(this.infopanel);
             this.driverpanel.Controls.Add(this.cleardriverpanel);
             this.driverpanel.Controls.Add(this.phno);
             this.driverpanel.Controls.Add(this.address);
@@ -1005,7 +1051,7 @@
             this.driverpanel.Controls.Add(this.bunifuCustomLabel24);
             this.driverpanel.Location = new System.Drawing.Point(326, 28);
             this.driverpanel.Name = "driverpanel";
-            this.driverpanel.Size = new System.Drawing.Size(799, 697);
+            this.driverpanel.Size = new System.Drawing.Size(799, 787);
             this.driverpanel.TabIndex = 10;
             // 
             // cleardriverpanel
@@ -1304,17 +1350,275 @@
             this.bunifuCustomLabel24.TabIndex = 6;
             this.bunifuCustomLabel24.Text = "Driver Name";
             // 
+            // infopanel
+            // 
+            this.infopanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.infopanel.Controls.Add(this.bunifuCustomLabel27);
+            this.infopanel.Controls.Add(this.bunifuCustomLabel26);
+            this.infopanel.Controls.Add(this.bunifuCustomLabel25);
+            this.infopanel.Controls.Add(this.rideDataGridView);
+            this.infopanel.Controls.Add(this.driverDataGridView);
+            this.infopanel.Controls.Add(this.carDataGridView);
+            this.infopanel.Location = new System.Drawing.Point(16, 6);
+            this.infopanel.Name = "infopanel";
+            this.infopanel.Size = new System.Drawing.Size(783, 781);
+            this.infopanel.TabIndex = 11;
+            // 
+            // fullcar
+            // 
+            this.fullcar.DataSetName = "fullcar";
+            this.fullcar.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // carBindingSource1
+            // 
+            this.carBindingSource1.DataMember = "car";
+            this.carBindingSource1.DataSource = this.fullcar;
+            // 
+            // carTableAdapter1
+            // 
+            this.carTableAdapter1.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.carTableAdapter = this.carTableAdapter1;
+            this.tableAdapterManager.UpdateOrder = taxii.fullcarTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // carDataGridView
+            // 
+            this.carDataGridView.AutoGenerateColumns = false;
+            this.carDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.carDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5});
+            this.carDataGridView.DataSource = this.carBindingSource1;
+            this.carDataGridView.Location = new System.Drawing.Point(226, 16);
+            this.carDataGridView.Name = "carDataGridView";
+            this.carDataGridView.RowTemplate.Height = 24;
+            this.carDataGridView.Size = new System.Drawing.Size(538, 178);
+            this.carDataGridView.TabIndex = 0;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "c_plate";
+            this.dataGridViewTextBoxColumn2.HeaderText = "c_plate";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "c_name";
+            this.dataGridViewTextBoxColumn3.HeaderText = "c_name";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "c_type";
+            this.dataGridViewTextBoxColumn4.HeaderText = "c_type";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "NUM";
+            this.dataGridViewTextBoxColumn5.HeaderText = "NUM";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // fulldriver
+            // 
+            this.fulldriver.DataSetName = "fulldriver";
+            this.fulldriver.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // driverBindingSource1
+            // 
+            this.driverBindingSource1.DataMember = "driver";
+            this.driverBindingSource1.DataSource = this.fulldriver;
+            // 
+            // driverTableAdapter1
+            // 
+            this.driverTableAdapter1.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager1
+            // 
+            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.driverTableAdapter = this.driverTableAdapter1;
+            this.tableAdapterManager1.UpdateOrder = taxii.fulldriverTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // driverDataGridView
+            // 
+            this.driverDataGridView.AutoGenerateColumns = false;
+            this.driverDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.driverDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewImageColumn1});
+            this.driverDataGridView.DataSource = this.driverBindingSource1;
+            this.driverDataGridView.Location = new System.Drawing.Point(221, 236);
+            this.driverDataGridView.Name = "driverDataGridView";
+            this.driverDataGridView.RowTemplate.Height = 24;
+            this.driverDataGridView.Size = new System.Drawing.Size(543, 220);
+            this.driverDataGridView.TabIndex = 1;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "d_name";
+            this.dataGridViewTextBoxColumn7.HeaderText = "d_name";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "d_pno";
+            this.dataGridViewTextBoxColumn8.HeaderText = "d_pno";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "d_address";
+            this.dataGridViewTextBoxColumn9.HeaderText = "d_address";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.DataPropertyName = "image";
+            this.dataGridViewImageColumn1.HeaderText = "image";
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            // 
+            // rentalDataSet
+            // 
+            this.rentalDataSet.DataSetName = "rentalDataSet";
+            this.rentalDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // rideBindingSource1
+            // 
+            this.rideBindingSource1.DataMember = "ride";
+            this.rideBindingSource1.DataSource = this.rentalDataSet;
+            // 
+            // rideTableAdapter1
+            // 
+            this.rideTableAdapter1.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager2
+            // 
+            this.tableAdapterManager2.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager2.rideTableAdapter = this.rideTableAdapter1;
+            this.tableAdapterManager2.UpdateOrder = taxii.rentalDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // rideDataGridView
+            // 
+            this.rideDataGridView.AutoGenerateColumns = false;
+            this.rideDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.rideDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15});
+            this.rideDataGridView.DataSource = this.rideBindingSource1;
+            this.rideDataGridView.Location = new System.Drawing.Point(221, 494);
+            this.rideDataGridView.Name = "rideDataGridView";
+            this.rideDataGridView.RowTemplate.Height = 24;
+            this.rideDataGridView.Size = new System.Drawing.Size(543, 220);
+            this.rideDataGridView.TabIndex = 2;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "main";
+            this.dataGridViewTextBoxColumn10.HeaderText = "main";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "c_name";
+            this.dataGridViewTextBoxColumn12.HeaderText = "c_name";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "d_name";
+            this.dataGridViewTextBoxColumn13.HeaderText = "d_name";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "car";
+            this.dataGridViewTextBoxColumn14.HeaderText = "car";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "date";
+            this.dataGridViewTextBoxColumn15.HeaderText = "date";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            // 
+            // bunifuCustomLabel25
+            // 
+            this.bunifuCustomLabel25.AutoSize = true;
+            this.bunifuCustomLabel25.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel25.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.bunifuCustomLabel25.Location = new System.Drawing.Point(34, 106);
+            this.bunifuCustomLabel25.Name = "bunifuCustomLabel25";
+            this.bunifuCustomLabel25.Size = new System.Drawing.Size(130, 32);
+            this.bunifuCustomLabel25.TabIndex = 7;
+            this.bunifuCustomLabel25.Text = "CAR TABLE";
+            // 
+            // bunifuCustomLabel26
+            // 
+            this.bunifuCustomLabel26.AutoSize = true;
+            this.bunifuCustomLabel26.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel26.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.bunifuCustomLabel26.Location = new System.Drawing.Point(34, 343);
+            this.bunifuCustomLabel26.Name = "bunifuCustomLabel26";
+            this.bunifuCustomLabel26.Size = new System.Drawing.Size(164, 32);
+            this.bunifuCustomLabel26.TabIndex = 8;
+            this.bunifuCustomLabel26.Text = "DRIVER TABLE";
+            // 
+            // bunifuCustomLabel27
+            // 
+            this.bunifuCustomLabel27.AutoSize = true;
+            this.bunifuCustomLabel27.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel27.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.bunifuCustomLabel27.Location = new System.Drawing.Point(34, 600);
+            this.bunifuCustomLabel27.Name = "bunifuCustomLabel27";
+            this.bunifuCustomLabel27.Size = new System.Drawing.Size(135, 32);
+            this.bunifuCustomLabel27.TabIndex = 9;
+            this.bunifuCustomLabel27.Text = "RIDE TABLE";
+            // 
             // control
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.ClientSize = new System.Drawing.Size(1132, 746);
+            this.ClientSize = new System.Drawing.Size(1132, 815);
             this.Controls.Add(this.leftpanel);
             this.Controls.Add(this.header);
-            this.Controls.Add(this.newridepanel);
             this.Controls.Add(this.driverpanel);
             this.Controls.Add(this.updateridepanel);
+            this.Controls.Add(this.newridepanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "control";
             this.Text = "control";
@@ -1336,6 +1640,17 @@
             this.driverpanel.ResumeLayout(false);
             this.driverpanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.infopanel.ResumeLayout(false);
+            this.infopanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fullcar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fulldriver)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.driverBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.driverDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rentalDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rideBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rideDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1419,5 +1734,40 @@
         private JTextBox2.JTextBox address;
         private JTextBox2.JTextBox name;
         private Bunifu.Framework.UI.BunifuFlatButton cleardriverpanel;
+        private System.Windows.Forms.Panel infopanel;
+        private fullcar fullcar;
+        private System.Windows.Forms.BindingSource carBindingSource1;
+        private fullcarTableAdapters.carTableAdapter carTableAdapter1;
+        private fullcarTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.DataGridView carDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private fulldriver fulldriver;
+        private System.Windows.Forms.BindingSource driverBindingSource1;
+        private fulldriverTableAdapters.driverTableAdapter driverTableAdapter1;
+        private fulldriverTableAdapters.TableAdapterManager tableAdapterManager1;
+        private System.Windows.Forms.DataGridView driverDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private rentalDataSet rentalDataSet;
+        private System.Windows.Forms.BindingSource rideBindingSource1;
+        private rentalDataSetTableAdapters.rideTableAdapter rideTableAdapter1;
+        private rentalDataSetTableAdapters.TableAdapterManager tableAdapterManager2;
+        private System.Windows.Forms.DataGridView rideDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel27;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel26;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel25;
     }
 }
