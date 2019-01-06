@@ -58,12 +58,18 @@ namespace taxii
         private void view_Click(object sender, EventArgs e)
         {
             SqlDataReader r;
-            string n = name.Text;
+            string n =search.Text;
             string cmd2="select image from driver where name ='"+n+"";
             SqlCommand c10 = new SqlCommand(cmd2, con);
-            DataTable t = new DataTable();
-           // byte[] imgg=(byte[])(r[i])
-
+            SqlDataAdapter da1 = new SqlDataAdapter(c10);
+            SqlCommandBuilder cb = new SqlCommandBuilder(da1);
+            DataSet ds = new DataSet();
+            da1.Fill(ds);
+            byte[] ap = (byte[])(ds.Tables[0].Rows[0]["image"]);
+            MemoryStream ms = new MemoryStream(ap);
+            pictureBox2.Image = Image.FromStream(ms);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            
         }
        
     }

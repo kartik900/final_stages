@@ -1,6 +1,6 @@
 ﻿namespace taxii
 {
-    partial class control
+    partial class holdform
     {
         /// <summary>
         /// Required designer variable.
@@ -28,29 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(control));
-            this.header = new System.Windows.Forms.Panel();
-            this.exit = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.carBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.select_ride = new taxii.select_ride();
-            this.leftpanel = new System.Windows.Forms.Panel();
-            this.infob = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.driversb = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.updaterideb = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.homeb = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.newrideb = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.rideBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.rideselect_control = new taxii.rideselect_control();
-            this.carBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.carselect_dataset = new taxii.carselect_dataset();
-            this.driverBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.drivername_dataset = new taxii.drivername_dataset();
-            this.driverTableAdapter = new taxii.drivername_datasetTableAdapters.driverTableAdapter();
-            this.carTableAdapter = new taxii.carselect_datasetTableAdapters.carTableAdapter();
-            this.rideTableAdapter = new taxii.rideselect_controlTableAdapters.rideTableAdapter();
-            this.carTableAdapter1 = new taxii.select_rideTableAdapters.carTableAdapter();
             this.newridepanel = new System.Windows.Forms.Panel();
             this.clear = new Bunifu.Framework.UI.BunifuFlatButton();
             this.idlabel = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -80,7 +57,9 @@
             this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.rideselect = new System.Windows.Forms.ComboBox();
+            this.bunifuCustomLabel12 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel15 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel16 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel17 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -90,313 +69,11 @@
             this.bunifuCustomLabel21 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel22 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.cname_on_update = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.rideid = new taxii.rideid();
-            this.rideBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.rideTableAdapter1 = new taxii.rideidTableAdapters.rideTableAdapter();
-            this.header.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.carBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.select_ride)).BeginInit();
-            this.leftpanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rideBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rideselect_control)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.carBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.carselect_dataset)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.driverBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.drivername_dataset)).BeginInit();
             this.newridepanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.updateridepanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rideid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rideBindingSource1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // header
-            // 
-            this.header.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.header.Controls.Add(this.exit);
-            this.header.Controls.Add(this.bunifuCustomLabel7);
-            this.header.Dock = System.Windows.Forms.DockStyle.Top;
-            this.header.Location = new System.Drawing.Point(0, 0);
-            this.header.Name = "header";
-            this.header.Size = new System.Drawing.Size(1132, 28);
-            this.header.TabIndex = 0;
-            this.header.Paint += new System.Windows.Forms.PaintEventHandler(this.header_Paint);
-            this.header.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelHeader_MouseDown);
-            this.header.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelHeader_MouseMove);
-            this.header.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelHeader_MouseUp);
-            // 
-            // exit
-            // 
-            this.exit.AutoSize = true;
-            this.exit.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exit.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.exit.Location = new System.Drawing.Point(1099, -2);
-            this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(29, 32);
-            this.exit.TabIndex = 7;
-            this.exit.Text = "X";
-            this.exit.Click += new System.EventHandler(this.bunifuCustomLabel8_Click);
-            // 
-            // bunifuCustomLabel7
-            // 
-            this.bunifuCustomLabel7.AutoSize = true;
-            this.bunifuCustomLabel7.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel7.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bunifuCustomLabel7.Location = new System.Drawing.Point(470, -3);
-            this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
-            this.bunifuCustomLabel7.Size = new System.Drawing.Size(195, 32);
-            this.bunifuCustomLabel7.TabIndex = 6;
-            this.bunifuCustomLabel7.Text = "- CAR RENTALS -";
-            // 
-            // carBindingSource1
-            // 
-            this.carBindingSource1.DataMember = "car";
-            this.carBindingSource1.DataSource = this.select_ride;
-            // 
-            // select_ride
-            // 
-            this.select_ride.DataSetName = "select_ride";
-            this.select_ride.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // leftpanel
-            // 
-            this.leftpanel.Controls.Add(this.infob);
-            this.leftpanel.Controls.Add(this.driversb);
-            this.leftpanel.Controls.Add(this.updaterideb);
-            this.leftpanel.Controls.Add(this.homeb);
-            this.leftpanel.Controls.Add(this.newrideb);
-            this.leftpanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.leftpanel.Location = new System.Drawing.Point(0, 28);
-            this.leftpanel.Name = "leftpanel";
-            this.leftpanel.Size = new System.Drawing.Size(320, 718);
-            this.leftpanel.TabIndex = 0;
-            // 
-            // infob
-            // 
-            this.infob.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.infob.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.infob.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.infob.BorderRadius = 0;
-            this.infob.ButtonText = "INFO";
-            this.infob.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.infob.DisabledColor = System.Drawing.Color.Gray;
-            this.infob.Iconcolor = System.Drawing.Color.Transparent;
-            this.infob.Iconimage = ((System.Drawing.Image)(resources.GetObject("infob.Iconimage")));
-            this.infob.Iconimage_right = null;
-            this.infob.Iconimage_right_Selected = null;
-            this.infob.Iconimage_Selected = null;
-            this.infob.IconMarginLeft = 0;
-            this.infob.IconMarginRight = 0;
-            this.infob.IconRightVisible = true;
-            this.infob.IconRightZoom = 0D;
-            this.infob.IconVisible = true;
-            this.infob.IconZoom = 90D;
-            this.infob.IsTab = false;
-            this.infob.Location = new System.Drawing.Point(0, 573);
-            this.infob.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.infob.Name = "infob";
-            this.infob.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.infob.OnHovercolor = System.Drawing.Color.Teal;
-            this.infob.OnHoverTextColor = System.Drawing.Color.White;
-            this.infob.selected = false;
-            this.infob.Size = new System.Drawing.Size(320, 138);
-            this.infob.TabIndex = 0;
-            this.infob.Text = "INFO";
-            this.infob.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.infob.Textcolor = System.Drawing.Color.White;
-            this.infob.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.infob.Click += new System.EventHandler(this.infob_Click);
-            // 
-            // driversb
-            // 
-            this.driversb.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.driversb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.driversb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.driversb.BorderRadius = 0;
-            this.driversb.ButtonText = "DRIVERS";
-            this.driversb.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.driversb.DisabledColor = System.Drawing.Color.Gray;
-            this.driversb.Iconcolor = System.Drawing.Color.Transparent;
-            this.driversb.Iconimage = ((System.Drawing.Image)(resources.GetObject("driversb.Iconimage")));
-            this.driversb.Iconimage_right = null;
-            this.driversb.Iconimage_right_Selected = null;
-            this.driversb.Iconimage_Selected = null;
-            this.driversb.IconMarginLeft = 0;
-            this.driversb.IconMarginRight = 0;
-            this.driversb.IconRightVisible = true;
-            this.driversb.IconRightZoom = 0D;
-            this.driversb.IconVisible = true;
-            this.driversb.IconZoom = 90D;
-            this.driversb.IsTab = false;
-            this.driversb.Location = new System.Drawing.Point(0, 431);
-            this.driversb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.driversb.Name = "driversb";
-            this.driversb.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.driversb.OnHovercolor = System.Drawing.Color.Teal;
-            this.driversb.OnHoverTextColor = System.Drawing.Color.White;
-            this.driversb.selected = false;
-            this.driversb.Size = new System.Drawing.Size(320, 138);
-            this.driversb.TabIndex = 0;
-            this.driversb.Text = "DRIVERS";
-            this.driversb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.driversb.Textcolor = System.Drawing.Color.White;
-            this.driversb.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.driversb.Click += new System.EventHandler(this.driversb_Click);
-            // 
-            // updaterideb
-            // 
-            this.updaterideb.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.updaterideb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.updaterideb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.updaterideb.BorderRadius = 0;
-            this.updaterideb.ButtonText = "         UPDATE TRIP";
-            this.updaterideb.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.updaterideb.DisabledColor = System.Drawing.Color.Gray;
-            this.updaterideb.Iconcolor = System.Drawing.Color.Transparent;
-            this.updaterideb.Iconimage = ((System.Drawing.Image)(resources.GetObject("updaterideb.Iconimage")));
-            this.updaterideb.Iconimage_right = null;
-            this.updaterideb.Iconimage_right_Selected = null;
-            this.updaterideb.Iconimage_Selected = null;
-            this.updaterideb.IconMarginLeft = 0;
-            this.updaterideb.IconMarginRight = 0;
-            this.updaterideb.IconRightVisible = true;
-            this.updaterideb.IconRightZoom = 0D;
-            this.updaterideb.IconVisible = true;
-            this.updaterideb.IconZoom = 90D;
-            this.updaterideb.IsTab = false;
-            this.updaterideb.Location = new System.Drawing.Point(-1, 289);
-            this.updaterideb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.updaterideb.Name = "updaterideb";
-            this.updaterideb.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.updaterideb.OnHovercolor = System.Drawing.Color.Teal;
-            this.updaterideb.OnHoverTextColor = System.Drawing.Color.White;
-            this.updaterideb.selected = false;
-            this.updaterideb.Size = new System.Drawing.Size(320, 138);
-            this.updaterideb.TabIndex = 0;
-            this.updaterideb.Text = "         UPDATE TRIP";
-            this.updaterideb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.updaterideb.Textcolor = System.Drawing.Color.White;
-            this.updaterideb.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updaterideb.Click += new System.EventHandler(this.updaterideb_Click);
-            // 
-            // homeb
-            // 
-            this.homeb.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.homeb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.homeb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.homeb.BorderRadius = 0;
-            this.homeb.ButtonText = "HOME";
-            this.homeb.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.homeb.DisabledColor = System.Drawing.Color.Gray;
-            this.homeb.Iconcolor = System.Drawing.Color.Transparent;
-            this.homeb.Iconimage = ((System.Drawing.Image)(resources.GetObject("homeb.Iconimage")));
-            this.homeb.Iconimage_right = null;
-            this.homeb.Iconimage_right_Selected = null;
-            this.homeb.Iconimage_Selected = null;
-            this.homeb.IconMarginLeft = 0;
-            this.homeb.IconMarginRight = 0;
-            this.homeb.IconRightVisible = true;
-            this.homeb.IconRightZoom = 0D;
-            this.homeb.IconVisible = true;
-            this.homeb.IconZoom = 90D;
-            this.homeb.IsTab = false;
-            this.homeb.Location = new System.Drawing.Point(0, 6);
-            this.homeb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.homeb.Name = "homeb";
-            this.homeb.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.homeb.OnHovercolor = System.Drawing.Color.Teal;
-            this.homeb.OnHoverTextColor = System.Drawing.Color.White;
-            this.homeb.selected = false;
-            this.homeb.Size = new System.Drawing.Size(320, 138);
-            this.homeb.TabIndex = 0;
-            this.homeb.Text = "HOME";
-            this.homeb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.homeb.Textcolor = System.Drawing.Color.White;
-            this.homeb.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.homeb.Click += new System.EventHandler(this.newrideb_Click);
-            // 
-            // newrideb
-            // 
-            this.newrideb.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.newrideb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.newrideb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.newrideb.BorderRadius = 0;
-            this.newrideb.ButtonText = "ADD TRIP";
-            this.newrideb.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.newrideb.DisabledColor = System.Drawing.Color.Gray;
-            this.newrideb.Iconcolor = System.Drawing.Color.Transparent;
-            this.newrideb.Iconimage = ((System.Drawing.Image)(resources.GetObject("newrideb.Iconimage")));
-            this.newrideb.Iconimage_right = null;
-            this.newrideb.Iconimage_right_Selected = null;
-            this.newrideb.Iconimage_Selected = null;
-            this.newrideb.IconMarginLeft = 0;
-            this.newrideb.IconMarginRight = 0;
-            this.newrideb.IconRightVisible = true;
-            this.newrideb.IconRightZoom = 0D;
-            this.newrideb.IconVisible = true;
-            this.newrideb.IconZoom = 90D;
-            this.newrideb.IsTab = false;
-            this.newrideb.Location = new System.Drawing.Point(-1, 147);
-            this.newrideb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.newrideb.Name = "newrideb";
-            this.newrideb.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.newrideb.OnHovercolor = System.Drawing.Color.Teal;
-            this.newrideb.OnHoverTextColor = System.Drawing.Color.White;
-            this.newrideb.selected = false;
-            this.newrideb.Size = new System.Drawing.Size(320, 138);
-            this.newrideb.TabIndex = 0;
-            this.newrideb.Text = "ADD TRIP";
-            this.newrideb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.newrideb.Textcolor = System.Drawing.Color.White;
-            this.newrideb.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newrideb.Click += new System.EventHandler(this.newrideb_Click);
-            // 
-            // rideBindingSource
-            // 
-            this.rideBindingSource.DataMember = "ride";
-            this.rideBindingSource.DataSource = this.rideselect_control;
-            // 
-            // rideselect_control
-            // 
-            this.rideselect_control.DataSetName = "rideselect_control";
-            this.rideselect_control.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // carBindingSource
-            // 
-            this.carBindingSource.DataMember = "car";
-            this.carBindingSource.DataSource = this.carselect_dataset;
-            // 
-            // carselect_dataset
-            // 
-            this.carselect_dataset.DataSetName = "carselect_dataset";
-            this.carselect_dataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // driverBindingSource
-            // 
-            this.driverBindingSource.DataMember = "driver";
-            this.driverBindingSource.DataSource = this.drivername_dataset;
-            // 
-            // drivername_dataset
-            // 
-            this.drivername_dataset.DataSetName = "drivername_dataset";
-            this.drivername_dataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // driverTableAdapter
-            // 
-            this.driverTableAdapter.ClearBeforeFill = true;
-            // 
-            // carTableAdapter
-            // 
-            this.carTableAdapter.ClearBeforeFill = true;
-            // 
-            // rideTableAdapter
-            // 
-            this.rideTableAdapter.ClearBeforeFill = true;
-            // 
-            // carTableAdapter1
-            // 
-            this.carTableAdapter1.ClearBeforeFill = true;
             // 
             // newridepanel
             // 
@@ -425,10 +102,10 @@
             this.newridepanel.Controls.Add(this.caddress);
             this.newridepanel.Controls.Add(this.cpno);
             this.newridepanel.Controls.Add(this.cname);
-            this.newridepanel.Location = new System.Drawing.Point(325, 34);
+            this.newridepanel.Location = new System.Drawing.Point(857, 37);
             this.newridepanel.Name = "newridepanel";
             this.newridepanel.Size = new System.Drawing.Size(803, 705);
-            this.newridepanel.TabIndex = 7;
+            this.newridepanel.TabIndex = 6;
             // 
             // clear
             // 
@@ -464,7 +141,6 @@
             this.clear.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.clear.Textcolor = System.Drawing.Color.White;
             this.clear.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clear.Click += new System.EventHandler(this.clear_Click_1);
             // 
             // idlabel
             // 
@@ -519,7 +195,6 @@
             this.okay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.okay.Textcolor = System.Drawing.Color.White;
             this.okay.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.okay.Click += new System.EventHandler(this.okay_Click_1);
             // 
             // carsel
             // 
@@ -531,7 +206,6 @@
             this.carsel.Size = new System.Drawing.Size(281, 33);
             this.carsel.TabIndex = 9;
             this.carsel.ValueMember = "Id";
-            this.carsel.Click += new System.EventHandler(this.Refresh);
             // 
             // driversel
             // 
@@ -543,8 +217,6 @@
             this.driversel.Size = new System.Drawing.Size(281, 33);
             this.driversel.TabIndex = 9;
             this.driversel.ValueMember = "Id";
-            this.driversel.SelectedIndexChanged += new System.EventHandler(this.driversel_SelectedIndexChanged_1);
-            this.driversel.Click += new System.EventHandler(this.Refresh);
             // 
             // datepick
             // 
@@ -559,7 +231,6 @@
             this.datepick.Size = new System.Drawing.Size(283, 38);
             this.datepick.TabIndex = 8;
             this.datepick.Value = new System.DateTime(2019, 1, 5, 20, 47, 4, 125);
-            this.datepick.Click += new System.EventHandler(this.Refresh);
             // 
             // bunifuCustomLabel4
             // 
@@ -733,7 +404,6 @@
             this.caddress.TabIndex = 0;
             this.caddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.caddress.TextName = "";
-            this.caddress.Click += new System.EventHandler(this.Refresh);
             // 
             // cpno
             // 
@@ -753,7 +423,6 @@
             this.cpno.TabIndex = 0;
             this.cpno.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.cpno.TextName = "";
-            this.cpno.Click += new System.EventHandler(this.Refresh);
             // 
             // cname
             // 
@@ -773,7 +442,6 @@
             this.cname.TabIndex = 0;
             this.cname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.cname.TextName = "";
-            this.cname.Click += new System.EventHandler(this.Refresh);
             // 
             // updateridepanel
             // 
@@ -781,7 +449,9 @@
             this.updateridepanel.Controls.Add(this.bunifuCustomLabel10);
             this.updateridepanel.Controls.Add(this.pictureBox2);
             this.updateridepanel.Controls.Add(this.bunifuFlatButton1);
+            this.updateridepanel.Controls.Add(this.comboBox1);
             this.updateridepanel.Controls.Add(this.rideselect);
+            this.updateridepanel.Controls.Add(this.bunifuCustomLabel12);
             this.updateridepanel.Controls.Add(this.bunifuCustomLabel15);
             this.updateridepanel.Controls.Add(this.bunifuCustomLabel16);
             this.updateridepanel.Controls.Add(this.bunifuCustomLabel17);
@@ -791,10 +461,10 @@
             this.updateridepanel.Controls.Add(this.bunifuCustomLabel21);
             this.updateridepanel.Controls.Add(this.bunifuCustomLabel22);
             this.updateridepanel.Controls.Add(this.cname_on_update);
-            this.updateridepanel.Location = new System.Drawing.Point(325, 37);
+            this.updateridepanel.Location = new System.Drawing.Point(24, 37);
             this.updateridepanel.Name = "updateridepanel";
             this.updateridepanel.Size = new System.Drawing.Size(803, 705);
-            this.updateridepanel.TabIndex = 8;
+            this.updateridepanel.TabIndex = 7;
             // 
             // bunifuCustomLabel10
             // 
@@ -850,9 +520,19 @@
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DisplayMember = "c_name";
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(452, 97);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(281, 33);
+            this.comboBox1.TabIndex = 9;
+            this.comboBox1.ValueMember = "Id";
+            // 
             // rideselect
             // 
-            this.rideselect.DataSource = this.rideBindingSource1;
             this.rideselect.DisplayMember = "Id";
             this.rideselect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rideselect.FormattingEnabled = true;
@@ -860,7 +540,18 @@
             this.rideselect.Name = "rideselect";
             this.rideselect.Size = new System.Drawing.Size(281, 33);
             this.rideselect.TabIndex = 9;
-            this.rideselect.SelectedIndexChanged += new System.EventHandler(this.rideselect_SelectedIndexChanged_1);
+            this.rideselect.ValueMember = "Id";
+            // 
+            // bunifuCustomLabel12
+            // 
+            this.bunifuCustomLabel12.AutoSize = true;
+            this.bunifuCustomLabel12.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel12.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.bunifuCustomLabel12.Location = new System.Drawing.Point(444, 48);
+            this.bunifuCustomLabel12.Name = "bunifuCustomLabel12";
+            this.bunifuCustomLabel12.Size = new System.Drawing.Size(121, 32);
+            this.bunifuCustomLabel12.TabIndex = 6;
+            this.bunifuCustomLabel12.Text = "Select Car";
             // 
             // bunifuCustomLabel15
             // 
@@ -869,9 +560,9 @@
             this.bunifuCustomLabel15.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.bunifuCustomLabel15.Location = new System.Drawing.Point(106, 48);
             this.bunifuCustomLabel15.Name = "bunifuCustomLabel15";
-            this.bunifuCustomLabel15.Size = new System.Drawing.Size(157, 32);
+            this.bunifuCustomLabel15.Size = new System.Drawing.Size(127, 32);
             this.bunifuCustomLabel15.TabIndex = 6;
-            this.bunifuCustomLabel15.Text = "Select ride ID";
+            this.bunifuCustomLabel15.Text = "Select ride";
             // 
             // bunifuCustomLabel16
             // 
@@ -961,80 +652,26 @@
             this.cname_on_update.TabIndex = 6;
             this.cname_on_update.Text = "Customer Name";
             // 
-            // rideid
-            // 
-            this.rideid.DataSetName = "rideid";
-            this.rideid.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // rideBindingSource1
-            // 
-            this.rideBindingSource1.DataMember = "ride";
-            this.rideBindingSource1.DataSource = this.rideid;
-            // 
-            // rideTableAdapter1
-            // 
-            this.rideTableAdapter1.ClearBeforeFill = true;
-            // 
-            // control
+            // holdform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.ClientSize = new System.Drawing.Size(1132, 746);
+            this.ClientSize = new System.Drawing.Size(1837, 1055);
             this.Controls.Add(this.updateridepanel);
             this.Controls.Add(this.newridepanel);
-            this.Controls.Add(this.leftpanel);
-            this.Controls.Add(this.header);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "control";
-            this.Text = "control";
-            this.Load += new System.EventHandler(this.control_Load);
-            this.header.ResumeLayout(false);
-            this.header.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.carBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.select_ride)).EndInit();
-            this.leftpanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.rideBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rideselect_control)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.carBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.carselect_dataset)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.driverBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.drivername_dataset)).EndInit();
+            this.Name = "holdform";
+            this.Text = "holdform";
             this.newridepanel.ResumeLayout(false);
             this.newridepanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.updateridepanel.ResumeLayout(false);
             this.updateridepanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rideid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rideBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel header;
-        private System.Windows.Forms.Panel leftpanel;
-        private Bunifu.Framework.UI.BunifuFlatButton updaterideb;
-        private Bunifu.Framework.UI.BunifuFlatButton newrideb;
-        private Bunifu.Framework.UI.BunifuFlatButton infob;
-        private Bunifu.Framework.UI.BunifuFlatButton driversb;
-        private drivername_dataset drivername_dataset;
-        private System.Windows.Forms.BindingSource driverBindingSource;
-        private drivername_datasetTableAdapters.driverTableAdapter driverTableAdapter;
-        private carselect_dataset carselect_dataset;
-        private System.Windows.Forms.BindingSource carBindingSource;
-        private carselect_datasetTableAdapters.carTableAdapter carTableAdapter;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
-        private Bunifu.Framework.UI.BunifuCustomLabel exit;
-        private rideselect_control rideselect_control;
-        private System.Windows.Forms.BindingSource rideBindingSource;
-        private rideselect_controlTableAdapters.rideTableAdapter rideTableAdapter;
-        private select_ride select_ride;
-        private System.Windows.Forms.BindingSource carBindingSource1;
-        private select_rideTableAdapters.carTableAdapter carTableAdapter1;
-        private Bunifu.Framework.UI.BunifuFlatButton homeb;
         private System.Windows.Forms.Panel newridepanel;
         private Bunifu.Framework.UI.BunifuFlatButton clear;
         private Bunifu.Framework.UI.BunifuCustomLabel idlabel;
@@ -1064,7 +701,9 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel10;
         private System.Windows.Forms.PictureBox pictureBox2;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox rideselect;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel12;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel15;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel16;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel17;
@@ -1074,8 +713,5 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel21;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel22;
         private Bunifu.Framework.UI.BunifuCustomLabel cname_on_update;
-        private rideid rideid;
-        private System.Windows.Forms.BindingSource rideBindingSource1;
-        private rideidTableAdapters.rideTableAdapter rideTableAdapter1;
     }
 }

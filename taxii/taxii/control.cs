@@ -57,8 +57,12 @@ namespace taxii
         }
         #endregion
 
+
+        //data stufff
         private void control_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'rideid.ride' table. You can move, or remove it, as needed.
+            this.rideTableAdapter1.Fill(this.rideid.ride);
             // TODO: This line of code loads data into the 'select_ride.car' table. You can move, or remove it, as needed.
             this.carTableAdapter1.Fill(this.select_ride.car);
             // TODO: This line of code loads data into the 'rideselect_control.ride' table. You can move, or remove it, as needed.
@@ -77,9 +81,66 @@ namespace taxii
             this.Close();
         }
 
-        private void okay_Click(object sender, EventArgs e)
+        #region LEFT PANEL BUTTON CLICKSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+        private void updaterideb_Click(object sender, EventArgs e)
         {
-            #region data entry
+
+        }
+        private void newrideb_Click(object sender, EventArgs e)
+        {
+            newridepanel.Show();
+
+        }
+        private void driversb_Click(object sender, EventArgs e)
+        {
+           
+           
+        }
+
+        private void homeb_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void infob_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+
+        #region updateride
+
+        
+
+        private void rideselect_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (rideselect.Text != null)
+            {
+                int y = Convert.ToInt32(rideselect.Text);
+                con.Open();
+
+
+                string cmd = "select c_name from ride where id='" + y + "'";
+                SqlCommand c = new SqlCommand(cmd, con);
+                string h = Convert.ToString(c.ExecuteScalar());
+                cname_on_update.Text = h;
+                con.Close();
+            }
+        }
+
+       
+
+        #endregion
+
+        
+
+
+
+       
+        #region create ride panel stuff
+        private void okay_Click_1(object sender, EventArgs e)
+        {
             int ID = i + 1;
             drivernamelabel.Text = driversel.Text;
             cnamelabel.Text = cname.TextName;
@@ -87,94 +148,18 @@ namespace taxii
             string datee = datepick.Value.ToString();
 
             con.Open();
-            string cmd = "insert into ride(id,c_name,d_name,car,date)values('"+ID+"','"+cname.TextName+"','"+driversel.Text+"','"+carsel.Text+"','"+datee+"')";
+            string cmd = "insert into ride(id,c_name,d_name,car,date)values('" + ID + "','" + cname.TextName + "','" + driversel.Text + "','" + carsel.Text + "','" + datee + "')";
             SqlCommand c1 = new SqlCommand(cmd, con);
             c1.ExecuteNonQuery();
             con.Close();
-            #endregion
 
-             r[i] = new Ride(ID, odo, driversel.Text, datee);
+            r[i] = new Ride(ID, odo, driversel.Text, datee);
 
-            idlabel.Text = "THE TRIP ID IS "+ID;
+            idlabel.Text = "THE TRIP ID IS " + ID;
             i = i + 1;
         }
 
-        private void updaterideb_Click(object sender, EventArgs e)
-        {
-            updateridepanel.Show();
-            updateridepanel.BringToFront();
-
-            driverpanel.SendToBack();
-            newridepanel.SendToBack();
-            
-        }
-
-        private void rideselect_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int y = Convert.ToInt32(rideselect.Text);
-            con.Open();
-
-
-            string cmd = "select c_name from ride where id='" + y + "'";
-            SqlCommand c = new SqlCommand(cmd, con);
-            string h = Convert.ToString(c.ExecuteScalar());
-            cname_on_update.Text = h;
-            con.Close();
-        }
-        #region UPDATE LABELS IN NEW RIDE PANEL
-        private void newrideb_Click(object sender, EventArgs e)
-        {
-            newridepanel.Show();
-            newridepanel.BringToFront();
-            driverpanel.SendToBack();
-            updateridepanel.SendToBack();
-            
-        }
-
-        private void cname_Load(object sender, EventArgs e)
-        {
-            drivernamelabel.Text = driversel.Text;
-            cnamelabel.Text = cname.TextName;
-            cpnumlabel.Text = cpno.TextName;
-        }
-
-        private void cpno_Load(object sender, EventArgs e)
-        {
-            drivernamelabel.Text = driversel.Text;
-            cnamelabel.Text = cname.TextName;
-            cpnumlabel.Text = cpno.TextName;
-        }
-
-        private void caddress_Load(object sender, EventArgs e)
-        {
-            drivernamelabel.Text = driversel.Text;
-            cnamelabel.Text = cname.TextName;
-            cpnumlabel.Text = cpno.TextName;
-        }
-
-        private void datepick_onValueChanged(object sender, EventArgs e)
-        {
-            drivernamelabel.Text = driversel.Text;
-            cnamelabel.Text = cname.TextName;
-            cpnumlabel.Text = cpno.TextName;
-        }
-
-        private void driversel_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            drivernamelabel.Text = driversel.Text;
-            cnamelabel.Text = cname.TextName;
-            cpnumlabel.Text = cpno.TextName;
-        }
-
-        private void carsel_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            drivernamelabel.Text = driversel.Text;
-            cnamelabel.Text = cname.TextName;
-            cpnumlabel.Text = cpno.TextName;
-        }
-        #endregion
-
-        private void clear_Click(object sender, EventArgs e)
+        private void clear_Click_1(object sender, EventArgs e)
         {
             cname.TextName = "";
             caddress.TextName = "";
@@ -184,22 +169,39 @@ namespace taxii
             cpnumlabel.Text = "";
         }
 
-        private void driversb_Click(object sender, EventArgs e)
+        private void driversel_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            driverpanel.Show();
-            driverpanel.BringToFront();
-            newridepanel.SendToBack();
-            updateridepanel.SendToBack();
-           
+            if (driversel.Text != null)
+            {
+                SqlDataReader r;
+                string n = driversel.Text;
+                string cmd2 = "select image from driver where name ='" + n + "";
+                SqlCommand c10 = new SqlCommand(cmd2, con);
+                SqlDataAdapter da1 = new SqlDataAdapter(c10);
+                SqlCommandBuilder cb = new SqlCommandBuilder(da1);
+                DataSet ds = new DataSet();
+                da1.Fill(ds);
+                byte[] ap = (byte[])(ds.Tables[0].Rows[0]["image"]);
+                MemoryStream ms = new MemoryStream(ap);
+                pictureBox1.Image = Image.FromStream(ms);
+                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
         }
+        private void Refresh(object sender, EventArgs e)
+        {
+            string cmd4 = "select d_pno from driver where d_name='" +driversel.Text+ ",";
+            drivernamelabel.Text = driversel.Text;
+            cnamelabel.Text = cname.TextName;
+            cpnumlabel.Text = cpno.TextName;
+            con.Open();
+            SqlCommand c4 = new SqlCommand(cmd4, con);
+            driverpnolabel.Text = Convert.ToString(c4.ExecuteNonQuery());
+        }
+        #endregion
 
-        private void homeb_Click(object sender, EventArgs e)
-        {
-            driverpanel.Hide();
-            newridepanel.Hide();
-            updateridepanel.Hide();
-        }
+      
     }
+    #region CLASS RIDE
     class Ride
     {
         int rno, km_b;
@@ -226,4 +228,5 @@ namespace taxii
         }
 
     }
+    #endregion
 }
