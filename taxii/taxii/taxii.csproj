@@ -95,6 +95,11 @@
     <Compile Include="control.Designer.cs">
       <DependentUpon>control.cs</DependentUpon>
     </Compile>
+    <Compile Include="drivername.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>drivername.xsd</DependentUpon>
+    </Compile>
     <Compile Include="drivername_dataset.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -180,6 +185,17 @@
     </None>
     <None Include="carselect_dataset.xss">
       <DependentUpon>carselect_dataset.xsd</DependentUpon>
+    </None>
+    <None Include="drivername.xsc">
+      <DependentUpon>drivername.xsd</DependentUpon>
+    </None>
+    <None Include="drivername.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>drivername.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="drivername.xss">
+      <DependentUpon>drivername.xsd</DependentUpon>
     </None>
     <None Include="drivername_dataset.xsc">
       <DependentUpon>drivername_dataset.xsd</DependentUpon>

@@ -58,6 +58,8 @@
             this.okay = new Bunifu.Framework.UI.BunifuFlatButton();
             this.carsel = new System.Windows.Forms.ComboBox();
             this.driversel = new System.Windows.Forms.ComboBox();
+            this.driverBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.drivername = new taxii.drivername();
             this.datepick = new Bunifu.Framework.UI.BunifuDatepicker();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -76,23 +78,26 @@
             this.caddress = new JTextBox2.JTextBox();
             this.cpno = new JTextBox2.JTextBox();
             this.cname = new JTextBox2.JTextBox();
+            this.rideBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.rideid = new taxii.rideid();
+            this.rideTableAdapter1 = new taxii.rideidTableAdapters.rideTableAdapter();
             this.updateridepanel = new System.Windows.Forms.Panel();
+            this.km_after = new JTextBox2.JTextBox();
+            this.updateb = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.rideselect = new System.Windows.Forms.ComboBox();
+            this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel15 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel16 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel17 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel18 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel19 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.dateshow = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.cpnoshow = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.carnameshow = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.c_nameshow = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel20 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel21 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel22 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.cname_on_update = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.rideid = new taxii.rideid();
-            this.rideBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.rideTableAdapter1 = new taxii.rideidTableAdapters.rideTableAdapter();
+            this.driverTableAdapter1 = new taxii.drivernameTableAdapters.driverTableAdapter();
             this.header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.carBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.select_ride)).BeginInit();
@@ -105,10 +110,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.drivername_dataset)).BeginInit();
             this.newridepanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.driverBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.drivername)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rideBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rideid)).BeginInit();
             this.updateridepanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rideid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rideBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // header
@@ -314,7 +321,7 @@
             this.homeb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.homeb.Textcolor = System.Drawing.Color.White;
             this.homeb.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.homeb.Click += new System.EventHandler(this.newrideb_Click);
+            this.homeb.Click += new System.EventHandler(this.homeb_Click);
             // 
             // newrideb
             // 
@@ -425,9 +432,9 @@
             this.newridepanel.Controls.Add(this.caddress);
             this.newridepanel.Controls.Add(this.cpno);
             this.newridepanel.Controls.Add(this.cname);
-            this.newridepanel.Location = new System.Drawing.Point(325, 34);
+            this.newridepanel.Location = new System.Drawing.Point(336, 47);
             this.newridepanel.Name = "newridepanel";
-            this.newridepanel.Size = new System.Drawing.Size(803, 705);
+            this.newridepanel.Size = new System.Drawing.Size(759, 671);
             this.newridepanel.TabIndex = 7;
             // 
             // clear
@@ -451,7 +458,7 @@
             this.clear.IconVisible = true;
             this.clear.IconZoom = 90D;
             this.clear.IsTab = false;
-            this.clear.Location = new System.Drawing.Point(213, 635);
+            this.clear.Location = new System.Drawing.Point(213, 608);
             this.clear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.clear.Name = "clear";
             this.clear.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
@@ -471,7 +478,7 @@
             this.idlabel.AutoSize = true;
             this.idlabel.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.idlabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.idlabel.Location = new System.Drawing.Point(305, 635);
+            this.idlabel.Location = new System.Drawing.Point(305, 608);
             this.idlabel.Name = "idlabel";
             this.idlabel.Size = new System.Drawing.Size(35, 32);
             this.idlabel.TabIndex = 7;
@@ -479,7 +486,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(536, 425);
+            this.pictureBox1.Location = new System.Drawing.Point(517, 398);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(228, 233);
             this.pictureBox1.TabIndex = 11;
@@ -506,7 +513,7 @@
             this.okay.IconVisible = true;
             this.okay.IconZoom = 90D;
             this.okay.IsTab = false;
-            this.okay.Location = new System.Drawing.Point(55, 635);
+            this.okay.Location = new System.Drawing.Point(55, 608);
             this.okay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.okay.Name = "okay";
             this.okay.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
@@ -523,6 +530,7 @@
             // 
             // carsel
             // 
+            this.carsel.DataSource = this.carBindingSource;
             this.carsel.DisplayMember = "c_name";
             this.carsel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.carsel.FormattingEnabled = true;
@@ -530,11 +538,11 @@
             this.carsel.Name = "carsel";
             this.carsel.Size = new System.Drawing.Size(281, 33);
             this.carsel.TabIndex = 9;
-            this.carsel.ValueMember = "Id";
             this.carsel.Click += new System.EventHandler(this.Refresh);
             // 
             // driversel
             // 
+            this.driversel.DataSource = this.driverBindingSource1;
             this.driversel.DisplayMember = "d_name";
             this.driversel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.driversel.FormattingEnabled = true;
@@ -542,9 +550,18 @@
             this.driversel.Name = "driversel";
             this.driversel.Size = new System.Drawing.Size(281, 33);
             this.driversel.TabIndex = 9;
-            this.driversel.ValueMember = "Id";
             this.driversel.SelectedIndexChanged += new System.EventHandler(this.driversel_SelectedIndexChanged_1);
             this.driversel.Click += new System.EventHandler(this.Refresh);
+            // 
+            // driverBindingSource1
+            // 
+            this.driverBindingSource1.DataMember = "driver";
+            this.driverBindingSource1.DataSource = this.drivername;
+            // 
+            // drivername
+            // 
+            this.drivername.DataSetName = "drivername";
+            this.drivername.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // datepick
             // 
@@ -621,7 +638,7 @@
             this.driverpnolabel.AutoSize = true;
             this.driverpnolabel.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.driverpnolabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.driverpnolabel.Location = new System.Drawing.Point(305, 567);
+            this.driverpnolabel.Location = new System.Drawing.Point(305, 540);
             this.driverpnolabel.Name = "driverpnolabel";
             this.driverpnolabel.Size = new System.Drawing.Size(35, 32);
             this.driverpnolabel.TabIndex = 6;
@@ -632,7 +649,7 @@
             this.cpnumlabel.AutoSize = true;
             this.cpnumlabel.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpnumlabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.cpnumlabel.Location = new System.Drawing.Point(305, 473);
+            this.cpnumlabel.Location = new System.Drawing.Point(305, 446);
             this.cpnumlabel.Name = "cpnumlabel";
             this.cpnumlabel.Size = new System.Drawing.Size(35, 32);
             this.cpnumlabel.TabIndex = 6;
@@ -643,7 +660,7 @@
             this.drivernamelabel.AutoSize = true;
             this.drivernamelabel.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.drivernamelabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.drivernamelabel.Location = new System.Drawing.Point(305, 519);
+            this.drivernamelabel.Location = new System.Drawing.Point(305, 492);
             this.drivernamelabel.Name = "drivernamelabel";
             this.drivernamelabel.Size = new System.Drawing.Size(35, 32);
             this.drivernamelabel.TabIndex = 6;
@@ -654,7 +671,7 @@
             this.cnamelabel.AutoSize = true;
             this.cnamelabel.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cnamelabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.cnamelabel.Location = new System.Drawing.Point(305, 425);
+            this.cnamelabel.Location = new System.Drawing.Point(305, 398);
             this.cnamelabel.Name = "cnamelabel";
             this.cnamelabel.Size = new System.Drawing.Size(35, 32);
             this.cnamelabel.TabIndex = 6;
@@ -665,7 +682,7 @@
             this.bunifuCustomLabel14.AutoSize = true;
             this.bunifuCustomLabel14.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel14.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bunifuCustomLabel14.Location = new System.Drawing.Point(49, 567);
+            this.bunifuCustomLabel14.Location = new System.Drawing.Point(49, 540);
             this.bunifuCustomLabel14.Name = "bunifuCustomLabel14";
             this.bunifuCustomLabel14.Size = new System.Drawing.Size(211, 32);
             this.bunifuCustomLabel14.TabIndex = 6;
@@ -676,7 +693,7 @@
             this.bunifuCustomLabel13.AutoSize = true;
             this.bunifuCustomLabel13.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel13.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bunifuCustomLabel13.Location = new System.Drawing.Point(49, 519);
+            this.bunifuCustomLabel13.Location = new System.Drawing.Point(49, 492);
             this.bunifuCustomLabel13.Name = "bunifuCustomLabel13";
             this.bunifuCustomLabel13.Size = new System.Drawing.Size(150, 32);
             this.bunifuCustomLabel13.TabIndex = 6;
@@ -687,7 +704,7 @@
             this.bunifuCustomLabel11.AutoSize = true;
             this.bunifuCustomLabel11.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel11.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bunifuCustomLabel11.Location = new System.Drawing.Point(49, 473);
+            this.bunifuCustomLabel11.Location = new System.Drawing.Point(49, 446);
             this.bunifuCustomLabel11.Name = "bunifuCustomLabel11";
             this.bunifuCustomLabel11.Size = new System.Drawing.Size(223, 32);
             this.bunifuCustomLabel11.TabIndex = 6;
@@ -698,7 +715,7 @@
             this.bunifuCustomLabel9.AutoSize = true;
             this.bunifuCustomLabel9.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel9.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bunifuCustomLabel9.Location = new System.Drawing.Point(49, 425);
+            this.bunifuCustomLabel9.Location = new System.Drawing.Point(49, 398);
             this.bunifuCustomLabel9.Name = "bunifuCustomLabel9";
             this.bunifuCustomLabel9.Size = new System.Drawing.Size(189, 32);
             this.bunifuCustomLabel9.TabIndex = 6;
@@ -775,33 +792,103 @@
             this.cname.TextName = "";
             this.cname.Click += new System.EventHandler(this.Refresh);
             // 
+            // rideBindingSource1
+            // 
+            this.rideBindingSource1.DataMember = "ride";
+            this.rideBindingSource1.DataSource = this.rideid;
+            // 
+            // rideid
+            // 
+            this.rideid.DataSetName = "rideid";
+            this.rideid.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // rideTableAdapter1
+            // 
+            this.rideTableAdapter1.ClearBeforeFill = true;
+            // 
             // updateridepanel
             // 
             this.updateridepanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.updateridepanel.Controls.Add(this.km_after);
+            this.updateridepanel.Controls.Add(this.updateb);
             this.updateridepanel.Controls.Add(this.bunifuCustomLabel10);
             this.updateridepanel.Controls.Add(this.pictureBox2);
-            this.updateridepanel.Controls.Add(this.bunifuFlatButton1);
             this.updateridepanel.Controls.Add(this.rideselect);
+            this.updateridepanel.Controls.Add(this.bunifuCustomLabel8);
             this.updateridepanel.Controls.Add(this.bunifuCustomLabel15);
-            this.updateridepanel.Controls.Add(this.bunifuCustomLabel16);
-            this.updateridepanel.Controls.Add(this.bunifuCustomLabel17);
-            this.updateridepanel.Controls.Add(this.bunifuCustomLabel18);
-            this.updateridepanel.Controls.Add(this.bunifuCustomLabel19);
+            this.updateridepanel.Controls.Add(this.dateshow);
+            this.updateridepanel.Controls.Add(this.cpnoshow);
+            this.updateridepanel.Controls.Add(this.carnameshow);
+            this.updateridepanel.Controls.Add(this.c_nameshow);
             this.updateridepanel.Controls.Add(this.bunifuCustomLabel20);
             this.updateridepanel.Controls.Add(this.bunifuCustomLabel21);
             this.updateridepanel.Controls.Add(this.bunifuCustomLabel22);
             this.updateridepanel.Controls.Add(this.cname_on_update);
-            this.updateridepanel.Location = new System.Drawing.Point(325, 37);
+            this.updateridepanel.Location = new System.Drawing.Point(327, 34);
             this.updateridepanel.Name = "updateridepanel";
-            this.updateridepanel.Size = new System.Drawing.Size(803, 705);
-            this.updateridepanel.TabIndex = 8;
+            this.updateridepanel.Size = new System.Drawing.Size(795, 698);
+            this.updateridepanel.TabIndex = 9;
+            // 
+            // km_after
+            // 
+            this.km_after.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.km_after.Font_Size = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.km_after.HintText = null;
+            this.km_after.IsPassword = false;
+            this.km_after.Location = new System.Drawing.Point(419, 97);
+            this.km_after.Margin = new System.Windows.Forms.Padding(4);
+            this.km_after.MaxLength = 32767;
+            this.km_after.Name = "km_after";
+            this.km_after.OnFocusedColor = System.Drawing.Color.White;
+            this.km_after.OnFocusedTextColor = System.Drawing.Color.Gray;
+            this.km_after.ReadOnly = false;
+            this.km_after.Right_To_Left = System.Windows.Forms.RightToLeft.No;
+            this.km_after.Size = new System.Drawing.Size(279, 33);
+            this.km_after.TabIndex = 13;
+            this.km_after.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.km_after.TextName = "";
+            // 
+            // updateb
+            // 
+            this.updateb.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.updateb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.updateb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.updateb.BorderRadius = 0;
+            this.updateb.ButtonText = "UPDATE TRIP";
+            this.updateb.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.updateb.DisabledColor = System.Drawing.Color.Gray;
+            this.updateb.Iconcolor = System.Drawing.Color.Transparent;
+            this.updateb.Iconimage = null;
+            this.updateb.Iconimage_right = null;
+            this.updateb.Iconimage_right_Selected = null;
+            this.updateb.Iconimage_Selected = null;
+            this.updateb.IconMarginLeft = 0;
+            this.updateb.IconMarginRight = 0;
+            this.updateb.IconRightVisible = true;
+            this.updateb.IconRightZoom = 0D;
+            this.updateb.IconVisible = true;
+            this.updateb.IconZoom = 90D;
+            this.updateb.IsTab = false;
+            this.updateb.Location = new System.Drawing.Point(112, 371);
+            this.updateb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.updateb.Name = "updateb";
+            this.updateb.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.updateb.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.updateb.OnHoverTextColor = System.Drawing.Color.White;
+            this.updateb.selected = false;
+            this.updateb.Size = new System.Drawing.Size(243, 50);
+            this.updateb.TabIndex = 12;
+            this.updateb.Text = "UPDATE TRIP";
+            this.updateb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.updateb.Textcolor = System.Drawing.Color.White;
+            this.updateb.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // bunifuCustomLabel10
             // 
             this.bunifuCustomLabel10.AutoSize = true;
             this.bunifuCustomLabel10.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel10.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bunifuCustomLabel10.Location = new System.Drawing.Point(305, 635);
+            this.bunifuCustomLabel10.Location = new System.Drawing.Point(49, 632);
             this.bunifuCustomLabel10.Name = "bunifuCustomLabel10";
             this.bunifuCustomLabel10.Size = new System.Drawing.Size(35, 32);
             this.bunifuCustomLabel10.TabIndex = 7;
@@ -815,41 +902,6 @@
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
             // 
-            // bunifuFlatButton1
-            // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "CREATE TRIP";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = null;
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 90D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(55, 635);
-            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(217, 44);
-            this.bunifuFlatButton1.TabIndex = 10;
-            this.bunifuFlatButton1.Text = "CREATE TRIP";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
             // rideselect
             // 
             this.rideselect.DataSource = this.rideBindingSource1;
@@ -860,7 +912,17 @@
             this.rideselect.Name = "rideselect";
             this.rideselect.Size = new System.Drawing.Size(281, 33);
             this.rideselect.TabIndex = 9;
-            this.rideselect.SelectedIndexChanged += new System.EventHandler(this.rideselect_SelectedIndexChanged_1);
+            // 
+            // bunifuCustomLabel8
+            // 
+            this.bunifuCustomLabel8.AutoSize = true;
+            this.bunifuCustomLabel8.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel8.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.bunifuCustomLabel8.Location = new System.Drawing.Point(413, 40);
+            this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
+            this.bunifuCustomLabel8.Size = new System.Drawing.Size(150, 32);
+            this.bunifuCustomLabel8.TabIndex = 6;
+            this.bunifuCustomLabel8.Text = "KM after trip";
             // 
             // bunifuCustomLabel15
             // 
@@ -873,49 +935,49 @@
             this.bunifuCustomLabel15.TabIndex = 6;
             this.bunifuCustomLabel15.Text = "Select ride ID";
             // 
-            // bunifuCustomLabel16
+            // dateshow
             // 
-            this.bunifuCustomLabel16.AutoSize = true;
-            this.bunifuCustomLabel16.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel16.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bunifuCustomLabel16.Location = new System.Drawing.Point(362, 311);
-            this.bunifuCustomLabel16.Name = "bunifuCustomLabel16";
-            this.bunifuCustomLabel16.Size = new System.Drawing.Size(35, 32);
-            this.bunifuCustomLabel16.TabIndex = 6;
-            this.bunifuCustomLabel16.Text = "--";
+            this.dateshow.AutoSize = true;
+            this.dateshow.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateshow.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dateshow.Location = new System.Drawing.Point(362, 311);
+            this.dateshow.Name = "dateshow";
+            this.dateshow.Size = new System.Drawing.Size(35, 32);
+            this.dateshow.TabIndex = 6;
+            this.dateshow.Text = "--";
             // 
-            // bunifuCustomLabel17
+            // cpnoshow
             // 
-            this.bunifuCustomLabel17.AutoSize = true;
-            this.bunifuCustomLabel17.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel17.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bunifuCustomLabel17.Location = new System.Drawing.Point(362, 217);
-            this.bunifuCustomLabel17.Name = "bunifuCustomLabel17";
-            this.bunifuCustomLabel17.Size = new System.Drawing.Size(35, 32);
-            this.bunifuCustomLabel17.TabIndex = 6;
-            this.bunifuCustomLabel17.Text = "--";
+            this.cpnoshow.AutoSize = true;
+            this.cpnoshow.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpnoshow.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.cpnoshow.Location = new System.Drawing.Point(362, 217);
+            this.cpnoshow.Name = "cpnoshow";
+            this.cpnoshow.Size = new System.Drawing.Size(35, 32);
+            this.cpnoshow.TabIndex = 6;
+            this.cpnoshow.Text = "--";
             // 
-            // bunifuCustomLabel18
+            // carnameshow
             // 
-            this.bunifuCustomLabel18.AutoSize = true;
-            this.bunifuCustomLabel18.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel18.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bunifuCustomLabel18.Location = new System.Drawing.Point(362, 263);
-            this.bunifuCustomLabel18.Name = "bunifuCustomLabel18";
-            this.bunifuCustomLabel18.Size = new System.Drawing.Size(35, 32);
-            this.bunifuCustomLabel18.TabIndex = 6;
-            this.bunifuCustomLabel18.Text = "--";
+            this.carnameshow.AutoSize = true;
+            this.carnameshow.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.carnameshow.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.carnameshow.Location = new System.Drawing.Point(362, 263);
+            this.carnameshow.Name = "carnameshow";
+            this.carnameshow.Size = new System.Drawing.Size(35, 32);
+            this.carnameshow.TabIndex = 6;
+            this.carnameshow.Text = "--";
             // 
-            // bunifuCustomLabel19
+            // c_nameshow
             // 
-            this.bunifuCustomLabel19.AutoSize = true;
-            this.bunifuCustomLabel19.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel19.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bunifuCustomLabel19.Location = new System.Drawing.Point(362, 169);
-            this.bunifuCustomLabel19.Name = "bunifuCustomLabel19";
-            this.bunifuCustomLabel19.Size = new System.Drawing.Size(35, 32);
-            this.bunifuCustomLabel19.TabIndex = 6;
-            this.bunifuCustomLabel19.Text = "--";
+            this.c_nameshow.AutoSize = true;
+            this.c_nameshow.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c_nameshow.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.c_nameshow.Location = new System.Drawing.Point(362, 169);
+            this.c_nameshow.Name = "c_nameshow";
+            this.c_nameshow.Size = new System.Drawing.Size(35, 32);
+            this.c_nameshow.TabIndex = 6;
+            this.c_nameshow.Text = "--";
             // 
             // bunifuCustomLabel20
             // 
@@ -924,9 +986,9 @@
             this.bunifuCustomLabel20.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.bunifuCustomLabel20.Location = new System.Drawing.Point(106, 311);
             this.bunifuCustomLabel20.Name = "bunifuCustomLabel20";
-            this.bunifuCustomLabel20.Size = new System.Drawing.Size(211, 32);
+            this.bunifuCustomLabel20.Size = new System.Drawing.Size(139, 32);
             this.bunifuCustomLabel20.TabIndex = 6;
-            this.bunifuCustomLabel20.Text = "Driver phone num";
+            this.bunifuCustomLabel20.Text = "Date of Trip";
             // 
             // bunifuCustomLabel21
             // 
@@ -935,9 +997,9 @@
             this.bunifuCustomLabel21.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.bunifuCustomLabel21.Location = new System.Drawing.Point(106, 263);
             this.bunifuCustomLabel21.Name = "bunifuCustomLabel21";
-            this.bunifuCustomLabel21.Size = new System.Drawing.Size(150, 32);
+            this.bunifuCustomLabel21.Size = new System.Drawing.Size(117, 32);
             this.bunifuCustomLabel21.TabIndex = 6;
-            this.bunifuCustomLabel21.Text = "Driver Name";
+            this.bunifuCustomLabel21.Text = "Car name";
             // 
             // bunifuCustomLabel22
             // 
@@ -961,19 +1023,9 @@
             this.cname_on_update.TabIndex = 6;
             this.cname_on_update.Text = "Customer Name";
             // 
-            // rideid
+            // driverTableAdapter1
             // 
-            this.rideid.DataSetName = "rideid";
-            this.rideid.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // rideBindingSource1
-            // 
-            this.rideBindingSource1.DataMember = "ride";
-            this.rideBindingSource1.DataSource = this.rideid;
-            // 
-            // rideTableAdapter1
-            // 
-            this.rideTableAdapter1.ClearBeforeFill = true;
+            this.driverTableAdapter1.ClearBeforeFill = true;
             // 
             // control
             // 
@@ -981,10 +1033,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.ClientSize = new System.Drawing.Size(1132, 746);
-            this.Controls.Add(this.updateridepanel);
-            this.Controls.Add(this.newridepanel);
             this.Controls.Add(this.leftpanel);
             this.Controls.Add(this.header);
+            this.Controls.Add(this.newridepanel);
+            this.Controls.Add(this.updateridepanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "control";
             this.Text = "control";
@@ -1003,11 +1055,13 @@
             this.newridepanel.ResumeLayout(false);
             this.newridepanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.driverBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.drivername)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rideBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rideid)).EndInit();
             this.updateridepanel.ResumeLayout(false);
             this.updateridepanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rideid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rideBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1060,22 +1114,27 @@
         private JTextBox2.JTextBox caddress;
         private JTextBox2.JTextBox cpno;
         private JTextBox2.JTextBox cname;
+        private rideid rideid;
+        private System.Windows.Forms.BindingSource rideBindingSource1;
+        private rideidTableAdapters.rideTableAdapter rideTableAdapter1;
         private System.Windows.Forms.Panel updateridepanel;
+        private JTextBox2.JTextBox km_after;
+        private Bunifu.Framework.UI.BunifuFlatButton updateb;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel10;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private System.Windows.Forms.ComboBox rideselect;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel8;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel15;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel16;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel17;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel18;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel19;
+        private Bunifu.Framework.UI.BunifuCustomLabel dateshow;
+        private Bunifu.Framework.UI.BunifuCustomLabel cpnoshow;
+        private Bunifu.Framework.UI.BunifuCustomLabel carnameshow;
+        private Bunifu.Framework.UI.BunifuCustomLabel c_nameshow;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel20;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel21;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel22;
         private Bunifu.Framework.UI.BunifuCustomLabel cname_on_update;
-        private rideid rideid;
-        private System.Windows.Forms.BindingSource rideBindingSource1;
-        private rideidTableAdapters.rideTableAdapter rideTableAdapter1;
+        private drivername drivername;
+        private System.Windows.Forms.BindingSource driverBindingSource1;
+        private drivernameTableAdapters.driverTableAdapter driverTableAdapter1;
     }
 }

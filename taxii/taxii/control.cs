@@ -19,9 +19,13 @@ namespace taxii
         int odo = 0;
         string constr;
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=K:\finalll\final_stages\taxii\taxii\rental.mdf;Integrated Security=True");
-        
+
+        double[] totals = new double[90];
+        string[] owners = new string[90];
+        string[] drivers = new string[90];
+
         Ride[] r = new Ride[90];
-        int i = 0;
+        int i = 1;
         public control()
         {
             InitializeComponent();
@@ -61,6 +65,8 @@ namespace taxii
         //data stufff
         private void control_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'drivername.driver' table. You can move, or remove it, as needed.
+            this.driverTableAdapter1.Fill(this.drivername.driver);
             // TODO: This line of code loads data into the 'rideid.ride' table. You can move, or remove it, as needed.
             this.rideTableAdapter1.Fill(this.rideid.ride);
             // TODO: This line of code loads data into the 'select_ride.car' table. You can move, or remove it, as needed.
@@ -84,10 +90,14 @@ namespace taxii
         #region LEFT PANEL BUTTON CLICKSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
         private void updaterideb_Click(object sender, EventArgs e)
         {
+            
+            newridepanel.Hide();
+            updateridepanel.Show();
 
         }
         private void newrideb_Click(object sender, EventArgs e)
         {
+            updateridepanel.Hide();
             newridepanel.Show();
 
         }
@@ -99,7 +109,8 @@ namespace taxii
 
         private void homeb_Click(object sender, EventArgs e)
         {
-            
+            updateridepanel.Hide();
+            newridepanel.Hide();
         }
 
         private void infob_Click(object sender, EventArgs e)
@@ -121,33 +132,60 @@ namespace taxii
                 con.Open();
 
 
-                string cmd = "select c_name from ride where id='" + y + "'";
-                SqlCommand c = new SqlCommand(cmd, con);
-                string h = Convert.ToString(c.ExecuteScalar());
-                cname_on_update.Text = h;
+                string cmd1 = "select c_name from ride where id='" + y + "'";
+                SqlCommand c1 = new SqlCommand(cmd1, con);
+                string h1 = Convert.ToString(c1.ExecuteScalar());
+                c_nameshow.Text = h1;
+
+                string cmd2 = "select d_name from ride where id='" + y + "'";
+                SqlCommand c2 = new SqlCommand(cmd2, con);
+                string h2 = Convert.ToString(c2.ExecuteNonQuery());
+                carnameshow.Text = h2;
+
+                string cmd3 = "select car from ride where id='" + y + "'";
+                SqlCommand c3 = new SqlCommand(cmd3, con);
+                string h3 = Convert.ToString(c3.ExecuteNonQuery());
+                carnameshow.Text = h3;
+
+                string cmd4 = "select date from ride where id='" + y + "'";
+                SqlCommand c4 = new SqlCommand(cmd4, con);
+                string h4 = Convert.ToString(c4.ExecuteNonQuery());
+                dateshow.Text = h4;
+
                 con.Close();
             }
+
+           
+
+
         }
 
-       
+        private void updateb_Click(object sender, EventArgs e)
+        {
+            int y = Convert.ToInt32(rideselect.Text);
+            int km = Convert.ToInt32(km_after.TextName);
+            totals[y] = Convert.ToDouble(r[i].Farecal(km));
+            owners[y] = r[i].ownfare(totals[y]);
+            drivers[y] = r[i].driverfare(totals[y]);
+        }
+
 
         #endregion
 
-        
 
 
 
-       
+
+
         #region create ride panel stuff
         private void okay_Click_1(object sender, EventArgs e)
         {
-            int ID = i + 1;
-            drivernamelabel.Text = driversel.Text;
-            cnamelabel.Text = cname.TextName;
-            cpnumlabel.Text = cpno.TextName;
+            int ID = i;
+            
             string datee = datepick.Value.ToString();
 
             con.Open();
+
             string cmd = "insert into ride(id,c_name,d_name,car,date)values('" + ID + "','" + cname.TextName + "','" + driversel.Text + "','" + carsel.Text + "','" + datee + "')";
             SqlCommand c1 = new SqlCommand(cmd, con);
             c1.ExecuteNonQuery();
@@ -175,7 +213,7 @@ namespace taxii
             {
                 SqlDataReader r;
                 string n = driversel.Text;
-                string cmd2 = "select image from driver where name ='" + n + "";
+                string cmd2 = "select image from driver where d_name ='" + n + "'";
                 SqlCommand c10 = new SqlCommand(cmd2, con);
                 SqlDataAdapter da1 = new SqlDataAdapter(c10);
                 SqlCommandBuilder cb = new SqlCommandBuilder(da1);
@@ -189,17 +227,20 @@ namespace taxii
         }
         private void Refresh(object sender, EventArgs e)
         {
-            string cmd4 = "select d_pno from driver where d_name='" +driversel.Text+ ",";
+            string cmd4 = "select d_pno from driver where d_name='" +driversel.Text+ "'";
             drivernamelabel.Text = driversel.Text;
             cnamelabel.Text = cname.TextName;
             cpnumlabel.Text = cpno.TextName;
             con.Open();
             SqlCommand c4 = new SqlCommand(cmd4, con);
             driverpnolabel.Text = Convert.ToString(c4.ExecuteNonQuery());
+            con.Close();
         }
+
+
         #endregion
 
-      
+        
     }
     #region CLASS RIDE
     class Ride
@@ -218,11 +259,11 @@ namespace taxii
             int f = a - km_b;
             return f * 50;
         }
-        public string ownfare(float a)
+        public string ownfare(double a)
         {
             return (a - (a * 80 / 100)).ToString();
         }
-        public string driverfare(float a)
+        public string driverfare(double a)
         {
             return (a - (a * 20 / 100)).ToString();
         }

@@ -59,7 +59,7 @@ namespace taxii
         {
             SqlDataReader r;
             string n =search.Text;
-            string cmd2="select image from driver where name ='"+n+"";
+            string cmd2="select image from driver where d_name ='"+n+"'";
             SqlCommand c10 = new SqlCommand(cmd2, con);
             SqlDataAdapter da1 = new SqlDataAdapter(c10);
             SqlCommandBuilder cb = new SqlCommandBuilder(da1);
