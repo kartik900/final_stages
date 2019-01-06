@@ -100,31 +100,46 @@ namespace taxii
         #region LEFT PANEL BUTTON CLICKSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
         private void updaterideb_Click(object sender, EventArgs e)
         {
-            
+            driverpanel.Hide();
+
             newridepanel.Hide();
             updateridepanel.Show();
 
         }
         private void newrideb_Click(object sender, EventArgs e)
         {
+            driverpanel.Hide();
+            //infopanel.Hide();
+
             updateridepanel.Hide();
             newridepanel.Show();
 
         }
         private void driversb_Click(object sender, EventArgs e)
         {
-           
-           
+            //infopanel.Hide();
+
+            updateridepanel.Hide();
+            newridepanel.Hide();
+            driverpanel.Show();
+
         }
 
         private void homeb_Click(object sender, EventArgs e)
         {
             updateridepanel.Hide();
             newridepanel.Hide();
+            driverpanel.Hide();
+            //infopanel.Hide();
+
         }
 
         private void infob_Click(object sender, EventArgs e)
         {
+            updateridepanel.Hide();
+            newridepanel.Hide();
+            driverpanel.Hide();
+            //infopanel.Show();
 
         }
         #endregion
@@ -132,7 +147,7 @@ namespace taxii
 
         #region updateride
 
-        
+
         private void updateb_Click_1(object sender, EventArgs e)
         {
             try
@@ -236,8 +251,8 @@ namespace taxii
                 da1.Fill(ds);
                 byte[] ap = (byte[])(ds.Tables[0].Rows[0]["image"]);
                 MemoryStream ms = new MemoryStream(ap);
-                pictureBox1.Image = Image.FromStream(ms);
-                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                pictureBox11.Image = Image.FromStream(ms);
+                pictureBox11.SizeMode = PictureBoxSizeMode.StretchImage;
                 
             }
         }
@@ -256,9 +271,67 @@ namespace taxii
 
 
 
+
         #endregion
 
-       
+
+        string imgloc;
+        #region driver panel
+        
+
+        private void Ref(object sender, EventArgs e)
+        {
+            dnamelabel.Text = name.TextName;
+            dpnolabel.Text = phno.TextName;
+            daddresslabel.Text = address.TextName;
+
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            dnamelabel.Text = name.TextName;
+            dpnolabel.Text = phno.TextName;
+            daddresslabel.Text = address.TextName;
+
+            OpenFileDialog od = new OpenFileDialog();
+            od.Filter = "png files(*.png)|*.png|jpg files(*.jpg)|*.jpg|all files(*.*)|*.*";
+            if (od.ShowDialog() == DialogResult.OK)
+            {
+                imgloc = od.FileName.ToString();
+                pictureBox1.ImageLocation = imgloc;
+            }
+        }
+
+        private void adddriver_Click(object sender, EventArgs e)
+        {
+
+            byte[] img = null;
+            FileStream stream = new FileStream(imgloc, FileMode.Open, FileAccess.Read);
+            BinaryReader br = new BinaryReader(stream);
+            img = br.ReadBytes((int)stream.Length);
+            string cmd0 = "insert into driver(d_name,d_pno,d_address,image)values('" + name.Text + "','" + phno.Text + "','" + address.Text + "',@img)";
+            con.Open();
+
+            SqlCommand c10 = new SqlCommand(cmd0, con);
+            c10.Parameters.Add(new SqlParameter("@img", img));
+            c10.ExecuteNonQuery();
+            con.Close();
+            lbl.Text="Driver Added Successfully"
+
+
+
+
+
+        }
+
+
+
+        #endregion
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     #region CLASS RIDE
     class Ride

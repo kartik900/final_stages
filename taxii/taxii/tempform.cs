@@ -66,5 +66,10 @@ namespace taxii
             didlabel.Text = "the drivers id is " +idd;
             MessageBox.Show(t.ToString() + "saved");
         }
+
+        private void daddress_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
