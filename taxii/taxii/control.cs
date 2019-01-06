@@ -73,7 +73,7 @@ namespace taxii
         private void bunifuCustomLabel8_Click(object sender, EventArgs e)
         {
             
-            rideselect.Text = "1";
+            rideselect.Text = "123";
             this.Close();
         }
 
@@ -101,8 +101,12 @@ namespace taxii
 
         private void updaterideb_Click(object sender, EventArgs e)
         {
-            newridepanel.Hide();
             updateridepanel.Show();
+            updateridepanel.BringToFront();
+
+            driverpanel.SendToBack();
+            newridepanel.SendToBack();
+            
         }
 
         private void rideselect_SelectedIndexChanged(object sender, EventArgs e)
@@ -120,8 +124,11 @@ namespace taxii
         #region UPDATE LABELS IN NEW RIDE PANEL
         private void newrideb_Click(object sender, EventArgs e)
         {
-            updateridepanel.Hide();
             newridepanel.Show();
+            newridepanel.BringToFront();
+            driverpanel.SendToBack();
+            updateridepanel.SendToBack();
+            
         }
 
         private void cname_Load(object sender, EventArgs e)
@@ -175,6 +182,22 @@ namespace taxii
             drivernamelabel.Text = "";
             cnamelabel.Text = "";
             cpnumlabel.Text = "";
+        }
+
+        private void driversb_Click(object sender, EventArgs e)
+        {
+            driverpanel.Show();
+            driverpanel.BringToFront();
+            newridepanel.SendToBack();
+            updateridepanel.SendToBack();
+           
+        }
+
+        private void homeb_Click(object sender, EventArgs e)
+        {
+            driverpanel.Hide();
+            newridepanel.Hide();
+            updateridepanel.Hide();
         }
     }
     class Ride
