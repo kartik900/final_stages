@@ -50,6 +50,9 @@
             this.rideBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rideselect1 = new taxii.rideselect();
             this.rideTableAdapter = new taxii.rideselectTableAdapters.rideTableAdapter();
+            this.phno = new JTextBox2.JTextBox();
+            this.address = new JTextBox2.JTextBox();
+            this.name = new JTextBox2.JTextBox();
             this.updateridepanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rideBindingSource)).BeginInit();
@@ -76,7 +79,7 @@
             this.updateridepanel.Controls.Add(this.bunifuCustomLabel13);
             this.updateridepanel.Controls.Add(this.bunifuCustomLabel11);
             this.updateridepanel.Controls.Add(this.bunifuCustomLabel9);
-            this.updateridepanel.Location = new System.Drawing.Point(196, 31);
+            this.updateridepanel.Location = new System.Drawing.Point(12, 28);
             this.updateridepanel.Name = "updateridepanel";
             this.updateridepanel.Size = new System.Drawing.Size(803, 705);
             this.updateridepanel.TabIndex = 2;
@@ -354,12 +357,72 @@
             // 
             this.rideTableAdapter.ClearBeforeFill = true;
             // 
+            // phno
+            // 
+            this.phno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.phno.Font_Size = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.phno.HintText = null;
+            this.phno.IsPassword = false;
+            this.phno.Location = new System.Drawing.Point(1010, 76);
+            this.phno.Margin = new System.Windows.Forms.Padding(4);
+            this.phno.MaxLength = 32767;
+            this.phno.Name = "phno";
+            this.phno.OnFocusedColor = System.Drawing.Color.White;
+            this.phno.OnFocusedTextColor = System.Drawing.Color.Gray;
+            this.phno.ReadOnly = false;
+            this.phno.Right_To_Left = System.Windows.Forms.RightToLeft.No;
+            this.phno.Size = new System.Drawing.Size(248, 38);
+            this.phno.TabIndex = 13;
+            this.phno.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.phno.TextName = "";
+            // 
+            // address
+            // 
+            this.address.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.address.Font_Size = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.address.HintText = null;
+            this.address.IsPassword = false;
+            this.address.Location = new System.Drawing.Point(672, 207);
+            this.address.Margin = new System.Windows.Forms.Padding(4);
+            this.address.MaxLength = 32767;
+            this.address.Name = "address";
+            this.address.OnFocusedColor = System.Drawing.Color.White;
+            this.address.OnFocusedTextColor = System.Drawing.Color.Gray;
+            this.address.ReadOnly = false;
+            this.address.Right_To_Left = System.Windows.Forms.RightToLeft.No;
+            this.address.Size = new System.Drawing.Size(248, 38);
+            this.address.TabIndex = 14;
+            this.address.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.address.TextName = "";
+            // 
+            // name
+            // 
+            this.name.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.name.Font_Size = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.name.HintText = null;
+            this.name.IsPassword = false;
+            this.name.Location = new System.Drawing.Point(672, 76);
+            this.name.Margin = new System.Windows.Forms.Padding(4);
+            this.name.MaxLength = 32767;
+            this.name.Name = "name";
+            this.name.OnFocusedColor = System.Drawing.Color.White;
+            this.name.OnFocusedTextColor = System.Drawing.Color.Gray;
+            this.name.ReadOnly = false;
+            this.name.Right_To_Left = System.Windows.Forms.RightToLeft.No;
+            this.name.Size = new System.Drawing.Size(248, 38);
+            this.name.TabIndex = 15;
+            this.name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.name.TextName = "";
+            // 
             // tempform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlText;
             this.ClientSize = new System.Drawing.Size(1245, 795);
+            this.Controls.Add(this.phno);
+            this.Controls.Add(this.address);
+            this.Controls.Add(this.name);
             this.Controls.Add(this.updateridepanel);
             this.Name = "tempform";
             this.Text = "tempform";
@@ -396,5 +459,8 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private Bunifu.Framework.UI.BunifuFlatButton adddriver;
+        private JTextBox2.JTextBox phno;
+        private JTextBox2.JTextBox address;
+        private JTextBox2.JTextBox name;
     }
 }

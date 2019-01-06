@@ -89,10 +89,11 @@
             this.carTableAdapter = new taxii.car_nameTableAdapters.carTableAdapter();
             this.rideTableAdapter = new taxii.ride_idTableAdapters.rideTableAdapter();
             this.driverpanel = new System.Windows.Forms.Panel();
-            this.adddriver = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.cleardriverpanel = new Bunifu.Framework.UI.BunifuFlatButton();
             this.phno = new JTextBox2.JTextBox();
             this.address = new JTextBox2.JTextBox();
             this.name = new JTextBox2.JTextBox();
+            this.adddriver = new Bunifu.Framework.UI.BunifuFlatButton();
             this.lbl = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -984,10 +985,11 @@
             // driverpanel
             // 
             this.driverpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.driverpanel.Controls.Add(this.adddriver);
+            this.driverpanel.Controls.Add(this.cleardriverpanel);
             this.driverpanel.Controls.Add(this.phno);
             this.driverpanel.Controls.Add(this.address);
             this.driverpanel.Controls.Add(this.name);
+            this.driverpanel.Controls.Add(this.adddriver);
             this.driverpanel.Controls.Add(this.lbl);
             this.driverpanel.Controls.Add(this.pictureBox1);
             this.driverpanel.Controls.Add(this.button2);
@@ -1005,6 +1007,99 @@
             this.driverpanel.Name = "driverpanel";
             this.driverpanel.Size = new System.Drawing.Size(799, 697);
             this.driverpanel.TabIndex = 10;
+            // 
+            // cleardriverpanel
+            // 
+            this.cleardriverpanel.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.cleardriverpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.cleardriverpanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.cleardriverpanel.BorderRadius = 0;
+            this.cleardriverpanel.ButtonText = "ADD ANOTHER";
+            this.cleardriverpanel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cleardriverpanel.DisabledColor = System.Drawing.Color.Gray;
+            this.cleardriverpanel.Iconcolor = System.Drawing.Color.Transparent;
+            this.cleardriverpanel.Iconimage = null;
+            this.cleardriverpanel.Iconimage_right = null;
+            this.cleardriverpanel.Iconimage_right_Selected = null;
+            this.cleardriverpanel.Iconimage_Selected = null;
+            this.cleardriverpanel.IconMarginLeft = 0;
+            this.cleardriverpanel.IconMarginRight = 0;
+            this.cleardriverpanel.IconRightVisible = true;
+            this.cleardriverpanel.IconRightZoom = 0D;
+            this.cleardriverpanel.IconVisible = true;
+            this.cleardriverpanel.IconZoom = 90D;
+            this.cleardriverpanel.IsTab = false;
+            this.cleardriverpanel.Location = new System.Drawing.Point(278, 525);
+            this.cleardriverpanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cleardriverpanel.Name = "cleardriverpanel";
+            this.cleardriverpanel.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.cleardriverpanel.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.cleardriverpanel.OnHoverTextColor = System.Drawing.Color.White;
+            this.cleardriverpanel.selected = false;
+            this.cleardriverpanel.Size = new System.Drawing.Size(184, 59);
+            this.cleardriverpanel.TabIndex = 19;
+            this.cleardriverpanel.Text = "ADD ANOTHER";
+            this.cleardriverpanel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cleardriverpanel.Textcolor = System.Drawing.Color.White;
+            this.cleardriverpanel.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cleardriverpanel.Click += new System.EventHandler(this.cleardriverpanel_Click);
+            // 
+            // phno
+            // 
+            this.phno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.phno.Font_Size = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.phno.HintText = null;
+            this.phno.IsPassword = false;
+            this.phno.Location = new System.Drawing.Point(485, 98);
+            this.phno.Margin = new System.Windows.Forms.Padding(4);
+            this.phno.MaxLength = 32767;
+            this.phno.Name = "phno";
+            this.phno.OnFocusedColor = System.Drawing.Color.White;
+            this.phno.OnFocusedTextColor = System.Drawing.Color.Gray;
+            this.phno.ReadOnly = false;
+            this.phno.Right_To_Left = System.Windows.Forms.RightToLeft.No;
+            this.phno.Size = new System.Drawing.Size(248, 38);
+            this.phno.TabIndex = 16;
+            this.phno.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.phno.TextName = "";
+            // 
+            // address
+            // 
+            this.address.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.address.Font_Size = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.address.HintText = null;
+            this.address.IsPassword = false;
+            this.address.Location = new System.Drawing.Point(113, 230);
+            this.address.Margin = new System.Windows.Forms.Padding(4);
+            this.address.MaxLength = 32767;
+            this.address.Name = "address";
+            this.address.OnFocusedColor = System.Drawing.Color.White;
+            this.address.OnFocusedTextColor = System.Drawing.Color.Gray;
+            this.address.ReadOnly = false;
+            this.address.Right_To_Left = System.Windows.Forms.RightToLeft.No;
+            this.address.Size = new System.Drawing.Size(248, 38);
+            this.address.TabIndex = 17;
+            this.address.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.address.TextName = "";
+            // 
+            // name
+            // 
+            this.name.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.name.Font_Size = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.name.HintText = null;
+            this.name.IsPassword = false;
+            this.name.Location = new System.Drawing.Point(113, 98);
+            this.name.Margin = new System.Windows.Forms.Padding(4);
+            this.name.MaxLength = 32767;
+            this.name.Name = "name";
+            this.name.OnFocusedColor = System.Drawing.Color.White;
+            this.name.OnFocusedTextColor = System.Drawing.Color.Gray;
+            this.name.ReadOnly = false;
+            this.name.Right_To_Left = System.Windows.Forms.RightToLeft.No;
+            this.name.Size = new System.Drawing.Size(248, 38);
+            this.name.TabIndex = 18;
+            this.name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.name.TextName = "";
             // 
             // adddriver
             // 
@@ -1034,72 +1129,13 @@
             this.adddriver.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.adddriver.OnHoverTextColor = System.Drawing.Color.White;
             this.adddriver.selected = false;
-            this.adddriver.Size = new System.Drawing.Size(183, 59);
+            this.adddriver.Size = new System.Drawing.Size(158, 59);
             this.adddriver.TabIndex = 13;
             this.adddriver.Text = "ADD";
             this.adddriver.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.adddriver.Textcolor = System.Drawing.Color.White;
             this.adddriver.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adddriver.Click += new System.EventHandler(this.adddriver_Click);
-            // 
-            // phno
-            // 
-            this.phno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.phno.Font_Size = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.phno.HintText = null;
-            this.phno.IsPassword = false;
-            this.phno.Location = new System.Drawing.Point(450, 105);
-            this.phno.Margin = new System.Windows.Forms.Padding(4);
-            this.phno.MaxLength = 32767;
-            this.phno.Name = "phno";
-            this.phno.OnFocusedColor = System.Drawing.Color.White;
-            this.phno.OnFocusedTextColor = System.Drawing.Color.Gray;
-            this.phno.ReadOnly = false;
-            this.phno.Right_To_Left = System.Windows.Forms.RightToLeft.No;
-            this.phno.Size = new System.Drawing.Size(248, 38);
-            this.phno.TabIndex = 12;
-            this.phno.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.phno.TextName = "";
-            // 
-            // address
-            // 
-            this.address.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.address.Font_Size = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.address.HintText = null;
-            this.address.IsPassword = false;
-            this.address.Location = new System.Drawing.Point(112, 236);
-            this.address.Margin = new System.Windows.Forms.Padding(4);
-            this.address.MaxLength = 32767;
-            this.address.Name = "address";
-            this.address.OnFocusedColor = System.Drawing.Color.White;
-            this.address.OnFocusedTextColor = System.Drawing.Color.Gray;
-            this.address.ReadOnly = false;
-            this.address.Right_To_Left = System.Windows.Forms.RightToLeft.No;
-            this.address.Size = new System.Drawing.Size(248, 38);
-            this.address.TabIndex = 12;
-            this.address.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.address.TextName = "";
-            this.address.Click += new System.EventHandler(this.Ref);
-            // 
-            // name
-            // 
-            this.name.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.name.Font_Size = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.name.HintText = null;
-            this.name.IsPassword = false;
-            this.name.Location = new System.Drawing.Point(112, 105);
-            this.name.Margin = new System.Windows.Forms.Padding(4);
-            this.name.MaxLength = 32767;
-            this.name.Name = "name";
-            this.name.OnFocusedColor = System.Drawing.Color.White;
-            this.name.OnFocusedTextColor = System.Drawing.Color.Gray;
-            this.name.ReadOnly = false;
-            this.name.Right_To_Left = System.Windows.Forms.RightToLeft.No;
-            this.name.Size = new System.Drawing.Size(248, 38);
-            this.name.TabIndex = 12;
-            this.name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.name.TextName = "";
-            this.name.Click += new System.EventHandler(this.Ref);
             // 
             // lbl
             // 
@@ -1114,9 +1150,9 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(470, 351);
+            this.pictureBox1.Location = new System.Drawing.Point(505, 351);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(228, 233);
+            this.pictureBox1.Size = new System.Drawing.Size(228, 240);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
@@ -1143,7 +1179,7 @@
             this.button2.IconVisible = true;
             this.button2.IconZoom = 90D;
             this.button2.IsTab = false;
-            this.button2.Location = new System.Drawing.Point(450, 230);
+            this.button2.Location = new System.Drawing.Point(493, 230);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
             this.button2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
@@ -1163,7 +1199,7 @@
             this.bunifuCustomLabel12.AutoSize = true;
             this.bunifuCustomLabel12.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel12.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bunifuCustomLabel12.Location = new System.Drawing.Point(444, 179);
+            this.bunifuCustomLabel12.Location = new System.Drawing.Point(487, 179);
             this.bunifuCustomLabel12.Name = "bunifuCustomLabel12";
             this.bunifuCustomLabel12.Size = new System.Drawing.Size(152, 32);
             this.bunifuCustomLabel12.TabIndex = 6;
@@ -1174,7 +1210,7 @@
             this.bunifuCustomLabel16.AutoSize = true;
             this.bunifuCustomLabel16.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel16.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bunifuCustomLabel16.Location = new System.Drawing.Point(106, 179);
+            this.bunifuCustomLabel16.Location = new System.Drawing.Point(111, 179);
             this.bunifuCustomLabel16.Name = "bunifuCustomLabel16";
             this.bunifuCustomLabel16.Size = new System.Drawing.Size(170, 32);
             this.bunifuCustomLabel16.TabIndex = 6;
@@ -1185,7 +1221,7 @@
             this.bunifuCustomLabel17.AutoSize = true;
             this.bunifuCustomLabel17.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel17.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bunifuCustomLabel17.Location = new System.Drawing.Point(444, 48);
+            this.bunifuCustomLabel17.Location = new System.Drawing.Point(487, 48);
             this.bunifuCustomLabel17.Name = "bunifuCustomLabel17";
             this.bunifuCustomLabel17.Size = new System.Drawing.Size(190, 32);
             this.bunifuCustomLabel17.TabIndex = 6;
@@ -1196,7 +1232,7 @@
             this.bunifuCustomLabel18.AutoSize = true;
             this.bunifuCustomLabel18.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel18.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bunifuCustomLabel18.Location = new System.Drawing.Point(106, 48);
+            this.bunifuCustomLabel18.Location = new System.Drawing.Point(111, 48);
             this.bunifuCustomLabel18.Name = "bunifuCustomLabel18";
             this.bunifuCustomLabel18.Size = new System.Drawing.Size(146, 32);
             this.bunifuCustomLabel18.TabIndex = 6;
@@ -1276,9 +1312,9 @@
             this.ClientSize = new System.Drawing.Size(1132, 746);
             this.Controls.Add(this.leftpanel);
             this.Controls.Add(this.header);
+            this.Controls.Add(this.newridepanel);
             this.Controls.Add(this.driverpanel);
             this.Controls.Add(this.updateridepanel);
-            this.Controls.Add(this.newridepanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "control";
             this.Text = "control";
@@ -1366,9 +1402,6 @@
         private ride_idTableAdapters.rideTableAdapter rideTableAdapter;
         private System.Windows.Forms.Panel driverpanel;
         private Bunifu.Framework.UI.BunifuFlatButton adddriver;
-        private JTextBox2.JTextBox phno;
-        private JTextBox2.JTextBox address;
-        private JTextBox2.JTextBox name;
         private Bunifu.Framework.UI.BunifuCustomLabel lbl;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.Framework.UI.BunifuFlatButton button2;
@@ -1382,5 +1415,9 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel19;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel23;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel24;
+        private JTextBox2.JTextBox phno;
+        private JTextBox2.JTextBox address;
+        private JTextBox2.JTextBox name;
+        private Bunifu.Framework.UI.BunifuFlatButton cleardriverpanel;
     }
 }

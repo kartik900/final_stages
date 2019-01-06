@@ -104,6 +104,7 @@ namespace taxii
 
             newridepanel.Hide();
             updateridepanel.Show();
+            this.rideTableAdapter.Fill(this.ride_id.ride);
 
         }
         private void newrideb_Click(object sender, EventArgs e)
@@ -113,6 +114,8 @@ namespace taxii
 
             updateridepanel.Hide();
             newridepanel.Show();
+            this.driverTableAdapter.Fill(this.driver_name.driver);
+            this.carTableAdapter.Fill(this.car_name.car);
 
         }
         private void driversb_Click(object sender, EventArgs e)
@@ -122,6 +125,7 @@ namespace taxii
             updateridepanel.Hide();
             newridepanel.Hide();
             driverpanel.Show();
+            cleardriverpanel.Hide();
 
         }
 
@@ -238,7 +242,7 @@ namespace taxii
 
         private void driversel_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            if (driversel.Text != null)
+            try
             {
 
                 SqlDataReader r;
@@ -255,6 +259,8 @@ namespace taxii
                 pictureBox11.SizeMode = PictureBoxSizeMode.StretchImage;
                 
             }
+            catch (IndexOutOfRangeException) { }
+            catch (InvalidCastException) { }
         }
         private void Refresh(object sender, EventArgs e)
         {
@@ -279,13 +285,7 @@ namespace taxii
         #region driver panel
         
 
-        private void Ref(object sender, EventArgs e)
-        {
-            dnamelabel.Text = name.TextName;
-            dpnolabel.Text = phno.TextName;
-            daddresslabel.Text = address.TextName;
-
-        }
+        
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
@@ -304,19 +304,20 @@ namespace taxii
 
         private void adddriver_Click(object sender, EventArgs e)
         {
-
+            
             byte[] img = null;
             FileStream stream = new FileStream(imgloc, FileMode.Open, FileAccess.Read);
             BinaryReader br = new BinaryReader(stream);
             img = br.ReadBytes((int)stream.Length);
-            string cmd0 = "insert into driver(d_name,d_pno,d_address,image)values('" + name.Text + "','" + phno.Text + "','" + address.Text + "',@img)";
+            string cmd0 = "insert into driver(d_name,d_pno,d_address,image)values('" + name.TextName + "','" + phno.TextName + "','" + address.TextName + "',@img)";
             con.Open();
 
             SqlCommand c10 = new SqlCommand(cmd0, con);
             c10.Parameters.Add(new SqlParameter("@img", img));
             c10.ExecuteNonQuery();
             con.Close();
-            lbl.Text="Driver Added Successfully"
+            lbl.Text = "Driver Added Successfully";
+            cleardriverpanel.Show();
 
 
 
@@ -331,6 +332,13 @@ namespace taxii
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cleardriverpanel_Click(object sender, EventArgs e)
+        {
+            dnamelabel.Text = daddresslabel.Text = dpnolabel.Text = "";
+            name.TextName = phno.TextName = address.TextName = "";
+            lbl.Text = "--";
         }
     }
     #region CLASS RIDE

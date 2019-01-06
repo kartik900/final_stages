@@ -84,6 +84,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="add_driver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_driver.Designer.cs">
+      <DependentUpon>add_driver.cs</DependentUpon>
+    </Compile>
     <Compile Include="carselect_dataset.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -171,6 +177,9 @@
     <Compile Include="tempform.Designer.cs">
       <DependentUpon>tempform.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="add_driver.resx">
+      <DependentUpon>add_driver.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="control.resx">
       <DependentUpon>control.cs</DependentUpon>
     </EmbeddedResource>
