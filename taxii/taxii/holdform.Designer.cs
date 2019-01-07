@@ -55,23 +55,22 @@
             this.caddress = new JTextBox2.JTextBox();
             this.cpno = new JTextBox2.JTextBox();
             this.cname = new JTextBox2.JTextBox();
-            this.updateridepanel = new System.Windows.Forms.Panel();
             this.rideselect = new taxii.rideselect();
             this.rideBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rideTableAdapter = new taxii.rideselectTableAdapters.rideTableAdapter();
             this.tableAdapterManager = new taxii.rideselectTableAdapters.TableAdapterManager();
             this.rideBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.rideBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.car_name = new taxii.car_name();
             this.carBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -81,6 +80,19 @@
             this.carBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.carTableAdapter1 = new taxii.fullcarTableAdapters.carTableAdapter();
             this.tableAdapterManager2 = new taxii.fullcarTableAdapters.TableAdapterManager();
+            this.infopanel = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.bunifuCustomLabel27 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel26 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel25 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.rideDataGridView = new System.Windows.Forms.DataGridView();
+            this.driverDataGridView = new System.Windows.Forms.DataGridView();
+            this.carDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.newridepanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rideselect)).BeginInit();
@@ -91,6 +103,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.carBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullcar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.carBindingSource1)).BeginInit();
+            this.infopanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rideDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.driverDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // newridepanel
@@ -461,14 +477,6 @@
             this.cname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.cname.TextName = "";
             // 
-            // updateridepanel
-            // 
-            this.updateridepanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.updateridepanel.Location = new System.Drawing.Point(48, 49);
-            this.updateridepanel.Name = "updateridepanel";
-            this.updateridepanel.Size = new System.Drawing.Size(803, 705);
-            this.updateridepanel.TabIndex = 7;
-            // 
             // rideselect
             // 
             this.rideselect.DataSetName = "rideselect";
@@ -520,13 +528,38 @@
             this.rideBindingNavigator.TabIndex = 8;
             this.rideBindingNavigator.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(24, 22);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -535,13 +568,13 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(24, 22);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -552,17 +585,10 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 20);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -584,33 +610,15 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // rideBindingNavigatorSaveItem
             // 
             this.rideBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.rideBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("rideBindingNavigatorSaveItem.Image")));
             this.rideBindingNavigatorSaveItem.Name = "rideBindingNavigatorSaveItem";
-            this.rideBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.rideBindingNavigatorSaveItem.Size = new System.Drawing.Size(24, 24);
             this.rideBindingNavigatorSaveItem.Text = "Save Data";
             this.rideBindingNavigatorSaveItem.Click += new System.EventHandler(this.rideBindingNavigatorSaveItem_Click);
             // 
@@ -654,14 +662,136 @@
             this.tableAdapterManager2.carTableAdapter = this.carTableAdapter1;
             this.tableAdapterManager2.UpdateOrder = taxii.fullcarTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // infopanel
+            // 
+            this.infopanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.infopanel.Controls.Add(this.button1);
+            this.infopanel.Controls.Add(this.bunifuCustomLabel27);
+            this.infopanel.Controls.Add(this.bunifuCustomLabel26);
+            this.infopanel.Controls.Add(this.bunifuCustomLabel25);
+            this.infopanel.Controls.Add(this.rideDataGridView);
+            this.infopanel.Controls.Add(this.driverDataGridView);
+            this.infopanel.Controls.Add(this.carDataGridView);
+            this.infopanel.Location = new System.Drawing.Point(68, 51);
+            this.infopanel.Name = "infopanel";
+            this.infopanel.Size = new System.Drawing.Size(783, 781);
+            this.infopanel.TabIndex = 12;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(19, 704);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(27, 23);
+            this.button1.TabIndex = 10;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // bunifuCustomLabel27
+            // 
+            this.bunifuCustomLabel27.AutoSize = true;
+            this.bunifuCustomLabel27.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel27.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.bunifuCustomLabel27.Location = new System.Drawing.Point(34, 600);
+            this.bunifuCustomLabel27.Name = "bunifuCustomLabel27";
+            this.bunifuCustomLabel27.Size = new System.Drawing.Size(135, 32);
+            this.bunifuCustomLabel27.TabIndex = 9;
+            this.bunifuCustomLabel27.Text = "RIDE TABLE";
+            // 
+            // bunifuCustomLabel26
+            // 
+            this.bunifuCustomLabel26.AutoSize = true;
+            this.bunifuCustomLabel26.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel26.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.bunifuCustomLabel26.Location = new System.Drawing.Point(34, 343);
+            this.bunifuCustomLabel26.Name = "bunifuCustomLabel26";
+            this.bunifuCustomLabel26.Size = new System.Drawing.Size(164, 32);
+            this.bunifuCustomLabel26.TabIndex = 8;
+            this.bunifuCustomLabel26.Text = "DRIVER TABLE";
+            // 
+            // bunifuCustomLabel25
+            // 
+            this.bunifuCustomLabel25.AutoSize = true;
+            this.bunifuCustomLabel25.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel25.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.bunifuCustomLabel25.Location = new System.Drawing.Point(34, 106);
+            this.bunifuCustomLabel25.Name = "bunifuCustomLabel25";
+            this.bunifuCustomLabel25.Size = new System.Drawing.Size(130, 32);
+            this.bunifuCustomLabel25.TabIndex = 7;
+            this.bunifuCustomLabel25.Text = "CAR TABLE";
+            // 
+            // rideDataGridView
+            // 
+            this.rideDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.rideDataGridView.Location = new System.Drawing.Point(221, 494);
+            this.rideDataGridView.Name = "rideDataGridView";
+            this.rideDataGridView.RowTemplate.Height = 24;
+            this.rideDataGridView.Size = new System.Drawing.Size(543, 220);
+            this.rideDataGridView.TabIndex = 2;
+            // 
+            // driverDataGridView
+            // 
+            this.driverDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.driverDataGridView.Location = new System.Drawing.Point(221, 236);
+            this.driverDataGridView.Name = "driverDataGridView";
+            this.driverDataGridView.RowTemplate.Height = 24;
+            this.driverDataGridView.Size = new System.Drawing.Size(543, 220);
+            this.driverDataGridView.TabIndex = 1;
+            // 
+            // carDataGridView
+            // 
+            this.carDataGridView.AutoGenerateColumns = false;
+            this.carDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.carDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5});
+            this.carDataGridView.DataSource = this.carBindingSource1;
+            this.carDataGridView.Location = new System.Drawing.Point(226, 16);
+            this.carDataGridView.Name = "carDataGridView";
+            this.carDataGridView.RowTemplate.Height = 24;
+            this.carDataGridView.Size = new System.Drawing.Size(538, 178);
+            this.carDataGridView.TabIndex = 0;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "c_plate";
+            this.dataGridViewTextBoxColumn2.HeaderText = "c_plate";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "c_name";
+            this.dataGridViewTextBoxColumn3.HeaderText = "c_name";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "c_type";
+            this.dataGridViewTextBoxColumn4.HeaderText = "c_type";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "NUM";
+            this.dataGridViewTextBoxColumn5.HeaderText = "NUM";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
             // holdform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1837, 1055);
+            this.Controls.Add(this.infopanel);
             this.Controls.Add(this.rideBindingNavigator);
-            this.Controls.Add(this.updateridepanel);
             this.Controls.Add(this.newridepanel);
             this.Name = "holdform";
             this.Text = "holdform";
@@ -678,6 +808,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.carBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fullcar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.carBindingSource1)).EndInit();
+            this.infopanel.ResumeLayout(false);
+            this.infopanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rideDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.driverDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -709,7 +844,6 @@
         private JTextBox2.JTextBox caddress;
         private JTextBox2.JTextBox cpno;
         private JTextBox2.JTextBox cname;
-        private System.Windows.Forms.Panel updateridepanel;
         private rideselect rideselect;
         private System.Windows.Forms.BindingSource rideBindingSource;
         private rideselectTableAdapters.rideTableAdapter rideTableAdapter;
@@ -735,5 +869,18 @@
         private System.Windows.Forms.BindingSource carBindingSource1;
         private fullcarTableAdapters.carTableAdapter carTableAdapter1;
         private fullcarTableAdapters.TableAdapterManager tableAdapterManager2;
+        private System.Windows.Forms.Panel infopanel;
+        private System.Windows.Forms.Button button1;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel27;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel26;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel25;
+        private System.Windows.Forms.DataGridView rideDataGridView;
+        private System.Windows.Forms.DataGridView driverDataGridView;
+        private System.Windows.Forms.DataGridView carDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
     }
 }

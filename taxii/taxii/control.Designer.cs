@@ -40,7 +40,10 @@
             this.homeb = new Bunifu.Framework.UI.BunifuFlatButton();
             this.newrideb = new Bunifu.Framework.UI.BunifuFlatButton();
             this.newridepanel = new System.Windows.Forms.Panel();
+            this.bunifuCustomLabel33 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.kmblabel = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.clear = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.cnamelabel = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.idlabel = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.okay = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -59,7 +62,6 @@
             this.driverpnolabel = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.cpnumlabel = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.drivernamelabel = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.cnamelabel = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel14 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel13 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel11 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -77,12 +79,22 @@
             this.ride_id = new taxii.ride_id();
             this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel15 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.drivercut = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.pricepkm = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.dateshow = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.totalincome = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.ownercut = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.dnameshow = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.ridekm = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.carnameshow = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel31 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel32 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.c_nameshow = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel30 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel20 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel29 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel21 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel28 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel22 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.cname_on_update = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.driverTableAdapter = new taxii.driver_nameTableAdapters.driverTableAdapter();
@@ -108,40 +120,23 @@
             this.bunifuCustomLabel23 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel24 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.infopanel = new System.Windows.Forms.Panel();
-            this.fullcar = new taxii.fullcar();
-            this.carBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.carTableAdapter1 = new taxii.fullcarTableAdapters.carTableAdapter();
-            this.tableAdapterManager = new taxii.fullcarTableAdapters.TableAdapterManager();
+            this.button1 = new System.Windows.Forms.Button();
+            this.bunifuCustomLabel27 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel26 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel25 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.rideDataGridView = new System.Windows.Forms.DataGridView();
+            this.driverDataGridView = new System.Windows.Forms.DataGridView();
             this.carDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fulldriver = new taxii.fulldriver();
+            this.rideBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.rentalDataSet = new taxii.rentalDataSet();
             this.driverBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.fulldriver = new taxii.fulldriver();
+            this.tableAdapterManager = new taxii.fullcarTableAdapters.TableAdapterManager();
             this.driverTableAdapter1 = new taxii.fulldriverTableAdapters.driverTableAdapter();
             this.tableAdapterManager1 = new taxii.fulldriverTableAdapters.TableAdapterManager();
-            this.driverDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.rentalDataSet = new taxii.rentalDataSet();
-            this.rideBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.rideTableAdapter1 = new taxii.rentalDataSetTableAdapters.rideTableAdapter();
             this.tableAdapterManager2 = new taxii.rentalDataSetTableAdapters.TableAdapterManager();
-            this.rideDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bunifuCustomLabel25 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel26 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel27 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.newkmshow = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.header.SuspendLayout();
             this.leftpanel.SuspendLayout();
             this.newridepanel.SuspendLayout();
@@ -156,15 +151,13 @@
             this.driverpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.infopanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fullcar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.carBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.carDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fulldriver)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.driverBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.driverDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rentalDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rideBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rideDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.driverDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rideBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rentalDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.driverBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fulldriver)).BeginInit();
             this.SuspendLayout();
             // 
             // header
@@ -215,7 +208,7 @@
             this.leftpanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.leftpanel.Location = new System.Drawing.Point(0, 28);
             this.leftpanel.Name = "leftpanel";
-            this.leftpanel.Size = new System.Drawing.Size(320, 787);
+            this.leftpanel.Size = new System.Drawing.Size(320, 743);
             this.leftpanel.TabIndex = 0;
             // 
             // infob
@@ -401,7 +394,10 @@
             // newridepanel
             // 
             this.newridepanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.newridepanel.Controls.Add(this.bunifuCustomLabel33);
+            this.newridepanel.Controls.Add(this.kmblabel);
             this.newridepanel.Controls.Add(this.clear);
+            this.newridepanel.Controls.Add(this.cnamelabel);
             this.newridepanel.Controls.Add(this.idlabel);
             this.newridepanel.Controls.Add(this.pictureBox11);
             this.newridepanel.Controls.Add(this.okay);
@@ -416,7 +412,6 @@
             this.newridepanel.Controls.Add(this.driverpnolabel);
             this.newridepanel.Controls.Add(this.cpnumlabel);
             this.newridepanel.Controls.Add(this.drivernamelabel);
-            this.newridepanel.Controls.Add(this.cnamelabel);
             this.newridepanel.Controls.Add(this.bunifuCustomLabel14);
             this.newridepanel.Controls.Add(this.bunifuCustomLabel13);
             this.newridepanel.Controls.Add(this.bunifuCustomLabel11);
@@ -427,8 +422,30 @@
             this.newridepanel.Controls.Add(this.cname);
             this.newridepanel.Location = new System.Drawing.Point(336, 47);
             this.newridepanel.Name = "newridepanel";
-            this.newridepanel.Size = new System.Drawing.Size(759, 671);
+            this.newridepanel.Size = new System.Drawing.Size(783, 671);
             this.newridepanel.TabIndex = 7;
+            // 
+            // bunifuCustomLabel33
+            // 
+            this.bunifuCustomLabel33.AutoSize = true;
+            this.bunifuCustomLabel33.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel33.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.bunifuCustomLabel33.Location = new System.Drawing.Point(635, 301);
+            this.bunifuCustomLabel33.Name = "bunifuCustomLabel33";
+            this.bunifuCustomLabel33.Size = new System.Drawing.Size(70, 32);
+            this.bunifuCustomLabel33.TabIndex = 13;
+            this.bunifuCustomLabel33.Text = "kms :";
+            // 
+            // kmblabel
+            // 
+            this.kmblabel.AutoSize = true;
+            this.kmblabel.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kmblabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.kmblabel.Location = new System.Drawing.Point(710, 301);
+            this.kmblabel.Name = "kmblabel";
+            this.kmblabel.Size = new System.Drawing.Size(35, 32);
+            this.kmblabel.TabIndex = 13;
+            this.kmblabel.Text = "--";
             // 
             // clear
             // 
@@ -465,6 +482,17 @@
             this.clear.Textcolor = System.Drawing.Color.White;
             this.clear.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clear.Click += new System.EventHandler(this.clear_Click_1);
+            // 
+            // cnamelabel
+            // 
+            this.cnamelabel.AutoSize = true;
+            this.cnamelabel.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cnamelabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.cnamelabel.Location = new System.Drawing.Point(311, 398);
+            this.cnamelabel.Name = "cnamelabel";
+            this.cnamelabel.Size = new System.Drawing.Size(35, 32);
+            this.cnamelabel.TabIndex = 7;
+            this.cnamelabel.Text = "--";
             // 
             // idlabel
             // 
@@ -527,10 +555,11 @@
             this.carsel.DisplayMember = "c_name";
             this.carsel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.carsel.FormattingEnabled = true;
-            this.carsel.Location = new System.Drawing.Point(432, 334);
+            this.carsel.Location = new System.Drawing.Point(430, 300);
             this.carsel.Name = "carsel";
-            this.carsel.Size = new System.Drawing.Size(281, 33);
+            this.carsel.Size = new System.Drawing.Size(199, 33);
             this.carsel.TabIndex = 9;
+            this.carsel.SelectedIndexChanged += new System.EventHandler(this.carsel_SelectedIndexChanged);
             this.carsel.Click += new System.EventHandler(this.Refresh);
             // 
             // carBindingSource
@@ -549,7 +578,7 @@
             this.driversel.DisplayMember = "d_name";
             this.driversel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.driversel.FormattingEnabled = true;
-            this.driversel.Location = new System.Drawing.Point(92, 334);
+            this.driversel.Location = new System.Drawing.Point(90, 300);
             this.driversel.Name = "driversel";
             this.driversel.Size = new System.Drawing.Size(281, 33);
             this.driversel.TabIndex = 9;
@@ -597,7 +626,7 @@
             this.bunifuCustomLabel6.AutoSize = true;
             this.bunifuCustomLabel6.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel6.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bunifuCustomLabel6.Location = new System.Drawing.Point(424, 285);
+            this.bunifuCustomLabel6.Location = new System.Drawing.Point(422, 251);
             this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
             this.bunifuCustomLabel6.Size = new System.Drawing.Size(121, 32);
             this.bunifuCustomLabel6.TabIndex = 6;
@@ -630,7 +659,7 @@
             this.bunifuCustomLabel5.AutoSize = true;
             this.bunifuCustomLabel5.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel5.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(86, 285);
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(84, 251);
             this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
             this.bunifuCustomLabel5.Size = new System.Drawing.Size(150, 32);
             this.bunifuCustomLabel5.TabIndex = 6;
@@ -668,17 +697,6 @@
             this.drivernamelabel.Size = new System.Drawing.Size(35, 32);
             this.drivernamelabel.TabIndex = 6;
             this.drivernamelabel.Text = "--";
-            // 
-            // cnamelabel
-            // 
-            this.cnamelabel.AutoSize = true;
-            this.cnamelabel.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cnamelabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.cnamelabel.Location = new System.Drawing.Point(305, 398);
-            this.cnamelabel.Name = "cnamelabel";
-            this.cnamelabel.Size = new System.Drawing.Size(35, 32);
-            this.cnamelabel.TabIndex = 6;
-            this.cnamelabel.Text = "--";
             // 
             // bunifuCustomLabel14
             // 
@@ -804,12 +822,23 @@
             this.updateridepanel.Controls.Add(this.rideselect);
             this.updateridepanel.Controls.Add(this.bunifuCustomLabel8);
             this.updateridepanel.Controls.Add(this.bunifuCustomLabel15);
+            this.updateridepanel.Controls.Add(this.drivercut);
+            this.updateridepanel.Controls.Add(this.pricepkm);
+            this.updateridepanel.Controls.Add(this.newkmshow);
             this.updateridepanel.Controls.Add(this.dateshow);
+            this.updateridepanel.Controls.Add(this.totalincome);
+            this.updateridepanel.Controls.Add(this.ownercut);
             this.updateridepanel.Controls.Add(this.dnameshow);
+            this.updateridepanel.Controls.Add(this.ridekm);
             this.updateridepanel.Controls.Add(this.carnameshow);
+            this.updateridepanel.Controls.Add(this.bunifuCustomLabel31);
+            this.updateridepanel.Controls.Add(this.bunifuCustomLabel32);
             this.updateridepanel.Controls.Add(this.c_nameshow);
+            this.updateridepanel.Controls.Add(this.bunifuCustomLabel30);
             this.updateridepanel.Controls.Add(this.bunifuCustomLabel20);
+            this.updateridepanel.Controls.Add(this.bunifuCustomLabel29);
             this.updateridepanel.Controls.Add(this.bunifuCustomLabel21);
+            this.updateridepanel.Controls.Add(this.bunifuCustomLabel28);
             this.updateridepanel.Controls.Add(this.bunifuCustomLabel22);
             this.updateridepanel.Controls.Add(this.cname_on_update);
             this.updateridepanel.Location = new System.Drawing.Point(327, 34);
@@ -927,6 +956,28 @@
             this.bunifuCustomLabel15.TabIndex = 6;
             this.bunifuCustomLabel15.Text = "Select ride ID";
             // 
+            // drivercut
+            // 
+            this.drivercut.AutoSize = true;
+            this.drivercut.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drivercut.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.drivercut.Location = new System.Drawing.Point(362, 638);
+            this.drivercut.Name = "drivercut";
+            this.drivercut.Size = new System.Drawing.Size(35, 32);
+            this.drivercut.TabIndex = 6;
+            this.drivercut.Text = "--";
+            // 
+            // pricepkm
+            // 
+            this.pricepkm.AutoSize = true;
+            this.pricepkm.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pricepkm.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.pricepkm.Location = new System.Drawing.Point(362, 508);
+            this.pricepkm.Name = "pricepkm";
+            this.pricepkm.Size = new System.Drawing.Size(41, 32);
+            this.pricepkm.TabIndex = 6;
+            this.pricepkm.Text = "50";
+            // 
             // dateshow
             // 
             this.dateshow.AutoSize = true;
@@ -937,6 +988,28 @@
             this.dateshow.Size = new System.Drawing.Size(35, 32);
             this.dateshow.TabIndex = 6;
             this.dateshow.Text = "--";
+            // 
+            // totalincome
+            // 
+            this.totalincome.AutoSize = true;
+            this.totalincome.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalincome.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.totalincome.Location = new System.Drawing.Point(362, 553);
+            this.totalincome.Name = "totalincome";
+            this.totalincome.Size = new System.Drawing.Size(35, 32);
+            this.totalincome.TabIndex = 6;
+            this.totalincome.Text = "--";
+            // 
+            // ownercut
+            // 
+            this.ownercut.AutoSize = true;
+            this.ownercut.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ownercut.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.ownercut.Location = new System.Drawing.Point(362, 590);
+            this.ownercut.Name = "ownercut";
+            this.ownercut.Size = new System.Drawing.Size(35, 32);
+            this.ownercut.TabIndex = 6;
+            this.ownercut.Text = "--";
             // 
             // dnameshow
             // 
@@ -949,6 +1022,17 @@
             this.dnameshow.TabIndex = 6;
             this.dnameshow.Text = "--";
             // 
+            // ridekm
+            // 
+            this.ridekm.AutoSize = true;
+            this.ridekm.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ridekm.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.ridekm.Location = new System.Drawing.Point(362, 460);
+            this.ridekm.Name = "ridekm";
+            this.ridekm.Size = new System.Drawing.Size(35, 32);
+            this.ridekm.TabIndex = 6;
+            this.ridekm.Text = "--";
+            // 
             // carnameshow
             // 
             this.carnameshow.AutoSize = true;
@@ -959,6 +1043,30 @@
             this.carnameshow.Size = new System.Drawing.Size(35, 32);
             this.carnameshow.TabIndex = 6;
             this.carnameshow.Text = "--";
+            // 
+            // bunifuCustomLabel31
+            // 
+            this.bunifuCustomLabel31.AutoSize = true;
+            this.bunifuCustomLabel31.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel31.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.bunifuCustomLabel31.Location = new System.Drawing.Point(106, 638);
+            this.bunifuCustomLabel31.Name = "bunifuCustomLabel31";
+            this.bunifuCustomLabel31.Size = new System.Drawing.Size(116, 32);
+            this.bunifuCustomLabel31.TabIndex = 6;
+            this.bunifuCustomLabel31.Text = "driver cut";
+            this.bunifuCustomLabel31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bunifuCustomLabel32
+            // 
+            this.bunifuCustomLabel32.AutoSize = true;
+            this.bunifuCustomLabel32.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel32.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.bunifuCustomLabel32.Location = new System.Drawing.Point(106, 553);
+            this.bunifuCustomLabel32.Name = "bunifuCustomLabel32";
+            this.bunifuCustomLabel32.Size = new System.Drawing.Size(149, 32);
+            this.bunifuCustomLabel32.TabIndex = 6;
+            this.bunifuCustomLabel32.Text = "total income";
+            this.bunifuCustomLabel32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // c_nameshow
             // 
@@ -971,6 +1079,18 @@
             this.c_nameshow.TabIndex = 6;
             this.c_nameshow.Text = "--";
             // 
+            // bunifuCustomLabel30
+            // 
+            this.bunifuCustomLabel30.AutoSize = true;
+            this.bunifuCustomLabel30.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel30.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.bunifuCustomLabel30.Location = new System.Drawing.Point(106, 590);
+            this.bunifuCustomLabel30.Name = "bunifuCustomLabel30";
+            this.bunifuCustomLabel30.Size = new System.Drawing.Size(121, 32);
+            this.bunifuCustomLabel30.TabIndex = 6;
+            this.bunifuCustomLabel30.Text = "owner cut";
+            this.bunifuCustomLabel30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // bunifuCustomLabel20
             // 
             this.bunifuCustomLabel20.AutoSize = true;
@@ -982,6 +1102,17 @@
             this.bunifuCustomLabel20.TabIndex = 6;
             this.bunifuCustomLabel20.Text = "Date of Trip";
             // 
+            // bunifuCustomLabel29
+            // 
+            this.bunifuCustomLabel29.AutoSize = true;
+            this.bunifuCustomLabel29.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel29.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.bunifuCustomLabel29.Location = new System.Drawing.Point(106, 508);
+            this.bunifuCustomLabel29.Name = "bunifuCustomLabel29";
+            this.bunifuCustomLabel29.Size = new System.Drawing.Size(149, 32);
+            this.bunifuCustomLabel29.TabIndex = 6;
+            this.bunifuCustomLabel29.Text = "price per km";
+            // 
             // bunifuCustomLabel21
             // 
             this.bunifuCustomLabel21.AutoSize = true;
@@ -992,6 +1123,17 @@
             this.bunifuCustomLabel21.Size = new System.Drawing.Size(117, 32);
             this.bunifuCustomLabel21.TabIndex = 6;
             this.bunifuCustomLabel21.Text = "Car name";
+            // 
+            // bunifuCustomLabel28
+            // 
+            this.bunifuCustomLabel28.AutoSize = true;
+            this.bunifuCustomLabel28.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel28.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.bunifuCustomLabel28.Location = new System.Drawing.Point(106, 460);
+            this.bunifuCustomLabel28.Name = "bunifuCustomLabel28";
+            this.bunifuCustomLabel28.Size = new System.Drawing.Size(151, 32);
+            this.bunifuCustomLabel28.TabIndex = 6;
+            this.bunifuCustomLabel28.Text = "Trip Distance";
             // 
             // bunifuCustomLabel22
             // 
@@ -1030,7 +1172,6 @@
             // driverpanel
             // 
             this.driverpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.driverpanel.Controls.Add(this.infopanel);
             this.driverpanel.Controls.Add(this.cleardriverpanel);
             this.driverpanel.Controls.Add(this.phno);
             this.driverpanel.Controls.Add(this.address);
@@ -1051,7 +1192,7 @@
             this.driverpanel.Controls.Add(this.bunifuCustomLabel24);
             this.driverpanel.Location = new System.Drawing.Point(326, 28);
             this.driverpanel.Name = "driverpanel";
-            this.driverpanel.Size = new System.Drawing.Size(799, 787);
+            this.driverpanel.Size = new System.Drawing.Size(799, 746);
             this.driverpanel.TabIndex = 10;
             // 
             // cleardriverpanel
@@ -1353,249 +1494,25 @@
             // infopanel
             // 
             this.infopanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.infopanel.Controls.Add(this.button1);
             this.infopanel.Controls.Add(this.bunifuCustomLabel27);
             this.infopanel.Controls.Add(this.bunifuCustomLabel26);
             this.infopanel.Controls.Add(this.bunifuCustomLabel25);
             this.infopanel.Controls.Add(this.rideDataGridView);
             this.infopanel.Controls.Add(this.driverDataGridView);
             this.infopanel.Controls.Add(this.carDataGridView);
-            this.infopanel.Location = new System.Drawing.Point(16, 6);
+            this.infopanel.Location = new System.Drawing.Point(326, 82);
             this.infopanel.Name = "infopanel";
-            this.infopanel.Size = new System.Drawing.Size(783, 781);
-            this.infopanel.TabIndex = 11;
-            // 
-            // fullcar
-            // 
-            this.fullcar.DataSetName = "fullcar";
-            this.fullcar.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // carBindingSource1
-            // 
-            this.carBindingSource1.DataMember = "car";
-            this.carBindingSource1.DataSource = this.fullcar;
-            // 
-            // carTableAdapter1
-            // 
-            this.carTableAdapter1.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.carTableAdapter = this.carTableAdapter1;
-            this.tableAdapterManager.UpdateOrder = taxii.fullcarTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // carDataGridView
-            // 
-            this.carDataGridView.AutoGenerateColumns = false;
-            this.carDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.carDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5});
-            this.carDataGridView.DataSource = this.carBindingSource1;
-            this.carDataGridView.Location = new System.Drawing.Point(226, 16);
-            this.carDataGridView.Name = "carDataGridView";
-            this.carDataGridView.RowTemplate.Height = 24;
-            this.carDataGridView.Size = new System.Drawing.Size(538, 178);
-            this.carDataGridView.TabIndex = 0;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "c_plate";
-            this.dataGridViewTextBoxColumn2.HeaderText = "c_plate";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "c_name";
-            this.dataGridViewTextBoxColumn3.HeaderText = "c_name";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "c_type";
-            this.dataGridViewTextBoxColumn4.HeaderText = "c_type";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "NUM";
-            this.dataGridViewTextBoxColumn5.HeaderText = "NUM";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // fulldriver
-            // 
-            this.fulldriver.DataSetName = "fulldriver";
-            this.fulldriver.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // driverBindingSource1
-            // 
-            this.driverBindingSource1.DataMember = "driver";
-            this.driverBindingSource1.DataSource = this.fulldriver;
-            // 
-            // driverTableAdapter1
-            // 
-            this.driverTableAdapter1.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager1
-            // 
-            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager1.driverTableAdapter = this.driverTableAdapter1;
-            this.tableAdapterManager1.UpdateOrder = taxii.fulldriverTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // driverDataGridView
-            // 
-            this.driverDataGridView.AutoGenerateColumns = false;
-            this.driverDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.driverDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewImageColumn1});
-            this.driverDataGridView.DataSource = this.driverBindingSource1;
-            this.driverDataGridView.Location = new System.Drawing.Point(221, 236);
-            this.driverDataGridView.Name = "driverDataGridView";
-            this.driverDataGridView.RowTemplate.Height = 24;
-            this.driverDataGridView.Size = new System.Drawing.Size(543, 220);
-            this.driverDataGridView.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "d_name";
-            this.dataGridViewTextBoxColumn7.HeaderText = "d_name";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "d_pno";
-            this.dataGridViewTextBoxColumn8.HeaderText = "d_pno";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "d_address";
-            this.dataGridViewTextBoxColumn9.HeaderText = "d_address";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.DataPropertyName = "image";
-            this.dataGridViewImageColumn1.HeaderText = "image";
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            // 
-            // rentalDataSet
-            // 
-            this.rentalDataSet.DataSetName = "rentalDataSet";
-            this.rentalDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // rideBindingSource1
-            // 
-            this.rideBindingSource1.DataMember = "ride";
-            this.rideBindingSource1.DataSource = this.rentalDataSet;
-            // 
-            // rideTableAdapter1
-            // 
-            this.rideTableAdapter1.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager2
-            // 
-            this.tableAdapterManager2.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager2.rideTableAdapter = this.rideTableAdapter1;
-            this.tableAdapterManager2.UpdateOrder = taxii.rentalDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // rideDataGridView
-            // 
-            this.rideDataGridView.AutoGenerateColumns = false;
-            this.rideDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.rideDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn13,
-            this.dataGridViewTextBoxColumn14,
-            this.dataGridViewTextBoxColumn15});
-            this.rideDataGridView.DataSource = this.rideBindingSource1;
-            this.rideDataGridView.Location = new System.Drawing.Point(221, 494);
-            this.rideDataGridView.Name = "rideDataGridView";
-            this.rideDataGridView.RowTemplate.Height = 24;
-            this.rideDataGridView.Size = new System.Drawing.Size(543, 220);
-            this.rideDataGridView.TabIndex = 2;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "main";
-            this.dataGridViewTextBoxColumn10.HeaderText = "main";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn11.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "c_name";
-            this.dataGridViewTextBoxColumn12.HeaderText = "c_name";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "d_name";
-            this.dataGridViewTextBoxColumn13.HeaderText = "d_name";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "car";
-            this.dataGridViewTextBoxColumn14.HeaderText = "car";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "date";
-            this.dataGridViewTextBoxColumn15.HeaderText = "date";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            // 
-            // bunifuCustomLabel25
-            // 
-            this.bunifuCustomLabel25.AutoSize = true;
-            this.bunifuCustomLabel25.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel25.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bunifuCustomLabel25.Location = new System.Drawing.Point(34, 106);
-            this.bunifuCustomLabel25.Name = "bunifuCustomLabel25";
-            this.bunifuCustomLabel25.Size = new System.Drawing.Size(130, 32);
-            this.bunifuCustomLabel25.TabIndex = 7;
-            this.bunifuCustomLabel25.Text = "CAR TABLE";
-            // 
-            // bunifuCustomLabel26
-            // 
-            this.bunifuCustomLabel26.AutoSize = true;
-            this.bunifuCustomLabel26.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel26.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.bunifuCustomLabel26.Location = new System.Drawing.Point(34, 343);
-            this.bunifuCustomLabel26.Name = "bunifuCustomLabel26";
-            this.bunifuCustomLabel26.Size = new System.Drawing.Size(164, 32);
-            this.bunifuCustomLabel26.TabIndex = 8;
-            this.bunifuCustomLabel26.Text = "DRIVER TABLE";
+            this.infopanel.Size = new System.Drawing.Size(783, 729);
+            this.infopanel.TabIndex = 13;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(19, 704);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(27, 23);
+            this.button1.TabIndex = 10;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // bunifuCustomLabel27
             // 
@@ -1608,17 +1525,125 @@
             this.bunifuCustomLabel27.TabIndex = 9;
             this.bunifuCustomLabel27.Text = "RIDE TABLE";
             // 
+            // bunifuCustomLabel26
+            // 
+            this.bunifuCustomLabel26.AutoSize = true;
+            this.bunifuCustomLabel26.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel26.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.bunifuCustomLabel26.Location = new System.Drawing.Point(34, 343);
+            this.bunifuCustomLabel26.Name = "bunifuCustomLabel26";
+            this.bunifuCustomLabel26.Size = new System.Drawing.Size(164, 32);
+            this.bunifuCustomLabel26.TabIndex = 8;
+            this.bunifuCustomLabel26.Text = "DRIVER TABLE";
+            // 
+            // bunifuCustomLabel25
+            // 
+            this.bunifuCustomLabel25.AutoSize = true;
+            this.bunifuCustomLabel25.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel25.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.bunifuCustomLabel25.Location = new System.Drawing.Point(34, 106);
+            this.bunifuCustomLabel25.Name = "bunifuCustomLabel25";
+            this.bunifuCustomLabel25.Size = new System.Drawing.Size(130, 32);
+            this.bunifuCustomLabel25.TabIndex = 7;
+            this.bunifuCustomLabel25.Text = "CAR TABLE";
+            // 
+            // rideDataGridView
+            // 
+            this.rideDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.rideDataGridView.Location = new System.Drawing.Point(221, 494);
+            this.rideDataGridView.Name = "rideDataGridView";
+            this.rideDataGridView.RowTemplate.Height = 24;
+            this.rideDataGridView.Size = new System.Drawing.Size(543, 220);
+            this.rideDataGridView.TabIndex = 2;
+            // 
+            // driverDataGridView
+            // 
+            this.driverDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.driverDataGridView.Location = new System.Drawing.Point(221, 236);
+            this.driverDataGridView.Name = "driverDataGridView";
+            this.driverDataGridView.RowTemplate.Height = 24;
+            this.driverDataGridView.Size = new System.Drawing.Size(543, 220);
+            this.driverDataGridView.TabIndex = 1;
+            // 
+            // carDataGridView
+            // 
+            this.carDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.carDataGridView.Location = new System.Drawing.Point(226, 16);
+            this.carDataGridView.Name = "carDataGridView";
+            this.carDataGridView.RowTemplate.Height = 24;
+            this.carDataGridView.Size = new System.Drawing.Size(538, 178);
+            this.carDataGridView.TabIndex = 0;
+            // 
+            // rideBindingSource1
+            // 
+            this.rideBindingSource1.DataMember = "ride";
+            this.rideBindingSource1.DataSource = this.rentalDataSet;
+            // 
+            // rentalDataSet
+            // 
+            this.rentalDataSet.DataSetName = "rentalDataSet";
+            this.rentalDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // driverBindingSource1
+            // 
+            this.driverBindingSource1.DataMember = "driver";
+            this.driverBindingSource1.DataSource = this.fulldriver;
+            // 
+            // fulldriver
+            // 
+            this.fulldriver.DataSetName = "fulldriver";
+            this.fulldriver.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.carTableAdapter = null;
+            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.UpdateOrder = taxii.fullcarTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // driverTableAdapter1
+            // 
+            this.driverTableAdapter1.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager1
+            // 
+            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.driverTableAdapter = this.driverTableAdapter1;
+            this.tableAdapterManager1.UpdateOrder = taxii.fulldriverTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // rideTableAdapter1
+            // 
+            this.rideTableAdapter1.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager2
+            // 
+            this.tableAdapterManager2.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager2.rideTableAdapter = this.rideTableAdapter1;
+            this.tableAdapterManager2.UpdateOrder = taxii.rentalDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // newkmshow
+            // 
+            this.newkmshow.AutoSize = true;
+            this.newkmshow.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newkmshow.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.newkmshow.Location = new System.Drawing.Point(383, 377);
+            this.newkmshow.Name = "newkmshow";
+            this.newkmshow.Size = new System.Drawing.Size(35, 32);
+            this.newkmshow.TabIndex = 6;
+            this.newkmshow.Text = "--";
+            // 
             // control
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.ClientSize = new System.Drawing.Size(1132, 815);
+            this.ClientSize = new System.Drawing.Size(1132, 771);
             this.Controls.Add(this.leftpanel);
             this.Controls.Add(this.header);
-            this.Controls.Add(this.driverpanel);
             this.Controls.Add(this.updateridepanel);
             this.Controls.Add(this.newridepanel);
+            this.Controls.Add(this.infopanel);
+            this.Controls.Add(this.driverpanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "control";
             this.Text = "control";
@@ -1642,15 +1667,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.infopanel.ResumeLayout(false);
             this.infopanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fullcar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.carBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.carDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fulldriver)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.driverBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.driverDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rentalDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rideBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rideDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.driverDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rideBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rentalDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.driverBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fulldriver)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1682,7 +1705,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel driverpnolabel;
         private Bunifu.Framework.UI.BunifuCustomLabel cpnumlabel;
         private Bunifu.Framework.UI.BunifuCustomLabel drivernamelabel;
-        private Bunifu.Framework.UI.BunifuCustomLabel cnamelabel;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel14;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel13;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel11;
@@ -1734,40 +1756,36 @@
         private JTextBox2.JTextBox address;
         private JTextBox2.JTextBox name;
         private Bunifu.Framework.UI.BunifuFlatButton cleardriverpanel;
-        private System.Windows.Forms.Panel infopanel;
-        private fullcar fullcar;
-        private System.Windows.Forms.BindingSource carBindingSource1;
-        private fullcarTableAdapters.carTableAdapter carTableAdapter1;
         private fullcarTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.DataGridView carDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private fulldriver fulldriver;
         private System.Windows.Forms.BindingSource driverBindingSource1;
         private fulldriverTableAdapters.driverTableAdapter driverTableAdapter1;
         private fulldriverTableAdapters.TableAdapterManager tableAdapterManager1;
-        private System.Windows.Forms.DataGridView driverDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private rentalDataSet rentalDataSet;
         private System.Windows.Forms.BindingSource rideBindingSource1;
         private rentalDataSetTableAdapters.rideTableAdapter rideTableAdapter1;
         private rentalDataSetTableAdapters.TableAdapterManager tableAdapterManager2;
-        private System.Windows.Forms.DataGridView rideDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private Bunifu.Framework.UI.BunifuCustomLabel kmblabel;
+        private System.Windows.Forms.Panel infopanel;
+        private System.Windows.Forms.Button button1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel27;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel26;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel25;
+        private System.Windows.Forms.DataGridView rideDataGridView;
+        private System.Windows.Forms.DataGridView driverDataGridView;
+        private System.Windows.Forms.DataGridView carDataGridView;
+        private Bunifu.Framework.UI.BunifuCustomLabel cnamelabel;
+        private Bunifu.Framework.UI.BunifuCustomLabel drivercut;
+        private Bunifu.Framework.UI.BunifuCustomLabel pricepkm;
+        private Bunifu.Framework.UI.BunifuCustomLabel totalincome;
+        private Bunifu.Framework.UI.BunifuCustomLabel ownercut;
+        private Bunifu.Framework.UI.BunifuCustomLabel ridekm;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel31;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel32;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel30;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel29;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel28;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel33;
+        private Bunifu.Framework.UI.BunifuCustomLabel newkmshow;
     }
 }

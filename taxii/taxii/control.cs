@@ -70,8 +70,7 @@ namespace taxii
             this.rideTableAdapter1.Fill(this.rentalDataSet.ride);
             // TODO: This line of code loads data into the 'fulldriver.driver' table. You can move, or remove it, as needed.
             this.driverTableAdapter1.Fill(this.fulldriver.driver);
-            // TODO: This line of code loads data into the 'fullcar.car' table. You can move, or remove it, as needed.
-            this.carTableAdapter1.Fill(this.fullcar.car);
+           
             // TODO: This line of code loads data into the 'ride_id.ride' table. You can move, or remove it, as needed.
             this.rideTableAdapter.Fill(this.ride_id.ride);
             
@@ -158,20 +157,43 @@ namespace taxii
 
 
         #region updateride
-
-
+        int y;
+        int km;
         private void updateb_Click_1(object sender, EventArgs e)
         {
+            
             try
             {
-                int y = Convert.ToInt32(rideselect.Text);
-                int km = Convert.ToInt32(km_after.TextName);
+                y = Convert.ToInt32(rideselect.Text);
+                km = Convert.ToInt32(km_after.TextName);
                 totals[y] = Convert.ToDouble(r[i].Farecal(km));
                 owners[y] = r[i].ownfare(totals[y]);
                 drivers[y] = r[i].driverfare(totals[y]);
             }
             catch (Exception) { }
+            int d = km - kma;
+            int d1 = km + kma;
+            string cc="";
+            ridekm.Text = Convert.ToString(d);
+            totalincome.Text = Convert.ToString(d * 50);
+            ownercut.Text = Convert.ToString((d*50) - ((d*50) * 80 / 100));
+            drivercut.Text = Convert.ToString((d * 50) - ((d * 50) * 20 / 100));
+            con.Open();
+            
+            string up="update car set km_bef='"+d1+"' where c_name='"+cc+"'";
+            string h0 = "select c_name from ride where Id='" + y + "'";
+            string kewkmfromdb = "select km_bef from car where c_name='" + cc + "'";
+            SqlCommand upc = new SqlCommand(up, con);
+            SqlCommand h0c = new SqlCommand(h0, con);
+            SqlCommand km_bfromdb = new SqlCommand(kewkmfromdb, con);
 
+            cc = Convert.ToString(h0c.ExecuteScalar());
+
+            upc.ExecuteScalar();
+
+            string newkm = Convert.ToString(km_bfromdb.ExecuteScalar());
+            newkmshow.Text = "the new kms for the car " + cc + " is "+newkm ;
+            con.Close();
         }
 
         private void rideselect_SelectedIndexChanged(object sender, EventArgs e)
@@ -254,7 +276,7 @@ namespace taxii
             try
             {
 
-                SqlDataReader r;
+                //SqlDataReader r;
                 string n = driversel.Text;
                 string cmd2 = "select image from driver where d_name ='" + n + "'";
                 SqlCommand c10 = new SqlCommand(cmd2, con);
@@ -349,6 +371,31 @@ namespace taxii
             name.TextName = phno.TextName = address.TextName = "";
             lbl.Text = "--";
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            control c1 = new control();
+            c1.Show();
+            this.Close();
+            
+        }
+        int kma;
+        private void carsel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string ca = "select km_bef from car where c_name='" + carsel.Text + "'";
+            con.Open();
+            if (carsel.Text != null)
+            {
+                try
+                {
+                    SqlCommand ca1 = new SqlCommand(ca, con);
+                    kmblabel.Text = Convert.ToString(ca1.ExecuteScalar());
+                    kma = Convert.ToInt32(kmblabel.Text);
+                }
+                catch (Exception) { }
+            }
+            con.Close();
+        }
     }
     #region CLASS RIDE
     class Ride
@@ -364,8 +411,8 @@ namespace taxii
         }
         public float Farecal(int a)
         {
-            int f = a - km_b;
-            return f * 50;
+            
+            return a * 50;
         }
         public string ownfare(double a)
         {
